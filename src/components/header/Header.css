@@ -1,0 +1,35 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.navbar-expand-lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.navbar {
+    transition-duration: .8s !important;
+}
+
+.head-m {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .head-m {
+        padding: 0px 10px;
+        margin-top: 0px;
+        height: 75px;
+    }
+}

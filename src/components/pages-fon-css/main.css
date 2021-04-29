@@ -1,0 +1,48 @@
+.left-fon {
+    margin-top: -48% !important;
+    float: left;
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    z-index: 3;
+}
+
+.right-fon {
+    margin-top: -48% !important;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+}
+
+.left-fon img {
+    margin-left: 5px;
+}
+
+.right-fon img {
+    margin: 5px;
+}
+
+.left-fon img:nth-child(3) {
+    margin-top: -100px;
+    width: 50px;
+}
+
+.right-fon img:nth-child(1) {
+    margin-top: -100px;
+    width: 50px;
+}
+
+.right-fon img:nth-child(3) {
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .left-fon {
+        display: none;
+    }
+
+    .right-fon {
+        display: none;
+    }
+}

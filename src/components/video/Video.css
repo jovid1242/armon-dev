@@ -1,0 +1,262 @@
+.video-gallery {
+    width: 100%;
+    height: auto;
+}
+
+.bghjHX {
+    margin: 0 !important;
+}
+
+/* //////////// Video effect */
+
+.video-container {
+    position: relative;
+    margin: 10px 11px;
+    width: 95%;
+
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.video-container:hover .image {
+    filter: brightness(40%);
+}
+
+.video-container:hover .middle {
+    opacity: 1;
+}
+
+.play-btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-btn img {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+/* ////////////////// and video effect */
+
+
+.video-gallery img {
+    width: 100%;
+    height: 313px;
+    border-radius: 13px;
+    /* margin: 20px; */
+    box-shadow: 0 0 10px 3px rgb(0 0 0 / 25%);
+}
+
+.kVtMtA {
+    left: -13px;
+}
+
+.bhRnqO {
+    right: -2px;
+}
+
+.ecdVOt {
+    width: 11px;
+    height: 11px;
+    border: 2px solid #6c757d
+}
+
+.qbpMB {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.video-gallery-header {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.video-gallery-header p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 15px;
+    letter-spacing: -1px;
+    color: #080B11;
+}
+
+.video-gallery-header span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    color: #080B11;
+}
+
+.video-gallery-header button {
+    display: block;
+    float: right;
+    width: 150px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 3px solid #E9E9E9;
+    box-sizing: border-box;
+    border-radius: 11px;
+}
+
+.video-gallery-header button:hover {
+    box-shadow: 0px 0px 10px 5px #cbcbcb;
+}
+
+.video-gallery-header button a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none !important;
+    color: #2B2B2B !important;
+}
+
+.video-modal-armon {
+    margin-top: 10%;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .video-container .image {
+        filter: brightness(55%);
+    }
+
+    .video-gallery img {
+        box-shadow: none;
+    }
+
+    .middle {
+        top: 55%;
+        opacity: 1 !important;
+    }
+
+    .video-gallery {
+        padding: 0;
+    }
+
+    .video-modal-armon {
+        width: 100%;
+    }
+
+    .video-gallery-header {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        margin-left: 0px;
+    }
+
+    .video-gallery-header p {
+        font-size: 22px;
+    }
+
+    .video-gallery img {
+        width: 100%;
+        height: 200px;
+        border-radius: 13px;
+    }
+
+    .video-gallery-header button {
+        width: 100px;
+        height: 35px;
+        font-size: 12px !important;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .video-gallery img {
+        box-shadow: none;
+    }
+
+    .play-btn img {
+        margin-top: 15px;
+    }
+
+    .bVoXXg {
+        margin-left: 0;
+    }
+
+    .dqhhZF {
+        padding-left: 0;
+    }
+
+    .video-gallery-header {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .video-gallery img {
+        width: 100%;
+        height: 200px;
+        border-radius: 13px;
+    }
+}
+
+/* @media (max-width: 767px) {
+    .video-gallery-header {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .video-gallery-header button {
+        display: none;
+    }
+
+    .video-gallery {
+        width: 100%;
+    }
+
+    .video-gallery img {
+        width: 100%;
+        height: 200px;
+        border-radius: 13px;
+    }
+} */
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+
+
+    .video-modal-armon {
+        width: 100%;
+        height: 250px;
+    }
+
+    .react-yt-pl {
+        width: 300px !important;
+        height: 250px;
+    }
+
+    .video-modal-yt {
+        height: 200px;
+    }
+
+}

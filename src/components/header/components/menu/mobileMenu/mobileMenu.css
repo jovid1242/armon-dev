@@ -1,0 +1,297 @@
+.dineuron-menu {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+/* ..... mobile icon */
+.mobile-icon {
+    position: absolute;
+    width: 100%;
+    top: 66vh;
+    padding: 0 0 0 35px;
+}
+
+.mobile-icon .phone-link {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-decoration: none !important;
+}
+
+.mobile-icon .phone-link p {
+    margin: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+
+.mobile-social-icons {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+
+}
+
+
+.mobile-social-icons svg {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.dropdown-toggle {
+    line-height: 35px;
+    margin-left: 25px;
+}
+
+/* mobile icon */
+.nav-open .dineuron-menu {
+    opacity: 1;
+    visibility: visible;
+    background: #2B232E;
+}
+
+.dineuron-menu .nav li a {
+    display: flex;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #F2F2F2;
+}
+
+.dineuron-menu .nav li {
+    /* position: absolute; */
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+    -webkit-animation-timing-function: cubic-bezier(.45, .005, 0, 1);
+    -moz-animation-timing-function: cubic-bezier(.45, .005, 0, 1);
+    -o-animation-timing-function: cubic-bezier(.45, .005, 0, 1);
+    animation-timing-function: cubic-bezier(.45, .005, 0, 1);
+}
+
+/* .dineuron-menu .nav li .dropdown-mobile-menu */
+
+.nav li:hover .sub-menu {
+    opacity: 1;
+    height: 140px;
+    visibility: visible;
+}
+
+.nav-open .dineuron-menu .nav li {
+    transition: 0.3s ease;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform .2s, opacity .2s;
+    transition: transform .2s, opacity .2s;
+}
+
+.nav-open .dineuron-menu .nav li ul {
+    transition: 0.3s ease;
+
+}
+
+.dineuron-menu .nav li.delay-1 {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.dineuron-menu .nav li.delay-2 {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.dineuron-menu .nav li.delay-3 {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.dineuron-menu .nav li.delay-4 {
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.dineuron-menu .nav li.delay-5 {
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.dineuron-menu .nav li.delay-6 {
+    -webkit-transition-delay: 0.6s;
+    -moz-transition-delay: 0.6s;
+    -ms-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.dineuron-menu .nav li.delay-7 {
+    -webkit-transition-delay: 0.7s;
+    -moz-transition-delay: 0.7s;
+    -ms-transition-delay: 0.7s;
+    -o-transition-delay: 0.7s;
+    transition-delay: 0.7s;
+}
+
+.dineuron-menu .nav li.delay-8 {
+    -webkit-transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -ms-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+}
+
+.dineuron-menu .nav li.delay-9 {
+    -webkit-transition-delay: 0.9s;
+    -moz-transition-delay: 0.9s;
+    -ms-transition-delay: 0.9s;
+    -o-transition-delay: 0.9s;
+    transition-delay: 0.9s;
+}
+
+.nav-button {
+    position: relative;
+    display: none;
+    z-index: 1111;
+    height: 42px;
+    width: 50px;
+    padding: 3px;
+}
+
+.nav-button #nav-icon3 {
+    width: 24px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-button #nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+
+.nav-button #nav-icon3 span:nth-child(1) {
+    top: 0
+}
+
+.nav-button #nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+    top: 7px
+}
+
+.nav-button #nav-icon3 span:nth-child(4) {
+    top: 14px
+}
+
+.nav-open #nav-icon3 span:nth-child(1) {
+    top: 9px;
+    width: 0;
+    left: 50%
+}
+
+.nav-open #nav-icon3 span:nth-child(2) {
+    background: #fff !important;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.nav-open #nav-icon3 span:nth-child(3) {
+    background: #fff !important;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.nav-open #nav-icon3 span:nth-child(4) {
+    top: 9px;
+    width: 0;
+    left: 50%
+}
+
+.flex-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%
+}
+
+
+@media (max-width: 1000px) {
+    .nav-button {
+        display: block;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .nav-button {
+        padding: 13px;
+    }
+}
+
+@media (max-width: 425px) {
+    #nav-icon3 {
+        margin-top: 10px;
+    }
+}

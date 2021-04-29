@@ -1,0 +1,211 @@
+.instagram {
+    width: 100% !important;
+    height: auto;
+    padding: 50px 0 80px;
+}
+
+.instagram-projects-header {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    /* margin-left: 43px; */
+}
+
+.under-test {
+    width: 121px;
+    height: 6px;
+    background: #0273BA;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.instagram-projects-header p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: -1px;
+
+    /* Black Color Armon */
+
+    color: #080B11;
+}
+
+.instagram-projects-header span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height */
+
+    letter-spacing: -1px;
+
+    /* Black Color Armon */
+
+    color: #080B11;
+}
+
+.instagram-projects-cards {
+    width: 100% !important;
+}
+
+.instagram-card {
+    border: 10px solid #fff;
+    height: auto;
+    box-shadow: 0px 0px 14px rgb(0 0 0 / 20%);
+    border-radius: 14px;
+    width: 95% !important;
+    margin: 10px 9px;
+}
+
+.instagram-projects-cards .bVoXXg {
+    margin-left: 0 !important;
+}
+
+.img-inst {
+    width: 250px;
+    height: 150px;
+    border-radius: 14px;
+}
+
+.instagram-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+.like-inst {
+    display: flex !important;
+    margin: 10px;
+}
+
+.like-inst span {
+    margin: 10px;
+}
+
+@media (max-width: 1920px) {
+    .instagram-card {
+        /* margin-left: 38px !important; */
+    }
+}
+
+@media (max-width: 900px) {
+    .instagram-card {
+        margin-left: 5px !important;
+        margin-right: 0;
+    }
+
+    .instagram-projects-header {
+        width: 100% !important;
+        z-index: 10;
+        margin-left: 0px;
+    }
+
+    .instagram-projects-header p {
+        font-size: 22px;
+    }
+
+    .instagram-projects-cards {
+        width: 100% !important;
+    }
+
+    .instagram-card {
+        margin-top: 30px !important;
+        margin-bottom: 40px;
+        padding: 10px;
+        height: auto;
+        background: #FFFFFF;
+        border: none !important;
+        box-shadow: 0px 0px 10px 2px #e9e9e9;
+        border-radius: 14px;
+        width: 300px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .instagram-projects-header {
+        margin-top: 10px;
+        width: 85% !important;
+        z-index: 10;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .instagram-projects-header {
+        margin-top: 10px;
+        width: 85% !important;
+        z-index: 10;
+    }
+
+    .instagram-card {
+        margin-top: 30px !important;
+        margin-bottom: 40px;
+        padding: 10px;
+        height: auto;
+        background: #FFFFFF;
+        border: none !important;
+        box-shadow: 0px 0px 10px 2px #e9e9e9;
+        border-radius: 14px;
+        width: 250px !important;
+    }
+
+    .react-multi-carousel-dot-list {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .instagram-card {
+        width: 375px !important;
+    }
+
+    .instagram-card {
+        margin-left: 11px !important;
+    }
+
+    /* .react-multi-carousel-dot-list {
+        margin-left: -18px !important;
+    } */
+}
+
+@media (max-width: 375px) {
+    .instagram-card {
+        width: 330px !important;
+        margin-left: 6px !important;
+    }
+
+    .instagram-card img {
+        width: 100%;
+        border-radius: 14px;
+    }
+
+    /* .react-multi-carousel-dot-list {
+        margin-left: -18px !important;
+    } */
+}
+
+@media (max-width: 340px) {
+    .instagram-card {
+        width: 300px !important;
+    }
+
+    .react-multi-carousel-dot-list {
+        margin-left: -18px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .instagram-card {
+        width: 250px !important;
+    }
+
+    .react-multi-carousel-dot-list {
+        margin-left: -18px !important;
+    }
+}

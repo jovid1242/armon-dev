@@ -1,0 +1,89 @@
+body {
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.affix {
+  transition-duration: 2s !important;
+  background: #fff !important;
+  -webkit-transition: padding 0.4s ease-out;
+  transition: padding 0.4s ease-out;
+  box-shadow: 0px 0px 8px rgb(62, 62, 62);
+}
+
+.affix .head-m {
+  padding: 10px 50px;
+}
+
+.affix .menu li a {
+  color: #000 !important;
+}
+
+.affix .menu li a:hover {
+  color: #0273BA !important;
+}
+
+.affix .navbar-brand .logo-header-r {
+  display: block;
+}
+
+.affix .navbar-brand .logo-header-l {
+  display: none;
+}
+
+.affix .navbar-collapse .header-icon img {
+  display: none;
+}
+
+.affix .navbar-collapse .header-icon-black img {
+  display: block;
+}
+
+.affix .nav-button #nav-icon3 span {
+  background: #000;
+}
+
+.affix .nav-open #nav-icon3 span:nth-child(1) {
+  background: #fff;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .affix .head-m {
+    padding: 0px 10px;
+    margin-top: 0px;
+    height: 75px;
+  }
+}
+
+/* 
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container_width {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container_width {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container_width {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container_width {
+    max-width: 1140px;
+  }
+} 
+*/
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .container {
+    width: 1085px !important;
+    margin: 0 auto;
+  }
+}

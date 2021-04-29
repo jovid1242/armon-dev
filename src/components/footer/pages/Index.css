@@ -1,0 +1,91 @@
+.footer-pages {
+    width: 100%;
+    height: auto;
+}
+
+.footer-pages .links span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-left: 25px;
+}
+
+.footer-pages ul li {
+    list-style: none;
+    cursor: pointer;
+    left: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #747278;
+}
+
+.footer-pages ul li a {
+    text-decoration: none !important;
+    color: #747278;
+}
+
+.footer-pages ul li a:hover {
+    color: #fff;
+}
+
+.footer-pages ul li:hover {
+    color: #fff;
+}
+
+.icons-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    padding: 35px 0 15px;
+}
+
+.icons-text span {
+    display: flex;
+    justify-content: start;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #BFBFBF;
+}
+
+.links {
+    padding: 77px 0 0 0;
+    display: block;
+}
+
+.m-links {
+    display: none;
+}
+
+.m-links span a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.links span a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+@media screen and (min-width: 1366) and (max-width: 1920px) {
+    .icons-text {
+        padding: 35px 20px 15px;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .icons-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 35px 20px 15px;
+    }
+}
