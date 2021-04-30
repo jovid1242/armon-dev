@@ -17,12 +17,17 @@ export default function SubMenu({ projectsLink }) {
                 <ul className="dropdown-menu__list">
                     <li>
                         <a href="https://armon.tj/freedom/">
-                            Ispechak Residence
+                            • Ispechak Residence
                         </a>
                     </li>
                     <li>
                         <a href="https://arc.tj/project/ispechak-residence/">
-                            Freedom Residencee
+                            • Freedom Residencee
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            • Санаторий (скоро)
                         </a>
                     </li>
                 </ul>

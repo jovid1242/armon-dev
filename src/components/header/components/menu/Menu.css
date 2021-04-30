@@ -46,8 +46,18 @@
     display: block;
     color: #F2F2F2;
     text-decoration: none;
-    padding: 22px 12px;
+    padding: 6px 12px;
     transition: all 0.3s ease-in-out 0s;
+}
+
+.menu li:hover .links-headers {
+    opacity: 1;
+    border-radius: 6px;
+    padding: 6px 12px !important;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #080B11 !important;
+    background: #fff;
 }
 
 

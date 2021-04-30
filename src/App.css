@@ -24,7 +24,38 @@ body {
 }
 
 .affix .menu li:hover .links-headers {
-  color: rgb(119, 119, 119) !important;
+  opacity: 0.8;
+  border-radius: 6px;
+  padding: 6px 12px !important;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: #fff !important;
+  background: #343237;
+}
+
+.affix .submenu__wrapper {
+  position: absolute;
+  top: 75px;
+  width: 200px;
+  background: #343237;
+  color: #fff;
+  opacity: 0.98;
+  border-radius: 6px;
+  box-shadow: 5px 1px 20px #000;
+  z-index: 999;
+  display: none;
+}
+
+.affix .submenu__wrapper::before {
+  color: #343237;
+}
+
+.affix .dropdown-menu__list li a {
+  color: #fff !important;
+}
+
+.affix .dropdown-menu__list li:hover {
+  background: #343237;
 }
 
 .affix .navbar-brand .logo-header-r {
