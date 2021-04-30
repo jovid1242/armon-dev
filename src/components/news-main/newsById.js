@@ -9,7 +9,7 @@ export default function NewsById({ news }) {
     const [newsContent, setNewsContent] = useState()
     const { id } = useParams();
     // useEffect(() => {
-    //     http.get('/news/:id')
+    //     http.get(`get_news/:${id}`)
     //         .then((response) => {
     //             setNewsContent(response)
     //         })

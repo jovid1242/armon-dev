@@ -1,5 +1,6 @@
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import ScrollToTop from 'react-router-scroll-top'
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -16,14 +17,17 @@ function App() {
   return (
     <>
       <Router
-        basename="#">
-        <Route path="/" exact component={Home} />
-        <Route path="/about" exact component={About} />
-        <Route path="/sales-offices" exact component={SalesOffices} />
-        <Route path="/contacts" exact component={Contacts} />
-        <Route path="/news" exact component={News} />
-        <Route path="/news/:id" component={NewsID} />
-        <Route path="/career" exact component={Career} />
+        basename="#"
+      >
+        <ScrollToTop>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/sales-offices" exact component={SalesOffices} />
+          <Route path="/contacts" exact component={Contacts} />
+          <Route path="/news" exact component={News} />
+          <Route path="/news/:id" component={NewsID} />
+          <Route path="/career" exact component={Career} />
+        </ScrollToTop>
       </Router>
     </>
   );
