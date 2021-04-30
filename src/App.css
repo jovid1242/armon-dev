@@ -16,7 +16,7 @@ body {
 }
 
 .affix .menu li {
-  transition: 0.3s ease;
+  transition: 0.1s ease;
 }
 
 .affix .menu li .links-headers {

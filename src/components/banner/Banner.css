@@ -19,6 +19,7 @@
     border-radius: 20px;
     background-color: #0273ba;
     color: #fff;
+    cursor: pointer;
 }
 
 .wrapper-inner p {
