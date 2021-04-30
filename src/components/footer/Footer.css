@@ -235,6 +235,7 @@
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
     .mobile-under-footer__text {
+        padding-left: 10%;
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
@@ -242,7 +243,11 @@
         line-height: 17px;
         color: #BFBFBF;
         text-align: left;
-        max-width: 50%;
+        max-width: 60%;
+    }
+
+    .mobile__under-footer-img {
+        padding-right: 30%;
     }
 
     .icons {
