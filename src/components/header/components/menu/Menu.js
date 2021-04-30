@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import SubMenu from './SubMenu'
 import './Menu.css'
 
 import hicon1 from '../../../../assets/img/h1.svg'
@@ -15,7 +15,10 @@ export default function Menu() {
             <div className="navbar-collapse">
                 <ul className="navbar-nav ml-auto menu">
                     <li><Link to="/about">О нас</Link></li>
-                    <li><Link to="/sales-offices">Проекты</Link></li>
+                    <li><Link to="/sales-offices">Проекты
+                    </Link>
+                        <SubMenu />
+                    </li>
                     <li><Link to="/sales-offices">Офисы продаж</Link></li>
                     <li><Link to="/sales-offices">Контакты</Link></li>
                 </ul>

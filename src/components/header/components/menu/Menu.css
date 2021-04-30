@@ -54,6 +54,10 @@
     color: #0273BA;
 }
 
+.menu li:hover .submenu__wrapper {
+    display: block;
+}
+
 .black-collor ul li {
     color: #fff !important;
 }
