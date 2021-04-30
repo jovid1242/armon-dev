@@ -39,7 +39,7 @@
 .about__logo-svg {
     max-width: 100%;
     float: right;
-    padding: 20px;
+    padding: 20px 55px 20px 0;
 }
 
 .about-wrapper-text {

@@ -142,8 +142,7 @@
 .main {
     display: block;
     color: #BFBFBF;
-    padding: 20px 0 40px;
-    border-bottom: 60px solid #2C2A2F;
+    padding: 20px 0 0;
 }
 
 .footer-address__text {
@@ -181,6 +180,16 @@
     margin-bottom: 15px;
 }
 
+.footer-bttm-wrap {
+    margin-top: 63px;
+    padding: 18px 0;
+    background: #2C2A2F;
+}
+
+.footer-bttm-wrap p {
+    margin: 0;
+}
+
 /* @media screen and (min-width: 1366) and (max-width: 1920px) {
     .icons-text {
         margin-left: 96px !important;
@@ -195,9 +204,9 @@
         width: 200px;
     }
 
+
     .main {
-        padding: 20px 0 40px;
-        border-bottom: 30px solid #2C2A2F;
+        padding: 20px 0 0;
     }
 
     .footer-address__text_color,

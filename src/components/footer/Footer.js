@@ -2,6 +2,7 @@ import React from 'react'
 import Pages from './pages/Index'
 import './Footer.css'
 import footerlogo from '../../assets/img/footer-logo.svg'
+import boboLogo from '../../assets/img/bobologo.svg'
 
 export default function Footer() {
     return (
@@ -45,6 +46,22 @@ export default function Footer() {
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+                        <div className="footer-bttm-wrap">
+                            <div className="row">
+                                <div className="container">
+                                    <div className="col-12">
+                                        <div className="under-footer d-flex justify-content-between align-items-center">
+                                            <p className="under-footer__text">
+                                                © All rights reserved by Armon Development
+                                        </p>
+                                            <a href="bobo.tj" className="under-footer__logo">
+                                                <img src={boboLogo} alt="Logotype" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

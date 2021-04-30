@@ -15,12 +15,16 @@ body {
   padding: 10px 50px;
 }
 
-.affix .menu li a {
+.affix .menu li {
+  transition: 0.3s ease;
+}
+
+.affix .menu li .links-headers {
   color: #000 !important;
 }
 
-.affix .menu li a:hover {
-  color: #0273BA !important;
+.affix .menu li:hover .links-headers {
+  color: rgb(119, 119, 119) !important;
 }
 
 .affix .navbar-brand .logo-header-r {

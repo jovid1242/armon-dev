@@ -14,13 +14,13 @@ export default function Menu() {
         <>
             <div className="navbar-collapse">
                 <ul className="navbar-nav ml-auto menu">
-                    <li><Link to="/about">О нас</Link></li>
-                    <li><Link to="/sales-offices">Проекты
+                    <li><Link to="/about" className="links-headers">О нас</Link></li>
+                    <li><Link to="#" className="links-headers">Проекты
                     </Link>
                         <SubMenu />
                     </li>
-                    <li><Link to="/sales-offices">Офисы продаж</Link></li>
-                    <li><Link to="/sales-offices">Контакты</Link></li>
+                    <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link></li>
+                    <li><Link to="/sales-offices" className="links-headers">Контакты</Link></li>
                 </ul>
                 <div className="header-icon ml-3">
                     <a href="tel:++992907229000">

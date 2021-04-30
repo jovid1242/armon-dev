@@ -50,9 +50,6 @@
     transition: all 0.3s ease-in-out 0s;
 }
 
-.menu li a:hover {
-    color: #0273BA;
-}
 
 .menu li:hover .submenu__wrapper {
     display: block;
