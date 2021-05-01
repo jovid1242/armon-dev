@@ -17,8 +17,7 @@ export default function Menu() {
             <div className="navbar-collapse">
                 <ul className="navbar-nav ml-auto menu">
                     <li><Link to="/about" className="links-headers">О нас</Link></li>
-                    <li><Link to="#" className="links-headers">Проекты
-                    </Link>
+                    <li><Link to="#" className="links-headers">Проекты</Link>
                         <SubMenu />
                     </li>
                     <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link></li>
