@@ -61,7 +61,7 @@ export default function News({ news }) {
                                 news.map((item, index) => {
                                     return (
                                         <div className="wrapper-news-card overflow-hidden" key={index}>
-                                            <Link to={`/news`}>
+                                            <Link to={`/news/${item.id}`}>
                                                 <div className="news-card" >
                                                     <h2>{item.title}</h2>
                                                     <span>{item.text.substr(0, 70) + '...'}</span>

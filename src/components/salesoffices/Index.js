@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Index.css'
 
-// import fon1 from '../../assets/img/l1.svg'
-// import fon2 from '../../assets/img/r1.svg'
 import freedom from '../../assets/img/1.jpg'
 import oficesImg from '../../assets/img/Rectangle.png'
 
