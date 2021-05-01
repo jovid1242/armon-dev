@@ -29,7 +29,7 @@ export default function NewsById({ news }) {
                     </div>
                     <div className="mobile__about-wrapper about-wrapper_center mt-4 mb-">
                         <p className="about__text" id="textEnd">
-                            <Link to="/">Главная</Link> | Новости
+                            <Link to="/">Главная</Link> | <Link to="/news">Новости</Link>
                         </p>
                         <h2 className="about__title" id="textStart">
                             Новости

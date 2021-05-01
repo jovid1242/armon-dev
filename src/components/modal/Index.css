@@ -1,0 +1,28 @@
+.modal-lg,
+.modal-xl {
+    max-width: 500px !important;
+}
+
+.text__modal {
+    font-family: Montserrat,
+        serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal-content {
+    background-color: #383D45 !important;
+    outline: none !important;
+}
+
+.modal__btn {
+    background: #B59B8D !important;
+    outline: none !important;
+    border-radius: unset !important;
+    border: none !important;
+    border-radius: 3px !important;
+}

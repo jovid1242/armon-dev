@@ -22,16 +22,19 @@
 
 .header-icon-black {
     display: flex;
+    cursor: pointer;
 }
 
 .header-icon-black img {
     margin-left: 10px;
     /* margin-right: 10px; */
     display: none;
+    cursor: pointer;
 }
 
 .header-icon img {
     display: block;
+    cursor: pointer;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -53,9 +56,6 @@
 .menu li:hover .links-headers {
     opacity: 1;
     border-radius: 6px;
-    padding: 6px 12px !important;
-    margin-left: 2px;
-    margin-right: 2px;
     color: #080B11 !important;
     background: #fff;
 }

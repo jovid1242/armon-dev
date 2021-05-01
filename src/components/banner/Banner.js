@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../modal/Index'
 import operator from '../../assets/img/operator1.svg'
 import Group from '../../assets/img/Group.svg'
 import frames from '../../assets/img/Frame.svg'
 import './Banner.css'
 
 export default function Banner() {
+    const [modalShow, setModalShow] = useState(false);
     return (
         <div className="banner-section">
+            <Modal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
             <div className="container">
                 <div className="row">
                     <div className="col-4">
@@ -23,7 +29,7 @@ export default function Banner() {
                         </div>
                     </div>
                     <div className="col-4">
-                        <div className="wrapper wrapper_orange d-flex align-items-center">
+                        <div className="wrapper wrapper_orange d-flex align-items-center" onClick={() => setModalShow(true)} >
                             <div className="wrapper-inner" style={{ padding: "81px 0 81px 50px" }}>
                                 <h4 className="wrapper-inner__title" style={{ fontSize: "36px", fontWeight: "bold", lineHeight: "19px" }}>
                                     Получить
