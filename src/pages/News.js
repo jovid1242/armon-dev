@@ -64,7 +64,7 @@ export default function News() {
         <div>
             <Header header={false} />
             <Main news={news} />
-            <Pagination total={6} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} />
+            <Pagination total={3} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} />
             <Footer />
         </div>
     )

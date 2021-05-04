@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Modal, Form } from 'react-bootstrap';
+import { Modal, Form } from 'react-bootstrap';
 import './Index.css'
 
 export default function Index(props) {

@@ -27,11 +27,15 @@
     color: #FFFFFF;
 }
 
+.paginate__btn img {
+    padding: 0 0 3px;
+}
+
 @media screen and (min-width: 375px) and (max-width: 768px) {
-    /* .paginate {
+    .paginate {
         display: flex;
         justify-content: center;
-    } */
+    }
 
     .paginate li {}
 }

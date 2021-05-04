@@ -69,7 +69,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
-                            <div style={{ position: "relative", overflow: "hidden", borderRadius: "20px", outline: "none", boxShadow: "0 0 10px 3px rgb(0 0 0 / 10%)" }} className="map__about"><a href="https://yandex.ru/maps/10318/dushanbe/?utm_medium=mapframe&utm_source=maps" style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "0px" }}>Душанбе</a><a href="https://yandex.ru/maps/10318/dushanbe/?ll=68.724163%2C38.585049&utm_medium=mapframe&utm_source=maps&z=15.54" style={{ color: "#fff", fontSize: "12px", position: "absolute", top: "14px" }}>Душанбе — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU4QHuwXB" width="100%" height="430px" frameborder="0" allowfullscreen="true" style={{ osition: "relative" }}></iframe></div>
+                            <div style={{ position: "relative", overflow: "hidden", borderRadius: "20px", outline: "none", boxShadow: "0 0 10px 3px rgb(0 0 0 / 10%)" }} className="map__about"><a href="https://yandex.ru/maps/10318/dushanbe/?utm_medium=mapframe&utm_source=maps" style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "0px" }}>Душанбе</a><a href="https://yandex.ru/maps/10318/dushanbe/?ll=68.724163%2C38.585049&utm_medium=mapframe&utm_source=maps&z=15.54" style={{ color: "#fff", fontSize: "12px", position: "absolute", top: "14px" }}>Душанбе — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU4QHuwXB" width="100%" height="443px" frameborder="0" allowfullscreen="true" style={{ osition: "relative" }}></iframe></div>
                         </div>
                     </div>
                 </div>
