@@ -17,7 +17,7 @@ export default function Banner() {
                 <div className="row">
                     <div className="col-4">
                         <div className="wrapper  d-flex align-items-center ">
-                            <div className="wrapper-inner" style={{ padding: "81px 0 81px 45px" }}>
+                            <div className="wrapper-inner" style={{ padding: "81px 0 81px 41px" }}>
                                 <h4 className="wrapper-inner__title" style={{ fontSize: "36px", fontWeight: "bold", lineHeight: "19px" }}>
                                     Оплата
                                 </h4>

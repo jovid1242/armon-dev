@@ -34,7 +34,7 @@ export default function Index() {
                                     <div className="icons-text">
                                         <span>Связаться с нами:</span>
                                     </div>
-                                    <div classaName="wrapper-icons">
+                                    <div className="wrapper-icons">
                                         <div className="icons">
                                             <a href="https://www.facebook.com/Строительная-Компания-Armon-Development-106799351467199/">
                                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

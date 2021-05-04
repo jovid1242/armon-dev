@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import Main from '../components/news-main/newsById'
 
+import http from '../http'
+
 export default function NewsID() {
+    const [newsContent, setNewsContent] = useState([])
+    const { id } = useParams();
+    useEffect(() => {
+        http.get(`get_news/${id}`)
+            .then((response) => {
+                setNewsContent(response.data)
+            })
+    }, [])
     const news = [
         {
             id: "1",
@@ -45,7 +56,7 @@ export default function NewsID() {
     return (
         <>
             <Header header={false} />
-            <Main news={news} />
+            <Main news={newsContent} />
             <Footer />
         </>
     )
