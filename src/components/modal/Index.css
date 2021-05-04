@@ -19,10 +19,27 @@
     outline: none !important;
 }
 
+.modal__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .modal__btn {
-    background: #B59B8D !important;
+    background: #0273ba !important;
     outline: none !important;
     border-radius: unset !important;
     border: none !important;
     border-radius: 3px !important;
+
+}
+
+.under__text-modal {}
+
+.under__text {
+    width: 121px;
+    height: 6px;
+    background: #0273BA;
+    border-radius: 2px;
+    margin-bottom: 10px;
 }

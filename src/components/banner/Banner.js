@@ -22,7 +22,7 @@ export default function Banner() {
                                     Оплата
                                 </h4>
                                 <p className="wrapper-inner__text" style={{ fontSize: "25px", letterSpacing: "-1px" }}>
-                                    В расрочку
+                                    В рассрочку
                                 </p>
                             </div>
                             <img src={Group} alt="" className="wrapper__img" style={{ marginRight: "-24px", marginLeft: "auto" }} />

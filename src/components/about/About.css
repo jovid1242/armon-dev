@@ -39,7 +39,7 @@
 .about__logo-svg {
     max-width: 100%;
     float: right;
-    padding: 20px 55px 20px 0;
+    padding: 20px 55px 20px 40px;
 }
 
 .about-wrapper-text {
@@ -115,6 +115,10 @@
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1366px) {
+    .about__img {
+        margin-left: 20px;
+    }
+
     .about-section1 {
         background-size: 110px;
     }

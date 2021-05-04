@@ -1,58 +1,79 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+// import { YMaps } from 'react-yandex-maps';
 
-import fon1 from '../../assets/img/l1.svg'
-import fon2 from '../../assets/img/r1.svg'
+import emailsvg from '../../assets/img/email.svg'
+import pindrop from '../../assets/img/pin_drop.svg'
+import phonealt from '../../assets/img/phone-alt.svg'
 
 import './Index.css'
-import '../pages-fon-css/main.css'
+
 export default function Index() {
     return (
-        <div>
+        <>
             <div className="about-section">
-                <div className="left-fon">
-                    <img src={fon1} alt="" />
-                    <img src={fon1} alt="" />
-                    <img src={fon1} alt="" />
-                </div>
-                <div className="about-main">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6 col-6">
-                                <div className="about-section-head">
-                                    <h2 className="text-contacts">Контакты</h2>
+                <div className="container">
+                    <div className="about-wrapper pc__about-wrapper about-wrapper_center mt-4 mb-4">
+                        <h2 className="about__title">
+                            Контакты
+                        </h2>
+                        <p className="about__text">
+                            <Link to="/">Главная</Link> | Контакты
+                        </p>
+                    </div>
+                    <div className="mobile__about-wrapper about-wrapper_center mt-4 mb-">
+                        <p className="about__text" id="textEnd">
+                            <Link to="/">Главная</Link> | Контакты
+                        </p>
+                        <h2 className="about__title" id="textStart">
+                            Контакты
+                        </h2>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6 col-md-6">
+                            <div className="info_wrapper">
+                                <div className="info__text">
+                                    <p>Есть вопросы? свяжитесь с нами и наши консультанты с радостью на них ответят</p>
                                 </div>
-                            </div>
-                            <div className="col-md-6 col-6">
-                                <div className="about-section-head">
-                                    <span><a href="#">главная</a>\контакты</span>
+                                <div className="info__phone">
+                                    <ul className="info__contact">
+                                        <li>
+                                            <img src={phonealt} className="info__img" alt="" />
+                                            <p className="info__phone-text">
+                                                +992 98-722-90-00
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src={phonealt} className="info__img" alt="" />
+                                            <p className="info__phone-text">
+                                                +992 90-722-90-00
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src={emailsvg} className="info__img" alt="" />
+                                            <p className="info__phone-text">
+                                                info@armon.tj
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="info__text">
+                                    <p>Основной офис продаж находится по адресу:</p>
+                                </div>
+                                <div className="info__address-text">
+                                    <img src={pindrop} className="info__img" alt="" />
+                                    <p>
+                                        г. Душанбе, Испечак М2-14
+                                </p>
                                 </div>
                             </div>
                         </div>
-                        <div className="about-main">
-                            <ul>
-                                <div className="row">
-                                    <div className="col-md-3">
-                                        <li><span>Колл Центр</span></li>
-                                        <li><p>+992 98-722-90-00</p></li>
-                                        <li><p>+992 90-722-90-00</p></li>
-                                    </div>
-                                    <div className="col-md-9">
-                                        <li><span>WhatsApp</span></li>
-                                        <li><p>+992 98-722-90-00</p></li>
-                                    </div>
-                                </div>
-                                <li><span>Адрес:</span></li>
-                                <li><p>г. Душанбе, Испечак М2-14</p></li>
-                            </ul>
+                        <div className="col-lg-6 col-md-6">
+                            <div style={{ position: "relative", overflow: "hidden", borderRadius: "20px", outline: "none", boxShadow: "0 0 10px 3px rgb(0 0 0 / 10%)" }} className="map__about"><a href="https://yandex.ru/maps/10318/dushanbe/?utm_medium=mapframe&utm_source=maps" style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "0px" }}>Душанбе</a><a href="https://yandex.ru/maps/10318/dushanbe/?ll=68.724163%2C38.585049&utm_medium=mapframe&utm_source=maps&z=15.54" style={{ color: "#fff", fontSize: "12px", position: "absolute", top: "14px" }}>Душанбе — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU4QHuwXB" width="100%" height="430px" frameborder="0" allowfullscreen="true" style={{ osition: "relative" }}></iframe></div>
                         </div>
                     </div>
                 </div>
-                <div className="right-fon">
-                    <img src={fon2} alt="" />
-                    <img src={fon2} alt="" />
-                    <img src={fon2} alt="" />
-                </div>
             </div>
-        </div>
+        </>
     )
 }

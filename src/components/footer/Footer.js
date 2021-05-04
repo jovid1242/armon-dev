@@ -130,7 +130,7 @@ export default function Footer() {
                                         <ul className="info-txt">
                                             <li><p className="d-flex justify-content-center display-4">Таджикистан, Душанбе</p></li>
                                             <li><p className="d-flex justify-content-center display-4">Испечак 2, М14</p></li>
-                                            <li><a href="#" className="d-flex justify-content-center"><u>показать на карте</u></a></li>
+                                            <li><a href="https://yandex.ru/maps/?um=constructor%3A1fcbdc3686a4e97f9384d36101b6e07b41f00107cfe432bd03646fae5c5312b9&source=constructorLink" className="d-flex justify-content-center"><u>показать на карте</u></a></li>
                                         </ul>
                                     </div>
                                     <div className="">

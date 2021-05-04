@@ -6,6 +6,7 @@ import SliderWeb from '../components/slider/Slider'
 import News from '../components/News/News'
 import Video from '../components/video/Video'
 import Instagram from '../components/instagram/Instagram'
+import Feedback from '../components/feedback/Index'
 import Footer from '../components/footer/Footer'
 
 import http from '../http'
@@ -93,7 +94,7 @@ export default function Home() {
     ];
     const news = [
         {
-            id: "1",
+            id: "6",
             title: "ОТКРЫТИЕ ОФИСА ПРОДАЖ ЖК 'FREEDOM RESIDENCE'",
             text: "Индивидуальный офис продаж ЖК 'Freedom Residence' создан для максимального удобства покупателей и экономии их времени: всего за один визит можно...",
             data: "12 марта 2021"
@@ -167,6 +168,7 @@ export default function Home() {
             <News news={news} />
             <Video videoGallery={videoGallery} />
             <Instagram post={instagram} />
+            <Feedback />
             <Footer />
         </>
     )

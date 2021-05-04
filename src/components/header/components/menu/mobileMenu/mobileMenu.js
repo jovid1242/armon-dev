@@ -84,7 +84,7 @@ export default function MobileMenu() {
                             {/* <SubMenu link={projects} /> */}
                         </li>
                         <li className="nav-item delay-3"><Link className="nav-link" to="/sales-offices">Офисы продаж</Link></li>
-                        <li className="nav-item delay-4"><Link className="nav-link" to="/sales-offices">Контакты</Link></li>
+                        <li className="nav-item delay-4"><Link className="nav-link" to="/contacts">Контакты</Link></li>
                         {/* <li className="nav-item delay-5"><a className="nav-link" href="#">Связаться с нами</a></li> */}
                     </ul>
 

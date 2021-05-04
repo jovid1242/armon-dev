@@ -21,7 +21,7 @@ export default function Menu() {
                         <SubMenu />
                     </li>
                     <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link></li>
-                    <li><Link to="/sales-offices" className="links-headers">Контакты</Link></li>
+                    <li><Link to="/contacts" className="links-headers">Контакты</Link></li>
                 </ul>
                 <div className="header-icon ml-3">
                     <a href="tel:++992907229000">

@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import Main from '../components/news-main/Index'
+import Pagination from '../components/pagination/Index'
+
+import http from '../http'
 
 export default function News() {
+
+    const [pagePost, setPagePost] = useState(1)
+    const [post, setPost] = useState(null)
+    useEffect(() => {
+        http.get(`get_news?page=${pagePost}`)
+            .then((response) => {
+                setPost(response.data)
+            })
+    }, [pagePost])
+    console.log(post);
     const news = [
         {
             id: "1",
@@ -42,10 +55,16 @@ export default function News() {
             date: "12 марта 2021"
         }
     ]
+
+    const onUpdateCurrentPage = page => {
+        setPagePost(page)
+        console.log('async update', page);
+    }
     return (
         <div>
             <Header header={false} />
             <Main news={news} />
+            <Pagination total={6} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} />
             <Footer />
         </div>
     )

@@ -12,6 +12,10 @@ export default function Index(props) {
                 centered
             >
                 <Modal.Body>
+                    <p className="text-center text__modal">ЗАКАЗАТЬ ЗВОНОК</p>
+                    <div className="under__modal-text d-flex justify-content-center">
+                        <div className="under__text"></div>
+                    </div>
                     <p className="text-center text__modal">Оставьте свои контакты и наши консультанты свяжутся с вами</p>
                     <Form>
                         <Form.Group controlId="formBasicName">
@@ -20,7 +24,9 @@ export default function Index(props) {
                         <Form.Group controlId="formBasicPhone">
                             <Form.Control type="phone" placeholder="Телефон" />
                         </Form.Group>
-                        <input class="btn btn-primary modal__btn d-flex justify-content-center" type="submit" value="Отправить" />
+                        <div className="modal__button">
+                            <input class="btn btn-primary modal__btn d-flex justify-content-center" type="submit" value="Отправить" />
+                        </div>
                     </Form>
                 </Modal.Body>
             </Modal>
