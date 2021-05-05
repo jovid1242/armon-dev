@@ -135,7 +135,7 @@ export default function Footer() {
                                     </div>
                                     <div className="">
                                         <ul className="info-txt">
-                                            <li><p className="d-flex justify-content-center">+992 900-00-00-00</p></li>
+                                            <li><p className="d-flex justify-content-center">+992 98-722-90-00</p></li>
                                             <li><p className="d-flex justify-content-center">info@armon.tj</p></li>
                                         </ul>
                                     </div>
