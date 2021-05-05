@@ -13,6 +13,32 @@
     color: #fff;
 }
 
+.success {
+    font-family: Montserrat,
+        serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.alert__paginate {
+    font-family: Montserrat,
+        serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
 .modal-content {
     background-color: #383D45 !important;
     outline: none !important;
