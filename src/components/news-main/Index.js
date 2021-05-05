@@ -25,7 +25,7 @@ export default function Index({ news }) {
                     </div>
                     <div className="row">
                         {
-                            news.map((el, index) => {
+                            news?.map((el, index) => {
                                 return (
                                     <div className="col-lg-4 col-md-6" key={index}>
                                         <Link to={`/news/${el.id}`}>
@@ -34,10 +34,10 @@ export default function Index({ news }) {
                                                     <p>{el.title}</p>
                                                 </div>
                                                 <div className="news__card-text">
-                                                    <p>{el.text.substr(0, 85) + '...'}</p>
+                                                    <p>{el.text.substr(0, 70) + '...'}</p>
                                                 </div>
                                                 <div className="news__card-date">
-                                                    <p className="news-dates">{el.date}</p>
+                                                    <p className="news-dates">10 марта 2021</p>
                                                 </div>
                                             </div>
                                         </Link>

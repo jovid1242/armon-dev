@@ -9,14 +9,15 @@ import http from '../http'
 export default function News() {
 
     const [pagePost, setPagePost] = useState(1)
+    const [pagTotal, setPagTotal] = useState()
     const [post, setPost] = useState(null)
     useEffect(() => {
         http.get(`get_news?page=${pagePost}`)
             .then((response) => {
-                setPost(response.data)
+                setPost(response.data.news)
+                setPagTotal(response.data.count)
             })
     }, [pagePost])
-    console.log(post);
     const news = [
         {
             id: "1",
@@ -56,15 +57,15 @@ export default function News() {
         }
     ]
 
-    const onUpdateCurrentPage = page => {
-        setPagePost(page)
+    const onUpdateCurrentPage = async (page) => {
+        await setPagePost(page)
         console.log('async update', page);
     }
     return (
         <div>
             <Header header={false} />
-            <Main news={news} />
-            <Pagination total={3} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} />
+            <Main news={post} />
+            <Pagination total={pagTotal} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} />
             <Footer />
         </div>
     )
