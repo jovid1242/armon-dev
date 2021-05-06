@@ -72,19 +72,19 @@ export default function MobileMenu() {
                 <div className="p-5">
                     <ul className="nav flex-column">
                         <li className="nav-item delay-1">
-                            <Link className="nav-link" to="/about" >О нас
+                            <Link className="nav-link" onClick={() => toggle()} to="/about" >О нас
                             {/* <div className="dropdown-toggle"></div> */}
                             </Link>
                             {/* <SubMenu link={about} /> */}
                         </li>
                         <li className="nav-item delay-2 ">
-                            <Link className="nav-link" to="/sales-offices" >Проекты
+                            <Link className="nav-link" onClick={() => toggle()} to="/sales-offices" >Проекты
                             {/* <div className="dropdown-toggle"></div> */}
                             </Link>
                             {/* <SubMenu link={projects} /> */}
                         </li>
-                        <li className="nav-item delay-3"><Link className="nav-link" to="/sales-offices">Офисы продаж</Link></li>
-                        <li className="nav-item delay-4"><Link className="nav-link" to="/contacts">Контакты</Link></li>
+                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/sales-offices">Офисы продаж</Link></li>
+                        <li className="nav-item delay-4"><Link className="nav-link" onClick={() => toggle()} to="/contacts">Контакты</Link></li>
                         {/* <li className="nav-item delay-5"><a className="nav-link" href="#">Связаться с нами</a></li> */}
                     </ul>
 

@@ -15,10 +15,6 @@
     align-items: center;
 }
 
-.under-footer__logo img {
-    width: 210px;
-}
-
 .phone-background {
     line-height: 5px;
     font-style: normal;
@@ -201,7 +197,9 @@
     }
 } */
 
-
+.under-footer__logo img {
+    max-width: 210px;
+}
 @media (max-width: 1024px) {
     .footer__logo img {
         object-fit: cover;
