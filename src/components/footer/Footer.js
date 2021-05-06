@@ -29,8 +29,8 @@ export default function Footer() {
                                         </a>
                                     </div>
                                     <div className="footer-address footer-address_margi d-flex flex-column">
-                                        <a href="tel:+992900000000" className="footer-address__text footer-address__text_bott">
-                                            +992 900-00-00-00
+                                        <a href="tel:+992987229000" className="footer-address__text footer-address__text_bott">
+                                            +992 98-722-90-00
                                         </a>
                                         <a href="#" className="footer-address__text">
                                             info@armon.tj
