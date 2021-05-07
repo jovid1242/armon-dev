@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Moment from 'react-moment';
+import 'moment-timezone';
+import 'moment/locale/ru';
 import './Index.css'
 
 export default function Index({ news }) {
@@ -37,7 +40,7 @@ export default function Index({ news }) {
                                                     <p>{el.text.substr(0, 70) + '...'}</p>
                                                 </div>
                                                 <div className="news__card-date">
-                                                    <p className="news-dates">10 марта 2021</p>
+                                                    <p className="news-dates"><Moment format="LL">{el.date}</Moment></p>
                                                 </div>
                                             </div>
                                         </Link>

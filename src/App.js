@@ -1,7 +1,6 @@
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top'
-
 import Home from './pages/Home';
 import About from './pages/About';
 import SalesOffices from './pages/SalesOffices'

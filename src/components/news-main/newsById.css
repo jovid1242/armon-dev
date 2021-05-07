@@ -39,6 +39,11 @@
     color: #2B2B2B;
 }
 
+.news__text-address a {
+    text-decoration: none !;
+    color: #2B2B2B !important;
+}
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .news__img img {
         max-width: 100%;

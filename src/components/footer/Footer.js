@@ -170,13 +170,6 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="basement ">
-                            <ul>
-                                <li><span className="d-flex justify-content-center">All rights reserved by</span></li>
-                                <li> <span className="d-flex justify-content-center">«Armon Development»</span></li>
-                                <li><a href="#"><img src={boboLogo} alt="Logotype" /></a></li>
-                            </ul>
-                        </div> */}
                     </div>
                 </div>
             </div>

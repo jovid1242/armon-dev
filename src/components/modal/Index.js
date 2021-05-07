@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, Form } from 'react-bootstrap';
+import { Modal, Form, Toast } from 'react-bootstrap';
 import axios from 'axios'
 import FormData from 'form-data'
 import validation from './validateModal'
@@ -8,6 +8,7 @@ import './Index.css'
 
 export default function Index(props) {
     const [validetAlert, setValidetAlert] = useState(null)
+    const [show, setShow] = useState(false)
     const [res, setRes] = useState(null)
     const [form, setForm] = useState({
         name: null,
@@ -45,7 +46,8 @@ export default function Index(props) {
     const valideModal = () => {
         const err = validation.modalValidation(form)
         if (err.error) {
-            setValidetAlert(err.message);
+            setValidetAlert(err.message)
+            setShow(true)
             return false
         }
         return true
@@ -61,8 +63,14 @@ export default function Index(props) {
             >
                 <Modal.Body>
                     <p className="text-center text__modal">ЗАКАЗАТЬ ЗВОНОК</p>
-                    {res === null ? "" : ReactHtmlParser(res)}
-                    {validetAlert === null ? "" : <p className="alert__paginate">{validetAlert}</p>}
+                    {res === null ? "" : <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+                        <Toast.Body>ReactHtmlParser(res)</Toast.Body>
+                    </Toast>}
+
+                    {/* {validetAlert === null ? "" : <p className="alert__paginate">{validetAlert}</p>} */}
+                    <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+                        <Toast.Body>{validetAlert}</Toast.Body>
+                    </Toast>
                     <div className="under__modal-text d-flex justify-content-center">
                         <div className="under__text"></div>
                     </div>

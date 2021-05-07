@@ -44,6 +44,15 @@
     outline: none !important;
 }
 
+.toast {
+    max-width: 100% !important;
+}
+
+.toast-body {
+    display: flex !important;
+    justify-content: center !important;
+}
+
 .modal__button {
     width: 100%;
     display: flex;
