@@ -63,10 +63,7 @@ export default function Index(props) {
             >
                 <Modal.Body>
                     <p className="text-center text__modal">ЗАКАЗАТЬ ЗВОНОК</p>
-                    {res === null ? "" : <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
-                        <Toast.Body>ReactHtmlParser(res)</Toast.Body>
-                    </Toast>}
-
+                    {res === null ? "" : ReactHtmlParser(res)}
                     {/* {validetAlert === null ? "" : <p className="alert__paginate">{validetAlert}</p>} */}
                     <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
                         <Toast.Body>{validetAlert}</Toast.Body>

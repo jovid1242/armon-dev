@@ -8,7 +8,6 @@ export default function Index() {
         <>
             <div className="footer-pages">
                 <div className="container">
-
                     <div className="m-links">
                         <div className="l-center d-flex justify-content-center">
                             <span><Link to="/about">О нас</Link></span>
@@ -24,8 +23,9 @@ export default function Index() {
                             <div className="links">
                                 <span ><Link to="/about">О нас</Link></span>
                                 <span ><Link to="/sales-offices">Проекты</Link></span>
-                                <span ><Link to="/sales-offices">В продаже</Link></span>
-                                <span ><Link to="/sales-offices">Контакты</Link></span>
+                                <span ><Link to="/sales-offices">Офисы продаж</Link></span>
+                                <span ><Link to="/contacts">Контакты</Link></span>
+                                {/* В продаже */}
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-12">
