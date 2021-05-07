@@ -32,7 +32,7 @@ export default function Footer() {
                                         <a href="tel:+992987229000" className="footer-address__text footer-address__text_bott">
                                             +992 98-722-90-00
                                         </a>
-                                        <a href="#" className="footer-address__text">
+                                        <a href="mailto:info@armon.tj" className="footer-address__text">
                                             info@armon.tj
                                         </a>
                                     </div>
@@ -130,13 +130,13 @@ export default function Footer() {
                                         <ul className="info-txt">
                                             <li><p className="d-flex justify-content-center display-4">Таджикистан, Душанбе</p></li>
                                             <li><p className="d-flex justify-content-center display-4">Испечак 2, М14</p></li>
-                                            <li><a href="https://yandex.ru/maps/?um=constructor%3A1fcbdc3686a4e97f9384d36101b6e07b41f00107cfe432bd03646fae5c5312b9&source=constructorLink" className="d-flex justify-content-center"><u>показать на карте</u></a></li>
+                                            <li><a href="https://yandex.ru/maps/-/CCU4aDBiGC" className="d-flex justify-content-center"><u>показать на карте</u></a></li>
                                         </ul>
                                     </div>
                                     <div className="">
                                         <ul className="info-txt">
-                                            <li><p className="d-flex justify-content-center">+992 98-722-90-00</p></li>
-                                            <li><p className="d-flex justify-content-center">info@armon.tj</p></li>
+                                            <li><p className="d-flex justify-content-center"><a href="tel:+992987229000"> +992 98-722-90-00</a></p></li>
+                                            <li><p className="d-flex justify-content-center"><a href="mailto:info@armon.tj">info@armon.tj</a></p></li>
                                         </ul>
                                     </div>
                                 </div>

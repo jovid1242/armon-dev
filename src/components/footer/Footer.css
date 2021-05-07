@@ -84,6 +84,12 @@
     /* padding: 1rem; */
 }
 
+.footer-address .footer-address__text_bott {
+    text-decoration: none !important;
+    color: #BFBFBF !important;
+    outline: none;
+}
+
 .substr p {
     color: #BFBFBF;
 }
@@ -113,6 +119,11 @@
 
 .info-txt li {
     list-style: none;
+}
+
+.info-txt li p a {
+    text-decoration: none !important;
+    color: #BFBFBF !important;
 }
 
 .info-txt li .phone-color {
