@@ -20,7 +20,7 @@ export default function Index() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-8">
+                        <div className="col-md-8 full_links">
                             <div className="links">
                                 <span ><Link to="/about">О нас</Link></span>
                                 <span ><Link to="/sales-offices">Проекты</Link></span>
@@ -28,7 +28,7 @@ export default function Index() {
                                 <span ><Link to="/sales-offices">Контакты</Link></span>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-lg-4 col-md-12">
                             <div className="row">
                                 <div className="col-12">
                                     <div className="icons-text">

@@ -23,6 +23,7 @@ import inst2 from '../assets/img/inst2.jpg'
 import inst3 from '../assets/img/inst3.jpg'
 
 export default function Home() {
+
     // useEffect(() => {
     //     http.get('/show')
     //         .then((response) => {

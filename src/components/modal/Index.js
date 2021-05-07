@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, Form, InputGroup, Col } from 'react-bootstrap';
+import { Modal, Form } from 'react-bootstrap';
 import axios from 'axios'
 import FormData from 'form-data'
 import validation from './validateModal'
@@ -68,28 +68,6 @@ export default function Index(props) {
                     </div>
                     <p className="text-center text__modal">Оставьте свои контакты и наши консультанты свяжутся с вами</p>
                     <Form action="#" onSubmit={submitForm}>
-                        {/* <Form.Group controlId="validationCustom01">
-                            <Form.Control
-                                required
-                                name="name"
-                                onChange={handleModalInput}
-                                type="text"
-                                placeholder="Ваше имя"
-                                defaultValue=""
-                            />
-                            <Form.Control.Feedback></Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group controlId="validationCustom02">
-                            <Form.Control
-                                required
-                                name="phone"
-                                onChange={handleModalInput}
-                                type="text"
-                                placeholder="Телефон"
-                                defaultValue=""
-                            />
-                            <Form.Control.Feedback></Form.Control.Feedback>
-                        </Form.Group> */}
                         <Form.Group controlId="formBasicName">
                             <Form.Control
                                 name="name"

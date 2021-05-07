@@ -78,7 +78,7 @@ export default function MobileMenu() {
                             {/* <SubMenu link={about} /> */}
                         </li>
                         <li className="nav-item delay-2 ">
-                            <Link className="nav-link" onClick={() => toggle()} to="/sales-offices" >Проекты
+                            <Link className="nav-link" to="/sales-offices">Проекты
                             {/* <div className="dropdown-toggle"></div> */}
                             </Link>
                             {/* <SubMenu link={projects} /> */}

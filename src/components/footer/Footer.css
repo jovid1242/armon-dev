@@ -200,6 +200,7 @@
 .under-footer__logo img {
     max-width: 210px;
 }
+
 @media (max-width: 1024px) {
     .footer__logo img {
         object-fit: cover;
@@ -282,6 +283,10 @@
     }
 
     .links {
+        display: none;
+    }
+
+    .full_links {
         display: none;
     }
 

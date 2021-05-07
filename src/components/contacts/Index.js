@@ -40,19 +40,19 @@ export default function Index() {
                                         <li>
                                             <img src={phonealt} className="info__img" alt="" />
                                             <p className="info__phone-text">
-                                                +992 98-722-90-00
+                                                <a href="tel:+992987229000"> +992 98-722-90-00</a>
                                             </p>
                                         </li>
                                         <li>
                                             <img src={phonealt} className="info__img" alt="" />
                                             <p className="info__phone-text">
-                                                +992 90-722-90-00
+                                                <a href="tel:+992987229000"> +992 98-722-90-00</a>
                                             </p>
                                         </li>
                                         <li>
                                             <img src={emailsvg} className="info__img" alt="" />
                                             <p className="info__phone-text">
-                                                info@armon.tj
+                                                <a href="mailto:info@armon.tj">info@armon.tj</a>
                                             </p>
                                         </li>
                                     </ul>
@@ -61,10 +61,10 @@ export default function Index() {
                                     <p>Основной офис продаж находится по адресу:</p>
                                 </div>
                                 <div className="info__address-text">
-                                    <img src={pindrop} className="info__img" alt="" />
+                                    <img src={pindrop} className="info__img img__adress" alt="" />
                                     <p>
-                                        г. Душанбе, Испечак М2-14
-                                </p>
+                                        <a href="https://yandex.ru/maps/-/CCU4aDBiGC">г. Душанбе, Испечак М2-14</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
