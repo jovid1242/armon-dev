@@ -57,6 +57,11 @@
     color: #2B2B2B;
 }
 
+.card__text a {
+    text-decoration: none !important;
+    color: #2B2B2B !important;
+}
+
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
     .ofices-section {

@@ -1,7 +1,7 @@
 .about-section1 {
     background: url(../../assets/img/чап.svg) 1% 7.4% repeat-y,
         url(../../assets/img/рост.svg) 99% 7.4% repeat-y;
-    padding: 100px 0 200px;
+    padding: 100px 0 0;
     font-size: 18px;
     background-size: 83px;
 }
