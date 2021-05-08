@@ -13,7 +13,7 @@ export default function Index() {
                             <p>Оставьте свои контакты и наши консультанты свяжутся с вами</p>
                         </div>
                         <div className="feedback__button">
-                            <input class="btn btn-primary feedback__btn" onClick={() => setModalShow(true)} type="submit" value="Оставить заявок" />
+                            <input className="btn btn-primary feedback__btn" onClick={() => setModalShow(true)} type="submit" value="Оставить заявок" />
                         </div>
                     </div> */}
 

@@ -259,7 +259,7 @@
     }
 
     .mobile__under-footer-img {
-        padding-right: 30%;
+        padding-right: 31% !important;
     }
 
     .icons {

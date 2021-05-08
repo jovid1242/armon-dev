@@ -88,7 +88,7 @@ export default function Index(props) {
                                 placeholder="Телефон" />
                         </Form.Group>
                         <div className="modal__button">
-                            <input class="btn btn-primary modal__btn d-flex justify-content-center" type="submit" value="Отправить" />
+                            <input className="btn btn-primary modal__btn d-flex justify-content-center" type="submit" value="Отправить" />
                         </div>
                     </Form>
                 </Modal.Body>
