@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Modal from '../modal/Index'
+
 import './Index.css'
 
 import btnsvg from '../../assets/img/t-inbtn.svg'
 import imgtin from '../../assets/img/t-in.png'
 
 export default function Index() {
+    const [modalShow, setModalShow] = useState(false);
     return (
         <>
+            <Modal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
             <div className="ofices-section">
                 <div className="container">
                     <div className="about-wrapper pc__about-wrapper about-wrapper_center mt-4 mb-4">
@@ -40,7 +47,7 @@ export default function Index() {
                                         в данной опции в качестве оплаты принимается автомобиль/квартира.</p>
                                     </div>
                                     <div className="tradein__btn">
-                                        <button>
+                                        <button onClick={() => setModalShow(true)}>
                                             <img src={btnsvg} alt="t-inbtn" />
                                             Оставить заявку
                                         </button>
