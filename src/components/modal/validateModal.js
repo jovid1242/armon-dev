@@ -6,11 +6,11 @@ const validate = {
         if (!state.phone) {
             return { error: true, message: 'Запольните поле телефона' };
         }
-        const re = /^((992|\+992)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$/;
+        const re = /^((992)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$/;
         if (!re.test(state.phone)) {
             return { error: true, message: 'Неверный номер телефон!! Пример: +992XXXXXXXXX' }
         }
-        if (state.phone.length < 13) {
+        if (state.phone.length <= 13) {
             return { error: true, message: 'Номер телефон дольжен содержать минимум 13 символов ' };
         }
         if (state.phone.length > 13) {
