@@ -1,5 +1,6 @@
 .modal-lg {
     max-width: 450px !important;
+    z-index: 999999 !important;
 }
 
 .text__modal {

@@ -67,7 +67,7 @@ export default function Index(props) {
                     <p className="text-center text__modal">ЗАДАТЬ ВОПРОС</p>
                     {res === null ? "" : ReactHtmlParser(res)}
                     {/* {validetAlert === null ? "" : <p className="alert__paginate">{validetAlert}</p>} */}
-                    <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
+                    <Toast onClose={() => setShow(false)} show={show} delay={30000} autohide>
                         <Toast.Body>{validetAlert}</Toast.Body>
                     </Toast>
                     <div className="under__modal-text d-flex justify-content-center">

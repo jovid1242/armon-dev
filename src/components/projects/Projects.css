@@ -277,6 +277,17 @@
     }
 }
 
+@media (max-width: 465px) {
+    .projects-header {
+        margin-left: 0;
+    }
+
+    .project-card {
+        margin: 10px !important;
+        width: 100% !important;
+    }
+}
+
 @media (max-width: 425px) {
     .projects-header {
         margin-left: 0;
