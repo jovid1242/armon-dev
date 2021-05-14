@@ -21,7 +21,6 @@
     line-height: 34px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
     /* Red */
 
     color: #EB5757;
@@ -58,7 +57,7 @@
 }
 
 .payment__btn button img {
-    padding-right: 10px;
+    margin-right: 10px;
 }
 
 .img-wrapper {
@@ -68,6 +67,10 @@
 .img-wrapper img {
     max-width: 100%;
     object-fit: cover;
+}
+
+.tradein-wrapper {
+    margin-top: 1rem;
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
@@ -86,6 +89,9 @@
         background-size: 130px;
     }
 
+    .tradein__text p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 1180px) and (max-width: 1280px) {
@@ -95,6 +101,9 @@
         background-size: 90px;
     }
 
+    .tradein__text p {
+        font-size: 11px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

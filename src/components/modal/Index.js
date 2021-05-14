@@ -61,8 +61,10 @@ export default function Index(props) {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
             >
+                <Modal.Header closeButton>
+                </Modal.Header>
                 <Modal.Body>
-                    <p className="text-center text__modal">ЗАКАЗАТЬ ЗВОНОК</p>
+                    <p className="text-center text__modal">ЗАДАТЬ ВОПРОС</p>
                     {res === null ? "" : ReactHtmlParser(res)}
                     {/* {validetAlert === null ? "" : <p className="alert__paginate">{validetAlert}</p>} */}
                     <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
@@ -71,21 +73,25 @@ export default function Index(props) {
                     <div className="under__modal-text d-flex justify-content-center">
                         <div className="under__text"></div>
                     </div>
-                    <p className="text-center text__modal">Оставьте свои контакты и наши консультанты свяжутся с вами</p>
+                    <p className="text-center text__modal-fdb">Оставьте свои контакты и наши консультанты свяжутся с вами</p>
                     <Form action="#" onSubmit={submitForm}>
+                        <label>ФИО*</label>
                         <Form.Group controlId="formBasicName">
                             <Form.Control
                                 name="name"
+                                className="input__modal"
                                 onChange={handleModalInput}
                                 type="text"
-                                placeholder="Ваше имя" />
+                            />
                         </Form.Group>
+                        <label>e-mail*</label>
                         <Form.Group controlId="formBasicPhone">
                             <Form.Control
                                 name="phone"
+                                className="input__modal"
                                 onChange={handleModalInput}
                                 type="phone"
-                                placeholder="Телефон" />
+                            />
                         </Form.Group>
                         <div className="modal__button">
                             <input className="btn btn-primary modal__btn d-flex justify-content-center" type="submit" value="Отправить" />

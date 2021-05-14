@@ -8,7 +8,7 @@ import './Footer.css'
 export default function Footer() {
     return (
         <>
-            <div className="footer overflow-hidden">
+            <div className="footer overflow-hidden mt-4">
                 <div className="footer-main">
                     <Pages />
                     <div className="under-text"></div>

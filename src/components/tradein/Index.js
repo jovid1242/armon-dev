@@ -19,18 +19,18 @@ export default function Index() {
                 <div className="container">
                     <div className="about-wrapper pc__about-wrapper about-wrapper_center mt-4 mb-4">
                         <h2 className="about__title">
-                            TRADEE-IN
+                            TRADE-IN
                         </h2>
                         <p className="about__text">
-                            <Link to="/">Главная</Link> | TRADEE-IN
+                            <Link to="/">Главная</Link> | TRADE-IN
                         </p>
                     </div>
                     <div className="mobile__about-wrapper about-wrapper_center mt-4 mb-">
                         <p className="about__text" id="textEnd">
-                            <Link to="/">Главная</Link> | TRADEE-IN
+                            <Link to="/">Главная</Link> | TRADE-IN
                         </p>
                         <h2 className="about__title" id="textStart">
-                            TRADEE-IN
+                            TRADE-IN
                         </h2>
                     </div>
                     <div className="tradein-main">

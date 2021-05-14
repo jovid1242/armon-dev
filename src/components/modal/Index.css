@@ -1,16 +1,56 @@
 .modal-lg {
-    max-width: 500px !important;
+    max-width: 450px !important;
 }
 
 .text__modal {
-    font-family: Montserrat,
-        serif;
+    font-family: Montserrat;
     font-style: normal;
-    font-weight: 100;
-    font-size: 22px;
-    line-height: 27px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
     text-align: center;
-    color: #fff;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+}
+
+.text__modal-fdb {
+    padding: 0px 40px 0 40px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+}
+
+.modal-lg .modal-body {
+    margin-top: -1.7rem !important;
+}
+
+.modal-lg .modal-header .close {
+    opacity: 1 !important;
+    padding: 0 !important;
+    width: 30px !important;
+    margin: 0 0 0 auto !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    border: 2px solid #fff !important;
+    color: #FFFFFF !important;
+    font-weight: 100 !important;
+}
+
+.modal-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    /* padding: 0 !important; */
+    border-bottom: none !important;
+    border-top-left-radius: none !important;
+    border-top-right-radius: none !important;
 }
 
 .success {
@@ -40,8 +80,33 @@
 }
 
 .modal-content {
+    border-radius: 25px !important;
     background-color: #383D45 !important;
     outline: none !important;
+}
+
+.form-group {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.modal-lg label {
+    display: flex !important;
+    justify-content: center !important;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+}
+
+.input__modal {
+    border-radius: 29px !important;
+    width: 60% !important;
 }
 
 .toast {
@@ -60,12 +125,13 @@
 }
 
 .modal__btn {
-    background: #0273ba !important;
+    background: #6296CF !important;
     outline: none !important;
     border-radius: unset !important;
     border: none !important;
-    border-radius: 3px !important;
-
+    border-radius: 20px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
 }
 
 .under__text-modal {}

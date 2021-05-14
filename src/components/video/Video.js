@@ -38,7 +38,7 @@ export default function Video({ videoGallery }) {
                                 <ReactPlayer
                                     playing={false}
                                     controls={true}
-                                    className='react-player react-yt-pl'
+                                    className='react-player react-yt-pl overflow-hideen'
                                     url={urlModal}
                                     width='100%'
                                     height='400px'

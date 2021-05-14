@@ -46,7 +46,7 @@ export default function Index() {
                                         <li>
                                             <img src={phonealt} className="info__img" alt="" />
                                             <p className="info__phone-text">
-                                                <a href="tel:+992987229000"> +992 98-722-90-00</a>
+                                                <a href="tel:+9921100200000"> +992 11-022-00-00</a>
                                             </p>
                                         </li>
                                         <li>

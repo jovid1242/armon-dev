@@ -114,7 +114,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.5px;
 
     /* Black Color Armon */
@@ -122,6 +122,11 @@
     color: #080B11;
 
 }
+
+.payment-wrapper {
+    margin-top: 1.5rem;
+}
+
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
     .payment-section {
@@ -148,6 +153,9 @@
         background-size: 90px;
     }
 
+    .payment__text p {
+        font-size: 13px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -178,6 +186,10 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+    .payment-wrapper {
+        margin-top: 0;
+    }
+
     .payment__btn-mt {
         margin-top: 20px;
     }

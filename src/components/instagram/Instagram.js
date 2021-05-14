@@ -28,7 +28,7 @@ export default function Instagram({ post }) {
             <div className="instagram">
                 <div className="container">
                     <div className="instagram-projects-header">
-                        <p>инстаграм</p>
+                        <p>instagram</p>
                         <div className="under-test"></div>
                         <div className="projects-inner">
                             <span>Будьте в курсе новостей</span>

@@ -22,7 +22,7 @@ export default function SubMenu({ projectsLink }) {
                     </li>
                     <li>
                         <a href="https://armon.tj/freedom/">
-                            • Freedom Residencee
+                            • Freedom Residence
                         </a>
                     </li>
                     <li>

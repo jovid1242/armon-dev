@@ -49,8 +49,8 @@ export default function Index({ projects }) {
                                         <img src={freedom} alt="" />
                                     </a>
                                 </div>
-                                <p className="card__title-text"><a href="https://armon.tj/freedom/">Freedom Residencee</a></p>
-                                <p className="card__text">Адреc:<br />Душанбе, Испечак М2-14</p>
+                                <p className="card__title-text"><a href="https://armon.tj/freedom/">Freedom Residence</a></p>
+                                <p className="card__text">Адреc:<br />ул. Н. Махсум 156 (102-й мкр)</p>
                                 <p className="card__text">Наш номер:<br /><a href="tel:+992987229000">+992 987 22 9000</a></p>
                                 <p className="card__text">Рабочее время:<br /> Пон-Суб: 08:00–19:00, Вcк: 10:00-17:00 <br />Наша почта: <a href="mailto:info@armon.tj">sales@armon.tj</a></p>
                             </div>
