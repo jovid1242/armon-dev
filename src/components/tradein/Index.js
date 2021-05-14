@@ -48,7 +48,7 @@ export default function Index() {
                                     </div>
                                     <div className="tradein__btn">
                                         <button onClick={() => setModalShow(true)}>
-                                            <img src={btnsvg} alt="t-inbtn" />
+                                            <img src={btnsvg} className="tradein_btn-svg" alt="t-inbtn" />
                                             Оставить заявку
                                         </button>
                                     </div>

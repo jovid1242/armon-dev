@@ -38,7 +38,7 @@ export default function Banner() {
                     </div>
                     <div className="col-4">
                         <div className="wrapper wrapper_orange d-flex align-items-center" onClick={() => setModalShow(true)} >
-                            <div className="wrapper-inner" style={{ padding: "81px 0 81px 50px" }}>
+                            <div className="wrapper-inner" style={{ padding: "81px 0 81px 45px" }}>
                                 <h4 className="wrapper-inner__title" style={{ fontSize: "36px", fontWeight: "bold", lineHeight: "19px" }}>
                                     Получить
                                 </h4>

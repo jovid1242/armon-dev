@@ -5,13 +5,15 @@
 .text__modal {
     font-family: Montserrat;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 29px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 34px;
     text-align: center;
     letter-spacing: -1px;
+    text-transform: uppercase;
 
     color: #FFFFFF;
+
 }
 
 .text__modal-fdb {
@@ -95,8 +97,8 @@
     justify-content: center !important;
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: normal;
+    font-size: 16px;
     line-height: 29px;
     text-align: center;
     letter-spacing: -1px;
@@ -122,6 +124,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.modal__button input {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
 }
 
 .modal__btn {
