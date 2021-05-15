@@ -74,7 +74,7 @@
 }
 
 .main svg {
-    padding: 0 10px 10px;
+    /* padding: 0 10px 10px; */
 }
 
 .substr {
@@ -85,6 +85,7 @@
     text-decoration: none !important;
     color: #BFBFBF !important;
     outline: none;
+    font-size: 14px;
 }
 
 .substr p {
@@ -164,6 +165,7 @@
 
 .footer-address__text_marg {
     margin-bottom: 0 !important;
+    font-size: 14px;
 }
 
 .footer-address__text_bott {
@@ -173,6 +175,7 @@
 .footer__logo img {
     object-fit: cover;
     width: 216px;
+    margin-bottom: 6px;
 }
 
 .mobile-footer {
@@ -191,7 +194,7 @@
 .footer-bttm-wrap {
     margin-top: 40px;
     padding: 8px 0;
-    background: #2C2A2F;
+    background: #000;
 }
 
 .footer-bttm-wrap p {
@@ -343,7 +346,7 @@
     }
 
     .f-logo svg {
-        padding: 0 10px 10px;
+        padding: 10px 10px 10px;
     }
 
     .armon-info {
@@ -390,6 +393,10 @@
 
     .input-group {
         margin: 0 auto;
+    }
+
+    .footer-bttm-wrap {
+        margin-top: 0;
     }
 
     /* .info li p {

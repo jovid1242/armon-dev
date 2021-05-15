@@ -38,7 +38,7 @@ export default function Index() {
                             <div className="col-lg-6 col-md-6">
                                 <div className="tradein-wrapper">
                                     <div className="tradein__text-title">
-                                        <p>Нужно оглавление</p>
+                                        <p>СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</p>
                                     </div>
                                     <div className="tradein__text">
                                         <p>Trade - in - схема не просто взаимозачётная, но и взаимовыгодная.

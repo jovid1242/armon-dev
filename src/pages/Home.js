@@ -25,7 +25,7 @@ import inst3 from '../assets/img/inst3.jpg'
 export default function Home() {
 
     // useEffect(() => {
-    //     http.get('/show')
+    //     http.get('/????')
     //         .then((response) => {
     //             console.log(response);
     //         })
