@@ -29,7 +29,7 @@ export default function Menu() {
     const aboutLink = [
         {
             url: "https://armon.tj/#/about",
-            text: "О нас"
+            text: "О компании"
         },
         {
             url: "https://armon.tj/#/news",
@@ -47,7 +47,7 @@ export default function Menu() {
                     <li><Link className="links-headers">О нас</Link>
                         <SubMenu projectsLink={aboutLink} />
                     </li>
-                    <li><Link to="#" className="links-headers">Проекты</Link>
+                    <li><Link to="/projects" className="links-headers">Проекты</Link>
                         <SubMenu projectsLink={projectsLink} />
                     </li>
                     <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link></li>

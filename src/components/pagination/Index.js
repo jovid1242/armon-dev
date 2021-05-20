@@ -6,7 +6,7 @@ import './Index.css'
 export default function Index({ total, currentPage, onChangeCurrentPage }) {
     let [currentX, setCurrentX] = useState(currentPage)
     const paginators = () => {
-        const data = [<button disabled={currentX === 1} className="paginate__btn" onClick={() => { prev() }}><img src={rightSvg} alt="rightSvg" /></button>]
+        const data = [<button disabled={currentX === 1} className={currentX !== 1 && "paginator-active"} onClick={() => { prev() }}><img src={rightSvg} alt="rightSvg" /></button>]
         for (let i = 1; i <= total; i++) {
             data.push(<li className={paginatorClassName(i)} onClick={() => { onCurrentPage(i) }}><button className="paginate__btn">{i}</button></li>)
         }

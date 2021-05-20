@@ -10,6 +10,7 @@ import NewsID from './pages/NewsID'
 import Career from './pages/Career'
 import TradeIn from './pages/Tradein'
 import Payment from './pages/Payment'
+import Projects from './pages/Projects'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/career" exact component={Career} />
           <Route path="/tradein" exact component={TradeIn} />
           <Route path="/payment" exact component={Payment} />
+          <Route path="/projects" exact component={Projects} />
         </ScrollToTop>
       </Router>
     </>

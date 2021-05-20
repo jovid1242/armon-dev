@@ -52,60 +52,60 @@ export default function SliderWeb({ slide }) {
         //     <div><SlideOne /></div>
         //     <div><SlideTwo /></div>
         // </Swiper> */}
-            <Carousel>
-                <Carousel.Item interval={4000} fade={false}>
+            <Carousel pause={false} fade style={{ animationDelay: "2.5s" }}>
+                <Carousel.Item interval={3000} pause={false}>
                     <img
                         className="d-block w-100"
                         src={slidew}
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 style={{ animationDelay: "3s" }} >Ispechak Residence</h3>
-                        <p style={{ animationDelay: "3s" }}>Рады представить Вам первый в Душанбе
+                        <h3 style={{ animationDelay: "2.5s" }} >Ispechak Residence</h3>
+                        <p style={{ animationDelay: "2s" }}>Рады представить Вам первый в Душанбе
                         продуманный архитектурный проект в
                         котором сочетаются красота и качество,
                     роскошь и уют, простота и обдуманность в деталях.</p>
-                        <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+                        <div className="slide__btn d-flex" style={{ animationDelay: "2s" }}>
                             <button>узнать подробнее</button>
                             <button onClick={() => setModalShow(true)}>оставить заявку</button>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={4000}>
+                <Carousel.Item interval={3000} pause={false}>
                     <img
                         className="d-block w-100"
                         src={slideww}
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3 style={{ animationDelay: "3s" }}>Freedom Residence</h3>
-                        <p style={{ animationDelay: "3s" }}>Рады представить Вам первый в Душанбе
+                        <h3 style={{ animationDelay: "2.5s" }}>Freedom Residence</h3>
+                        <p style={{ animationDelay: "2s" }}>Рады представить Вам первый в Душанбе
                         продуманный архитектурный проект в
                         котором сочетаются красота и качество,
                     роскошь и уют, простота и обдуманность в деталях.</p>
-                        <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+                        <div className="slide__btn d-flex" style={{ animationDelay: "2s" }}>
                             <button>узнать подробнее</button>
                             <button onClick={() => setModalShow(true)}>оставить заявку</button>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={4000}>
+                {/* <Carousel.Item interval={3000}>
                     <img
                         className="d-block w-100"
                         src={slideww}
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3 style={{ animationDelay: "3s" }}>Скоро начнем!</h3>
-                        <p style={{ animationDelay: "3s" }}> Уже совсем скоро! Следите за нашими обновлениями,
+                        <h3 style={{ animationDelay: "2s" }}>Скоро начнем!</h3>
+                        <p style={{ animationDelay: "2s" }}> Уже совсем скоро! Следите за нашими обновлениями,
                          чтобы быть в курсе самых последних новостей</p>
 
-                        <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+                        <div className="slide__btn d-flex" style={{ animationDelay: "2s" }}>
                             <button>узнать подробнее</button>
                             <button onClick={() => setModalShow(true)}>оставить заявку</button>
                         </div>
                     </Carousel.Caption>
-                </Carousel.Item>
+                </Carousel.Item> */}
             </Carousel>
             <Modal
                 show={modalShow}
