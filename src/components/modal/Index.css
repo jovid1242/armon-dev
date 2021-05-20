@@ -1,5 +1,5 @@
 .modal-lg {
-    max-width: 450px !important;
+    max-width: 400px !important;
     z-index: 999999 !important;
 }
 
@@ -109,7 +109,7 @@
 
 .input__modal {
     border-radius: 29px !important;
-    width: 60% !important;
+    width: 80% !important;
 }
 
 .toast {

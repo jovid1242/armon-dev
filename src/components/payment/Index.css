@@ -61,7 +61,7 @@
 }
 
 .payment__btn-mt {
-    margin-top: 100px;
+    margin-top: 15px;
 }
 
 .payment__btn button {
@@ -110,11 +110,25 @@
 
 }
 
+.percent__l p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    /* Blue Color Armon */
+
+    color: #0273BA;
+
+}
+
 .installment__text p {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.5px;
 
     /* Black Color Armon */

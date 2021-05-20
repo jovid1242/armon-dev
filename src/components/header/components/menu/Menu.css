@@ -44,10 +44,10 @@
 }
 
 .menu li a {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     display: block;
-    color: #F2F2F2;
+    color: #080B11;
     text-decoration: none;
     padding: 6px 12px;
     transition: all 0.3s ease-in-out 0s;
@@ -60,8 +60,7 @@
     background: #fff;
 }
 
-
-.menu li:hover .submenu__wrapper {
+.menu li:hover .submenu__trasparent-bg {
     display: block;
 }
 

@@ -6,9 +6,9 @@
     height: 50px !important;
 }
 
-.navbar-brand .logo-header-r {
+/* .navbar-brand .logo-header-r {
     display: none;
-}
+} */
 
 @media (max-width: 1920px) {
     .navbar-brand svg {

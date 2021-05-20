@@ -79,59 +79,22 @@ export default function Index() {
                                     <div className="row">
                                         <div className="col-lg-6 col-md-5">
                                             <div className="percent">
-                                                <p>50%</p>
+                                                <p>40%</p>
                                             </div>
                                             <div className="installment__text">
                                                 <p>
-                                                    взнос <br />
-                                                    Без скидки
+                                                    Беспроцентная рассрочка при первоначальном взносе от
                                                 </p>
                                             </div>
-                                            <div className="percent">
-                                                <p>6%</p>
-                                            </div>
-                                            <div className="installment__text">
-                                                <p>
-                                                    Надбавка, свыше 6<br />
-                                                    месяцев до СМР
-                                                </p>
-                                            </div>
-                                            <div className="percent">
-                                                <p>3%</p>
-                                            </div>
-                                            <div className="installment__text">
-                                                <p>
-                                                    Надбавка, до 6 месяцев<br />
-                                                    до СМР
-                                                </p>
-                                            </div>
+
                                         </div>
                                         <div className="col-lg-6 col-md-5">
-                                            <div className="percent">
-                                                <p>70%</p>
+                                            <div className="percent__l">
+                                                <p>Рассрочка через банк</p>
                                             </div>
                                             <div className="installment__text">
                                                 <p>
-                                                    взнос <br />
-                                                    Без скидки
-                                                </p>
-                                            </div>
-                                            <div className="percent">
-                                                <p>4%</p>
-                                            </div>
-                                            <div className="installment__text">
-                                                <p>
-                                                    Надбавка, свыше 6<br />
-                                                    месяцев до СМР
-                                                </p>
-                                            </div>
-                                            <div className="percent">
-                                                <p>2%</p>
-                                            </div>
-                                            <div className="installment__text">
-                                                <p>
-                                                    Надбавка, до 6 месяцев<br />
-                                                    до СМР
+                                                    банк, проценты и сроки оплаты выбираются покупателем самостоятельно
                                                 </p>
                                             </div>
                                         </div>

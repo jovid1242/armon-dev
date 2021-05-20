@@ -1,13 +1,20 @@
 .submenu__wrapper {
-    position: absolute;
-    top: 80px;
     width: 200px;
     background: #fff;
-    color: #080B11;
+    color: #191a1b;
     opacity: 0.98;
     border-radius: 6px;
     box-shadow: 0 0 30px rgb(0 0 0 / 20%);
     z-index: 999;
+}
+
+.submenu__trasparent-bg {
+    position: absolute;
+    top: 60px;
+    width: 70px;
+    height: 250px;
+    padding-top: 22px;
+    z-index: 5;
     display: none;
 }
 

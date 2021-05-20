@@ -13,18 +13,18 @@ export default function Index() {
                 <div className="container">
                     <div className="about-wrapper pc__about-wrapper about-wrapper_center mt-4 mb-4">
                         <h2 className="about__title">
-                            О компании
+                            Карьера
                         </h2>
                         <p className="about__text">
-                            <Link to="/">Главная</Link> | О компании
+                            <Link to="/">Главная</Link> | Карьера
                         </p>
                     </div>
                     <div className="mobile__about-wrapper about-wrapper_center mt-4 ">
                         <p className="about__text" id="textEnd">
-                            <Link to="/">Главная</Link> | О компании
+                            <Link to="/">Главная</Link> | Карьера
                         </p>
                         <h2 className="about__title" id="textStart">
-                            О компании
+                            Карьера
                         </h2>
                     </div>
                     <div className="row">

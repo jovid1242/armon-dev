@@ -57,7 +57,7 @@ export default function Projects({ projects }) {
                                                 <div className="project-card">
                                                     <img src={item.img} alt="" />
                                                     <h2>{item.title}</h2>
-                                                    <span>{item.text}</span>
+                                                    <span>{item.text.substr(0, 65) + '...'}</span>
                                                     <p>{item.address}</p>
                                                 </div>
                                             </div>

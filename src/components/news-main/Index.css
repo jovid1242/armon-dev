@@ -1,6 +1,6 @@
 .news-section {
-    background: url(../../assets/img/рост.svg) 1% 7.4% repeat-y,
-        url(../../assets/img/чап.svg) 99% 7.4% repeat-y;
+    /* background: url(../../assets/img/рост.svg) 1% 7.4% repeat-y,
+        url(../../assets/img/чап.svg) 99% 7.4% repeat-y; */
     padding: 100px 0 200px;
     font-size: 18px;
     background-size: 83px;
@@ -58,8 +58,8 @@
 
 @media (max-width: 1920px) {
     .news-section {
-        background: url(../../assets/img/чап.svg) 1% 7.4% repeat-y,
-            url(../../assets/img/рост.svg) 99% 7.4% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 7.4% repeat-y,
+            url(../../assets/img/рост.svg) 99% 7.4% repeat-y; */
         padding: 100px 0 200px;
         font-size: 18px;
         background-size: 180px;
@@ -91,8 +91,8 @@
 
 @media screen and (min-width: 1440px) and (max-width: 1900px) {
     .news-section {
-        background: url(../../assets/img/рост.svg) 1% 0% repeat-y,
-            url(../../assets/img/чап.svg) 99% 0% repeat-y;
+        /* background: url(../../assets/img/рост.svg) 1% 0% repeat-y,
+            url(../../assets/img/чап.svg) 99% 0% repeat-y; */
         padding: 100px 0 200px;
         font-size: 18px;
         background-size: 130px;
@@ -126,8 +126,8 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1366px) {
     .news-section {
-        background: url(../../assets/img/рост.svg) 1% 0% repeat-y,
-            url(../../assets/img/чап.svg) 99% 0% repeat-y;
+        /* background: url(../../assets/img/рост.svg) 1% 0% repeat-y,
+            url(../../assets/img/чап.svg) 99% 0% repeat-y; */
         padding: 100px 0 10px;
         font-size: 18px;
         background-size: 120px;
@@ -161,8 +161,8 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1180px) {
     .news-section {
-        background: url(../../assets/img/чап.svg) 1% 14% repeat-y,
-            url(../../assets/img/рост.svg) 99% 14% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 14% repeat-y,
+            url(../../assets/img/рост.svg) 99% 14% repeat-y; */
         padding: 100px 0 200px;
         font-size: 18px;
         background-size: 83px;

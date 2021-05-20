@@ -1,6 +1,6 @@
 .about-section {
-    background: url(../../assets/img/чап.svg) 1% 3.1% repeat-y,
-        url(../../assets/img/рост.svg) 99% 3.1% repeat-y;
+    /* background: url(../../assets/img/чап.svg) 1% 3.1% repeat-y,
+        url(../../assets/img/рост.svg) 99% 3.1% repeat-y; */
     padding: 100px 0 140px;
     font-size: 18px;
     background-size: 100px;
@@ -78,8 +78,8 @@
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
     .about-section {
-        background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
-            url(../../assets/img/рост.svg) 99% 17% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
+            url(../../assets/img/рост.svg) 99% 17% repeat-y; */
         background-size: 170px;
     }
 
@@ -87,8 +87,8 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1366px) {
     .about-section {
-        background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
-            url(../../assets/img/рост.svg) 99% 16% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
+            url(../../assets/img/рост.svg) 99% 16% repeat-y; */
         background-size: 130px;
     }
 
@@ -96,8 +96,8 @@
 
 @media screen and (min-width: 1180px) and (max-width: 1280px) {
     .about-section {
-        background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
-            url(../../assets/img/рост.svg) 99% 16% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
+            url(../../assets/img/рост.svg) 99% 16% repeat-y; */
         background-size: 90px;
     }
 

@@ -66,7 +66,6 @@ export default function Index(props) {
                 <Modal.Body>
                     <p className="text-center text__modal">ЗАДАТЬ ВОПРОС</p>
                     {res === null ? "" : ReactHtmlParser(res)}
-                    {/* {validetAlert === null ? "" : <p className="alert__paginate">{validetAlert}</p>} */}
                     <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
                         <Toast.Body>{validetAlert}</Toast.Body>
                     </Toast>
@@ -76,20 +75,20 @@ export default function Index(props) {
                     <p className="text-center text__modal-fdb">Оставьте свой вопрос нам и
 мы ответим вам на него</p>
                     <Form action="#" onSubmit={submitForm}>
-                        <label>ФИО*</label>
                         <Form.Group controlId="formBasicName">
                             <Form.Control
                                 name="name"
                                 className="input__modal"
                                 onChange={handleModalInput}
+                                placeholder="Имя*"
                                 type="text"
                             />
                         </Form.Group>
-                        <label>e-mail*</label>
                         <Form.Group controlId="formBasicPhone">
                             <Form.Control
                                 name="phone"
                                 className="input__modal"
+                                placeholder="Номер тел*"
                                 onChange={handleModalInput}
                                 type="phone"
                             />
