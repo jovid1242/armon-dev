@@ -24,7 +24,7 @@ export default function Footer() {
                                             Таджикистан, Душанбе<br />
                                             Испечак 2, М14
                                         </p>
-                                        <a href="https://yandex.ru/maps/-/CCU4aDBiGC" className="footer-address__text_color" target="_blank">
+                                        <a href="https://yandex.ru/maps/10318/dushanbe/geo/1926089001/?ll=68.730417%2C38.582082&z=14.63" className="footer-address__text_color" target="_blank">
                                             показать на карте
                                         </a>
                                     </div>

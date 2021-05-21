@@ -13,7 +13,7 @@ import http from '../http'
 
 import projectsImg1 from '../assets/img/projects-1.jfif'
 import projectsImg2 from '../assets/img/projects-2.jfif'
-import projectsImg3 from '../assets/img/projects-3.jfif'
+import projectsImg3 from '../assets/img/29.1.jpg'
 
 import videoImg1 from '../assets/img/1.jpg'
 import videoImg2 from '../assets/img/2.jpg'
@@ -83,14 +83,14 @@ export default function Home() {
             img: projectsImg2,
             title: "Freedom Residence",
             text: "Один из первых проектов который мы реалезовали в Душанбе.",
-            address: "Испечак 2, м М14"
+            address: "Н.махсум 156"
         },
         {
             url: "#",
             img: projectsImg3,
             title: "Скоро начнем!",
             text: "Уже совсем скоро! Следите за нашими обновлениями, чтобы быть в курсе самых последних новостей",
-            address: "Испечак 2, м М14"
+            address: "Скоро начнем!"
         }
     ];
     const news = [

@@ -22,7 +22,7 @@ export default function Menu() {
             text: "Freedom Residence"
         },
         {
-            url: "https://arc.tj/project/ispechak-residence/",
+            url: "#",
             text: "Санаторий (скоро)"
         }
     ]

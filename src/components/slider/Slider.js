@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import { Carousel } from 'react-bootstrap';
 import Modal from '../modal/Index'
 import slidew from '../../assets/img/slide_w.jpg'
@@ -60,13 +60,19 @@ export default function SliderWeb({ slide }) {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 style={{ animationDelay: "2.5s" }} >Ispechak Residence</h3>
-                        <p style={{ animationDelay: "2s" }}>Рады представить Вам первый в Душанбе
-                        продуманный архитектурный проект в
-                        котором сочетаются красота и качество,
+                        <a href="https://arc.tj/project/ispechak-residence/">
+                            <h3 style={{ animationDelay: "2s" }} >Ispechak Residence</h3>
+                            <p style={{ animationDelay: "2s" }}>Рады представить Вам первый в Душанбе
+                            продуманный архитектурный проект в
+                            котором сочетаются красота и качество,
                     роскошь и уют, простота и обдуманность в деталях.</p>
+
+                        </a>
                         <div className="slide__btn d-flex" style={{ animationDelay: "2s" }}>
                             <button>узнать подробнее</button>
+                            <button onClick={() => setModalShow(true)}>оставить заявку</button>
+                        </div>
+                        <div className="mob__btn-slider">
                             <button onClick={() => setModalShow(true)}>оставить заявку</button>
                         </div>
                     </Carousel.Caption>
@@ -78,13 +84,19 @@ export default function SliderWeb({ slide }) {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3 style={{ animationDelay: "2.5s" }}>Freedom Residence</h3>
-                        <p style={{ animationDelay: "2s" }}>Рады представить Вам первый в Душанбе
-                        продуманный архитектурный проект в
-                        котором сочетаются красота и качество,
-                    роскошь и уют, простота и обдуманность в деталях.</p>
+                        <a href="https://armon.tj/freedom">
+                            <h3 style={{ animationDelay: "2s" }}>Freedom Residence</h3>
+                            <p style={{ animationDelay: "2s" }}>Рады представить Вам первый в Душанбе
+                            продуманный архитектурный проект в
+                            котором сочетаются красота и качество,
+                            роскошь и уют, простота и обдуманность в деталях.</p>
+
+                        </a>
                         <div className="slide__btn d-flex" style={{ animationDelay: "2s" }}>
                             <button>узнать подробнее</button>
+                            <button onClick={() => setModalShow(true)}>оставить заявку</button>
+                        </div>
+                        <div className="mob__btn-slider">
                             <button onClick={() => setModalShow(true)}>оставить заявку</button>
                         </div>
                     </Carousel.Caption>
