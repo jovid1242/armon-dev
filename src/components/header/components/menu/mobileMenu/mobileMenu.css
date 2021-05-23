@@ -290,7 +290,13 @@
     }
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
+    #nav-icon3 {
+        margin-top: 10px;
+    }
+} */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
     #nav-icon3 {
         margin-top: 10px;
     }

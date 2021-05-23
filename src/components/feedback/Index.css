@@ -88,11 +88,12 @@
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .text__feedback p {
-        margin: 0;
+        /* margin: 0; */
+        margin-bottom: 23px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 11px;
+        font-size: 24px;
         line-height: 29px;
         text-transform: uppercase;
         color: #000000;
@@ -102,14 +103,26 @@
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 21px;
         line-height: 24px;
         color: #000000;
     }
 
     .feedback__btn button {
-        font-size: 12px;
+        width: 100% !important;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #000000;
         padding: 10px;
+    }
+
+    .feedback__btn button img {
+        padding-right: 25px;
     }
 
     .feedback__btn {

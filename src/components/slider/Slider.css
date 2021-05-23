@@ -32,6 +32,9 @@
     color: #fff;
     text-align: start !important;
     width: 75%;
+    /* opacity: 0; */
+    animation: mymove 3s infinite;
+    animation-delay: 3s;
 }
 
 .carousel-caption h3 {
@@ -44,9 +47,6 @@
     letter-spacing: -1px;
     text-transform: uppercase;
     color: #343237;
-    opacity: 0;
-    animation: mymove 2s infinite;
-    animation-delay: 2s;
 }
 
 .carousel-caption p {
@@ -58,38 +58,17 @@
     line-height: 27px;
     letter-spacing: 0.5px;
     color: #343237;
-    opacity: 0;
-    animation: mymove 3s infinite;
-    animation-delay: 3s;
 }
 
-/* .carousel-item img {
-    animation: slide 2s infinite;
-    animation-delay: 2s;
-
-}
-
-@keyframes slide {
-    from {
-        margin-left: 100px;
-    }
-
-    to {
-        margin-left: 0;
-    }
-} */
-
-@keyframes mymove {
+/* @keyframes mymove {
     from {
         opacity: 0;
-        margin-left: 40px;
     }
 
     to {
         opacity: 1;
-        margin-left: 0;
     }
-}
+} */
 
 .carousel-indicators .active {
     opacity: 1;
@@ -149,17 +128,15 @@
 }
 
 .slide__btn {
-    opacity: 0;
-    animation: mymove 2s infinite;
-    animation-delay: 2s;
+    /* opacity: 0; */
+    /* animation: mymove 2s infinite; */
+    /* animation-delay: 2s; */
 }
 
 .slide__btn button {
-    background: #FFFFFF;
-    /* Grey 1 */
+    background: #0273BA;
+    color: #FFFFFF;
     margin-right: 15px;
-
-    border: 1px solid #343237;
     box-sizing: border-box;
     border-radius: 8px;
     font-family: Montserrat;
@@ -167,15 +144,9 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 27px;
-    /* identical to box height */
-
     text-align: center;
     letter-spacing: 0.5px;
-
-    /* Grey 1 */
-
-    color: #343237;
-
+    outline: none !important;
 }
 
 /* and paginte btn */
@@ -205,14 +176,20 @@
     display: none;
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
+@media screen and (min-width: 1700px) and (max-width: 1920px) {
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 10% !important;
+    }
+
     .carousel-item img {
         width: 100% !important;
     }
 
     .carousel-caption {
-        bottom: 38% !important;
-        left: 15% !important;
+        bottom: 36% !important;
+        left: 7% !important;
         width: 70%;
     }
 
@@ -223,31 +200,91 @@
 
     .carousel-caption p {
         font-size: 20px;
-        margin-top: 40px;
+        margin-top: 65px;
+        margin-bottom: 50px;
     }
 
     .slide__btn button {
+        outline: none !important;
+        border: none !important;
         padding: 10px 20px 10px 20px;
         height: 50px;
         margin-right: 20px;
         font-size: 28px;
+        background: #0273BA;
+        color: #FFFFFF;
     }
 
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1440px) {
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 10% !important;
+    }
 
     .carousel-item img {
         width: 100% !important;
     }
 
     .carousel-caption {
-        bottom: 37% !important;
-        left: 12% !important;
+        bottom: 35% !important;
+        left: 7% !important;
         width: 70%;
     }
 
+    .carousel-caption h3 {
+        font-size: 56px;
+        line-height: 27px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+        margin-top: 65px;
+        margin-bottom: 50px;
+    }
+
     .slide__btn button {
+        outline: none !important;
+        border: none !important;
+        padding: 10px 20px 10px 20px;
+        height: 50px;
+        margin-right: 20px;
+        font-size: 28px;
+        background: #0273BA;
+        color: #FFFFFF;
+    }
+
+}
+
+@media screen and (min-width: 1380px) and (max-width: 1440px) {
+
+    .carousel-item img {
+        width: 100% !important;
+    }
+
+    .carousel-caption {
+        bottom: 32% !important;
+        left: 10% !important;
+        width: 70%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 40px;
+        line-height: 27px;
+    }
+
+    .carousel-caption p {
+        max-width: 45%;
+        font-size: 18px;
+        margin-top: 55px;
+        margin-bottom: 50px;
+    }
+
+    .slide__btn button {
+        outline: none !important;
+        border: none !important;
         height: 40px;
         padding: 5px 20px 5px 20px;
         margin-right: 10px;
@@ -255,32 +292,72 @@
     }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1360px) {
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
 
     .carousel-item img {
         width: 100% !important;
     }
 
     .carousel-caption {
-        bottom: 38% !important;
-        left: 12% !important;
+        bottom: 35% !important;
+        left: 10% !important;
         width: 70%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 40px;
+        line-height: 27px;
+    }
+
+    .carousel-caption p {
+        max-width: 45%;
+        margin-top: 55px;
+        margin-bottom: 50px;
+    }
+
+    .slide__btn button {
+        outline: none !important;
+        border: none !important;
+        height: 40px;
+        padding: 5px 20px 5px 20px;
+        margin-right: 10px;
+        font-size: 14px;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
+
+    /* .carousel {
+         height: 65vh !important;
+     } */
+
     .carousel-item img {
         width: 100% !important;
+        height: 100vh;
     }
 
     .carousel-caption {
-        bottom: 38% !important;
-        left: 12% !important;
+        bottom: 28% !important;
+        left: 10% !important;
         width: 70%;
     }
 
+    .carousel-caption h3 {
+        font-size: 40px;
+        line-height: 27px;
+    }
+
+    .carousel-caption p {
+        max-width: 45%;
+        margin-top: 55px;
+        margin-bottom: 50px;
+    }
+
     .slide__btn button {
+        outline: none !important;
+        border: none !important;
         height: 40px;
+        padding: 5px 20px 5px 20px;
         margin-right: 10px;
         font-size: 14px;
     }
@@ -290,68 +367,79 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .carousel-item img {
         width: 100% !important;
+        height: 100vh;
     }
 
     .carousel-caption {
         bottom: 25% !important;
-        left: 12% !important;
-        width: 85%;
+        left: 10% !important;
+        width: 70%;
     }
 
     .carousel-caption h3 {
-        font-size: 16px;
+        font-size: 37px;
         line-height: 27px;
     }
 
     .carousel-caption p {
-        max-width: 80%;
-        font-size: 14px;
+        max-width: 55%;
+        margin-top: 55px;
+        margin-bottom: 50px;
     }
 
     .slide__btn button {
+        outline: none !important;
+        border: none !important;
         height: 40px;
-        margin-right: 5px;
-        font-size: 12px;
+        padding: 5px 20px 5px 20px;
+        margin-right: 10px;
+        font-size: 14px;
     }
 
 }
 
-@media screen and (min-width: 485px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 768px) {
     .carousel-item img {
-        filter: brightness(80%);
+        width: 100% !important;
+        object-fit: cover;
+        height: 100vh;
     }
 
     .carousel-caption {
         bottom: 25% !important;
-        left: 15% !important;
-        width: 85%;
+        left: 11% !important;
+        width: 70%;
     }
 
     .carousel-caption h3 {
-        font-size: 16px;
+        font-size: 37px;
         line-height: 27px;
-        color: #fff;
     }
 
     .carousel-caption p {
-        max-width: 80%;
-        font-size: 14px;
-        color: #fff;
+        max-width: 65%;
+        margin-top: 55px;
+        margin-bottom: 50px;
     }
 
     .slide__btn button {
+        outline: none !important;
+        border: none !important;
         height: 40px;
-        margin-right: 5px;
-        font-size: 12px;
+        padding: 5px 20px 5px 20px;
+        margin-right: 10px;
+        font-size: 14px;
     }
-
-
-
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .carousel {
         height: 65vh !important;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        display: none !important;
     }
 
     .carousel-item img {
@@ -406,11 +494,12 @@
 
     .mob__btn-slider button {
         position: absolute;
+        color: #FFFFFF;
         bottom: -80px;
         display: block;
         height: 40px;
-        background: rgba(255, 255, 255, 0.67);
-        border: 1px solid #E9E9E9;
+        background: #0273BA;
+        border: none !important;
         box-sizing: border-box;
         border-radius: 7px;
         padding-left: 15px;

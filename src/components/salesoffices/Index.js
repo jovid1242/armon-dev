@@ -4,6 +4,7 @@ import './Index.css'
 
 import freedom from '../../assets/img/seles-offices-freedon.jpg'
 import oficesImg from '../../assets/img/Rectangle.png'
+import scoro from '../../assets/img/29.1.jpg'
 
 
 export default function Index({ projects }) {
@@ -58,7 +59,7 @@ export default function Index({ projects }) {
                         <div className="col-lg-4 col-md-6">
                             <div className="ofices-card">
                                 <div className="card__img">
-                                    <img src={oficesImg} alt="" />
+                                    <img src={scoro} alt="" />
                                 </div>
                                 <p className="card__title-text">Скоро начнем!</p>
                                 <p className="card__text">Адреc:<br />Душанбе, Испечак М2-14</p>

@@ -34,6 +34,8 @@ export default function Video({ videoGallery }) {
                             aria-labelledby="contained-modal-title-vcenter"
                             centered
                         >
+                            <Modal.Header closeButton>
+                            </Modal.Header>
                             <Modal.Body>
                                 <ReactPlayer
                                     playing={false}
@@ -41,7 +43,7 @@ export default function Video({ videoGallery }) {
                                     className='react-player react-yt-pl overflow-hideen'
                                     url={urlModal}
                                     width='100%'
-                                    height='400px'
+                                    height='550px'
                                 />
                             </Modal.Body>
                         </Modal>

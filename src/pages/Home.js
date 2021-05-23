@@ -75,15 +75,15 @@ export default function Home() {
             url: "https://arc.tj/project/ispechak-residence/",
             img: projectsImg1,
             title: "Ispechak Residence",
-            text: "Один из первых проектов который мы реалезовали в Душанбе.",
-            address: "Испечак 2, м М14"
+            text: "Один из первых проектов, который мы реализовали в Душанбе...",
+            address: "Испечак 2, М14"
         },
         {
             url: "https://armon.tj/freedom",
             img: projectsImg2,
             title: "Freedom Residence",
-            text: "Один из первых проектов который мы реалезовали в Душанбе.",
-            address: "Н.махсум 156"
+            text: "Станет идеальным местом для комфортной жизни Вашей семьи...",
+            address: "Ул. Н. Махсум 156"
         },
         {
             url: "#",

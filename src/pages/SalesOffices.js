@@ -5,7 +5,7 @@ import Main from '../components/salesoffices/Index'
 
 import projectsImg1 from '../assets/img/projects-1.jfif'
 import projectsImg2 from '../assets/img/projects-2.jfif'
-import projectsImg3 from '../assets/img/projects-3.jfif'
+import projectsImg3 from '../assets/img/29.1.jpg'
 
 export default function SalesOffices() {
     const projects = [

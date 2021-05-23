@@ -37,9 +37,10 @@
 }
 
 .about__logo-svg {
+    margin-top: -4rem;
     max-width: 100%;
     float: right;
-    padding: 20px 55px 20px 40px;
+    padding: 20px 48px 40px 50px;
 }
 
 .about-wrapper-text {

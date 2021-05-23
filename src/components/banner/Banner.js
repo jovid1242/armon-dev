@@ -53,7 +53,7 @@ export default function Banner() {
                         <div className="wrapper wrapper_green d-flex align-items-center wrapper_height" onClick={() => { tradein() }}>
                             <div className="wrapper-inner" style={{ padding: "130px 0px 106px 50px" }}>
                                 <h4 className="wrapper-inner__title" style={{ fontSize: "36px", fontWeight: "bold", lineHeight: "19px" }}>
-                                    Traide in
+                                    Trade-in
                                     </h4>
                                 <p className="wrapper-inner__text" style={{ fontSize: "25px", letterSpacing: "-1px" }}>
                                     на выгодных

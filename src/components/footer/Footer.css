@@ -199,6 +199,7 @@
 
 .footer-bttm-wrap p {
     margin: 0;
+    font-size: 14px;
 }
 
 /* @media screen and (min-width: 1366) and (max-width: 1920px) {
@@ -371,7 +372,6 @@
         font-size: 16px;
         line-height: 18px;
         text-align: center;
-
         color: #BFBFBF;
     }
 
