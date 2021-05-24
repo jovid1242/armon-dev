@@ -126,6 +126,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 10px !important;
     margin-bottom: 10px !important;
 }
 

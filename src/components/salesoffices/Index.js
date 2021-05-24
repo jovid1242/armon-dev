@@ -38,7 +38,7 @@ export default function Index({ projects }) {
                                     </a>
                                 </div>
                                 <p className="card__title-text"><a href="https://arc.tj/project/ispechak-residence/">Ispechak Residence</a></p>
-                                <p className="card__text">Адреc:<br />Душанбе, Испечак М2-14</p>
+                                <p className="card__text">Адреc:<br />Испечак 2 М14</p>
                                 <p className="card__text">Наш номер:<br /><a href="tel:+992987229000">+992 987 22 9000</a></p>
                                 <p className="card__text">Рабочее время:<br /> Пон-Суб: 08:00–19:00, Вcк: 10:00-17:00 <br />Наша почта: <a href="mailto:info@armon.tj">sales@armon.tj</a></p>
                             </div>
@@ -53,7 +53,7 @@ export default function Index({ projects }) {
                                 <p className="card__title-text"><a href="https://armon.tj/freedom/">Freedom Residence</a></p>
                                 <p className="card__text">Адреc:<br />ул. Н. Махсум 156 (102-й мкр)</p>
                                 <p className="card__text">Наш номер:<br /><a href="tel:+992987229000">+992 987 22 9000</a></p>
-                                <p className="card__text">Рабочее время:<br /> Пон-Суб: 08:00–19:00, Вcк: 10:00-17:00 <br />Наша почта: <a href="mailto:info@armon.tj">sales@armon.tj</a></p>
+                                <p className="card__text">Рабочее время:<br /> ПН-СБ - с: 08:00 до 19:00, ВСК - выходной  <br />Наша почта: <a href="mailto:info@armon.tj">sales@armon.tj</a></p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6">
@@ -62,9 +62,7 @@ export default function Index({ projects }) {
                                     <img src={scoro} alt="" />
                                 </div>
                                 <p className="card__title-text">Скоро начнем!</p>
-                                <p className="card__text">Адреc:<br />Душанбе, Испечак М2-14</p>
-                                <p className="card__text">Наш номер:<br /><a href="tel:+992987229000">+992 987 22 9000</a></p>
-                                <p className="card__text">Рабочее время:<br /> Пон-Суб: 08:00–19:00, Вcк: 10:00-17:00 <br />Наша почта:<a href="mailto:info@armon.tj">sales@armon.tj</a></p>
+                                <p className="card__text mb-4">Следите за нашими обновлениями</p>
                             </div>
                         </div>
                     </div>

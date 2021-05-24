@@ -33,7 +33,7 @@ export default function Index() {
                         <div className="col-lg-6 col-md-6">
                             <div className="info_wrapper">
                                 <div className="info__text">
-                                    <p>Есть вопросы? свяжитесь с нами и наши консультанты с радостью на них ответят</p>
+                                    <p>Есть вопросы? Свяжитесь с нами, и наши консультанты с радостью Вам ответят</p>
                                 </div>
                                 <div className="info__phone">
                                     <ul className="info__contact">
@@ -63,7 +63,7 @@ export default function Index() {
                                 <div className="info__address-text">
                                     <img src={pindrop} className="info__img img__adress" alt="" />
                                     <p>
-                                        <a href="https://yandex.ru/maps/-/CCU4aDBiGC">г. Душанбе, Испечак М2-14</a>
+                                        <a href="https://yandex.ru/maps/-/CCU4aDBiGC">г. Душанбе, ул. Н. Махсум 156 (102-й мкр)</a>
                                     </p>
                                 </div>
                             </div>

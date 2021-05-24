@@ -9,6 +9,8 @@ import hicon2 from '../../../../assets/img/h2.svg'
 
 import hicon1black from '../../../../assets/img/h1black.svg'
 import hicon2black from '../../../../assets/img/h2black.svg'
+import bl_hover from '../../../../assets/img/bl_hover.svg'
+import bl_hover1 from '../../../../assets/img/bl_hover1.svg'
 
 export default function Menu() {
     const [modalShow, setModalShow] = useState(false);
@@ -64,7 +66,14 @@ export default function Menu() {
                         <img src={hicon1black} alt="header-icon-phone" />
                     </a>
                     <img src={hicon2black} onClick={() => setModalShow(true)} alt="header-icon-modal" />
+
                 </div>
+                {/* <div className="header-icon_hover">
+                    <a href="tel:++992907229000">
+                        <img src={bl_hover1} alt="header-icon-phone" />
+                    </a>
+                    <img src={bl_hover} onClick={() => setModalShow(true)} alt="header-icon-modal" />
+                </div> */}
             </div>
             <Modal
                 show={modalShow}

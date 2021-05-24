@@ -71,6 +71,11 @@
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
+    .banner-section {
+        margin-top: 90px;
+        margin-bottom: 60px;
+    }
+
     .wrapper {
         width: 100%;
     }
@@ -95,6 +100,7 @@
 }
 
 @media (max-width: 1400px) {
+
     .wrapper {
         width: 100%;
         height: 190px;

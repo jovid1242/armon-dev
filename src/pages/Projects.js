@@ -14,21 +14,27 @@ export default function Projects() {
             img: projectsImg1,
             title: "Ispechak Residence",
             text: "Один из первых проектов который мы реалезовали в Душанбе.",
-            address: "Испечак 2, м М14"
+            tel: "+992987229000",
+            email: "sales@armon.tj",
+            address: "Испечак 2 М14"
         },
         {
             url: "https://armon.tj/freedom",
             img: projectsImg2,
             title: "Freedom Residence",
             text: "Один из первых проектов который мы реалезовали в Душанбе.",
-            address: "Н.махсум 156"
+            tel: "+992987229000",
+            email: "sales@armon.tj",
+            address: "ул. Н. Махсум 156 (102-й мкр)"
         },
         {
             url: "#",
             img: projectsImg3,
             title: "Скоро начнем!",
-            text: "Уже совсем скоро! Следите за нашими обновлениями, чтобы быть в курсе самых последних новостей",
-            address: "Испечак 2, м М14"
+            text: "Следите за нашими обновлениями",
+            tel: "",
+            email: "",
+            address: ""
         }
     ];
     return (

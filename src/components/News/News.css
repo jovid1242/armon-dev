@@ -59,11 +59,18 @@
     border: 3px solid #E9E9E9;
     box-sizing: border-box;
     border-radius: 11px;
+    color: #2B2B2B;
     /* margin-right: 40px; */
 }
 
 .news-header button:hover {
-    box-shadow: 0px 0px 10px 5px #cbcbcb;
+    color: #FFFFFF;
+    background: #0273BA;
+    border: none;
+}
+
+.news-header button:hover a {
+    color: #FFFFFF;
 }
 
 
@@ -72,7 +79,7 @@
     font-style: normal;
     font-weight: 500;
     text-decoration: none !important;
-    color: #2B2B2B !important;
+    color: #2B2B2B;
 }
 
 .news-card {

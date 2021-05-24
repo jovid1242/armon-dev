@@ -247,12 +247,18 @@
     }
 
     .mobile-btn button:hover {
-        box-shadow: 0px 0px 10px 5px #cbcbcb;
+        color: #FFFFFF;
+        background: #0273BA;
+        border: none;
+    }
+
+    .mobile-btn button:hover a {
+        color: #FFFFFF;
     }
 
     .mobile-btn button a {
         text-decoration: none !important;
-        color: #2B2B2B !important;
+        color: #2B2B2B;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;

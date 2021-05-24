@@ -10,6 +10,7 @@
 .ofices-card {
     padding: 12px;
     max-width: 360px;
+    min-height: 480px;
     background: #FFFFFF;
     box-shadow: 0 0 10px 3px rgb(0 0 0 / 25%);
     border-radius: 20px;
