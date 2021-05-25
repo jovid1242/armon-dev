@@ -25,7 +25,7 @@ export default function Menu() {
         },
         {
             url: "#",
-            text: "Санаторий (скоро)"
+            text: "Скоро"
         }
     ]
     const aboutLink = [

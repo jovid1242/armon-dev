@@ -80,7 +80,7 @@ export default function Index(props) {
                                 name="name"
                                 className="input__modal"
                                 onChange={handleModalInput}
-                                placeholder="Имя*"
+                                placeholder="Имя..."
                                 type="text"
                             />
                         </Form.Group>
@@ -88,7 +88,7 @@ export default function Index(props) {
                             <Form.Control
                                 name="phone"
                                 className="input__modal"
-                                placeholder="Номер тел*"
+                                placeholder="Телефон..."
                                 onChange={handleModalInput}
                                 type="phone"
                             />

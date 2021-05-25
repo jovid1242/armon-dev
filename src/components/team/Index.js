@@ -31,9 +31,7 @@ export default function Index({ team }) {
                                     <div className="col-lg-4 col-md-4" key={index}>
                                         <div className="team-card">
                                             <div className="team-card__img">
-                                                <a href={el.url}>
-                                                    <img src={el.img} alt={el.img} />
-                                                </a>
+                                                <img src={el.img} alt={el.img} />
                                             </div>
                                             <p className="team-name">{el.name}</p>
                                             <p className="team-desc">{el.desc}</p>

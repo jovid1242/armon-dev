@@ -127,7 +127,9 @@
     z-index: 99;
 }
 
-.slide__btn {
+.slide__btn button a {
+    text-decoration: none !important;
+    color: #FFFFFF !important;
     /* opacity: 0; */
     /* animation: mymove 2s infinite; */
     /* animation-delay: 2s; */

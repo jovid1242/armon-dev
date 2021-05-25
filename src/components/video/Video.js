@@ -24,7 +24,7 @@ export default function Video({ videoGallery }) {
                     <div className="video-gallery-header">
                         <p>видео</p>
                         <div className="under-test"></div>
-                        <span>Глазами строителей</span>
+                        <span>Наш ютуб канал</span>
                     </div>
                     <div className="row">
                         <Modal

@@ -51,7 +51,11 @@ export default function Index() {
                         </h2>
                     </div>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-md-12">
+                            <h2 className="text__career-t">На данный момент открытых вакансий нет...</h2>
+                            <p>А пока, Вы можете насладиться просмотром наших <a href="https://armon.tj/#/projects">уникальных проектов </a>, которые точно не оставят Вас равнодушными</p>
+                        </div>
+                        {/* <div className="col-lg-4 col-md-6">
                             <div className="career-card">
                                 <div className="career-card-card__img">
                                     <img src={careerImg1} alt="" />
@@ -80,7 +84,7 @@ export default function Index() {
                                 <p className="career-card_card__text">В строительную компанию требуется: Проект-менеджер Описание работы: -управление проектом в целом; -проектирование и расстановка приоритетов; – планирование выполнения задач; -контроль,…</p>
                                 <button className="career-card__button" onClick={() => { setModalShow(true) }}>Подробнее</button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

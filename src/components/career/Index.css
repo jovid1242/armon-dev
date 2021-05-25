@@ -215,6 +215,11 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+    .text__career-t {
+        margin-top: 25px;
+        font-size: 28px;
+    }
+
     .modal-wrapper__text {
         width: 100%;
         margin-top: -2rem;

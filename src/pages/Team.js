@@ -3,42 +3,38 @@ import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import Main from '../components/team/Index'
 
-import imgI from '../assets/img/seles-offices-freedon.jpg'
+import muzf from '../assets/team/m.png'
+import fh from '../assets/team/fh.png'
+import fn from '../assets/team/fn.png'
 
 export default function Team() {
     const group = [
         {
-            url: "#",
-            img: imgI,
+            img: muzf,
             name: "Музаффар Юнусзода",
             desc: "developer"
         },
         {
-            url: "#",
-            img: imgI,
+            img: fh,
             name: "Фируз Хамидов",
-            desc: "Full Stack программист"
+            desc: "Html программист"
         },
         {
-            url: "#",
-            img: imgI,
+            img: fn,
             name: "Фирдавс Намозов",
             desc: "Руководитель отдела качества"
         }, {
-            url: "#",
-            img: imgI,
+            img: muzf,
             name: "Музаффар Юнусзода",
             desc: "developer"
         },
         {
-            url: "#",
-            img: imgI,
+            img: fh,
             name: "Фируз Хамидов",
             desc: "Full Stack программист"
         },
         {
-            url: "#",
-            img: imgI,
+            img: fn,
             name: "Фирдавс Намозов",
             desc: "Руководитель отдела качества"
         }

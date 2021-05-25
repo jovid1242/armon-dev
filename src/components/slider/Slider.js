@@ -23,17 +23,18 @@ export default function SliderWeb() {
                     />
                     <Carousel.Caption>
                         <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
-                            <a href="https://arc.tj/project/ispechak-residence/">
-                                <h3 style={{ animationDelay: "3s" }} >Ispechak Residence</h3>
-                                <p style={{ animationDelay: "3s" }}>Рады представить Вам первый в Душанбе
-                                продуманный архитектурный проект в
-                                котором сочетаются красота и качество,
+                            <h3 style={{ animationDelay: "3s" }} >Ispechak Residence</h3>
+                            <p style={{ animationDelay: "3s" }}>Рады представить Вам первый в Душанбе
+                            продуманный архитектурный проект в
+                            котором сочетаются красота и качество,
                             роскошь и уют, простота и обдуманность в деталях.</p>
-
-                            </a>
                         </Animated>
                         <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
-                            <button>Узнать подробнее</button>
+                            <button>
+                                <a href="https://arc.tj/project/ispechak-residence/">
+                                    Узнать подробнее
+                                </a>
+                            </button>
                             <button onClick={() => setModalShow(true)}>Оставить заявку</button>
                         </div>
                         <div className="mob__btn-slider">
@@ -49,17 +50,14 @@ export default function SliderWeb() {
                     />
                     <Carousel.Caption>
                         <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
-                            <a href="https://armon.tj/freedom">
-                                <h3 style={{ animationDelay: "3s" }}>Freedom Residence</h3>
-                                <p style={{ animationDelay: "3s" }}>
-                                    Freedom Residence - место, где красота и удобство, качество и уют,
-                                    безопасность и беззаботность никогда не будут спорить между собой.
+                            <h3 style={{ animationDelay: "3s" }}>Freedom Residence</h3>
+                            <p style={{ animationDelay: "3s" }}>
+                                Freedom Residence - место, где красота и удобство, качество и уют,
+                                безопасность и беззаботность никогда не будут спорить между собой.
                             </p>
-
-                            </a>
                         </Animated>
                         <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
-                            <button>Узнать подробнее</button>
+                            <button> <a href="https://armon.tj/freedom">Узнать подробнее</a></button>
                             <button onClick={() => setModalShow(true)}>Оставить заявку</button>
                         </div>
                         <div className="mob__btn-slider">
