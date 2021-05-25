@@ -56,8 +56,8 @@
 .menu li:hover .links-headers {
     opacity: 1;
     border-radius: 6px;
-    color: #080B11 !important;
-    background: #fff;
+    color: #fff !important;
+    background: #0273BA;
 }
 
 .menu li:hover .submenu__trasparent-bg {

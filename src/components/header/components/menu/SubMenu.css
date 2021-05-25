@@ -1,8 +1,8 @@
 .submenu__wrapper {
     width: 200px;
-    background: #fff;
-    color: #191a1b;
+    background: #0273BA;
     opacity: 0.98;
+    color: #fff;
     border-radius: 6px;
     box-shadow: 0 0 30px rgb(0 0 0 / 20%);
     z-index: 999;
@@ -17,6 +17,11 @@
     z-index: 5;
     display: none;
 }
+
+/* 
+.submenu__wrapper ul li a {
+    color: #fff;
+} */
 
 /* 
 .submenu__wrapper::before {

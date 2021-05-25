@@ -32,6 +32,7 @@ body {
 
 .affix .submenu__trasparent-bg {
   position: absolute;
+  color: #fff;
   top: 60px;
   width: 70px;
   height: 250px;
@@ -43,7 +44,7 @@ body {
 .affix .submenu__trasparent-bg .submenu__wrapper {
   width: 200px;
   background: #343237 !important;
-  color: #fff;
+  color: #fff !important;
   opacity: 0.98;
   border-radius: 6px;
   box-shadow: 0 0 30px rgb(0 0 0 / 20%);
@@ -65,6 +66,19 @@ body {
   border-left: 0.5rem solid transparent;
   transform: rotateX(180deg);
 } */
+.dropdown-menu__list li a {
+  color: #fff !important;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* White Color Armon */
+
+  color: #FFFFFF;
+
+}
 
 .affix .dropdown-menu__list li a {
   color: #fff !important;
