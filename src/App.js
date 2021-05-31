@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top'
 import Home from './pages/Home';
 import About from './pages/About';
@@ -35,8 +35,8 @@ function App() {
           <Route path="/payment" exact component={Payment} />
           <Route path="/projects" exact component={Projects} />
           <Route path="/team" exact component={Team} />
-          <Route path="/404" component={NotFound} />
-          {/* <Route component={NotFound} /> */}
+          <Route path='/404' component={NotFound} />
+          <Redirect from='*' to='/404' />
         </ScrollToTop>
       </Router>
     </>
