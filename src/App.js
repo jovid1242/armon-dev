@@ -12,6 +12,7 @@ import TradeIn from './pages/Tradein'
 import Payment from './pages/Payment'
 import Projects from './pages/Projects'
 import Team from './pages/Team'
+import Layouts from './pages/Layouts'
 import NotFound from './pages/404.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,8 +36,8 @@ function App() {
           <Route path="/payment" exact component={Payment} />
           <Route path="/projects" exact component={Projects} />
           <Route path="/team" exact component={Team} />
+          <Route path="/layouts" exact component={Layouts} />
           <Route path='/404' component={NotFound} />
-          <Redirect from='*' to='/404' />
         </ScrollToTop>
       </Router>
     </>
