@@ -12,11 +12,11 @@
 
 .sales-image {
     max-width: 100%;
-    min-height: 180px;
+    min-height: 150px;
     border: 2px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 12px;
-    transform: rotateX(45deg);
+    /* transform: rotateX(45deg); */
 }
 
 .btns__filter {
@@ -27,6 +27,7 @@
     box-sizing: border-box;
     border-radius: 12px;
     width: 25%;
+    margin-left: 2rem;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -50,7 +51,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     letter-spacing: -1px;
     text-transform: capitalize;
@@ -58,7 +59,7 @@
 }
 
 .layouts__card {
-    padding: 0 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
     max-width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 18px 4px rgb(0 0 0 / 14%);
@@ -102,8 +103,35 @@
     color: #2B2B2B;
 }
 
-.text__w {
+.img__hover {
     position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.img__hover .icon-h {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.img__hover:hover .sales-image {
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
+    border: none;
+    filter: brightness(65%);
+}
+
+.img__hover:hover .icon-h {
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+
+.text__w {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -120,29 +148,251 @@
 }
 
 .btn__h-effects {
-
-    position: relative;
-    margin-top: -10px;
-    outline: none;
-    border: none;
-    background: #0273BA;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    z-index: 9;
-}
-
-.btn__h-effects:hover {
-    transition: all 0.6s ease;
-    transition-delay: 0.3s;
-    margin-top: -10px;
+    position: absolute;
+    right: 27px;
+    bottom: 10px;
     outline: none;
     border: none;
     background: #0273BA;
     border-radius: 50px;
-    width: 100%;
+    width: 40px;
     height: 40px;
     padding: 5px;
     z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__h-effects:hover {
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
+    border-radius: 50px;
+    width: 80%;
+    z-index: 9;
+}
+
+.btn__h-effects:hover p {
+    transition: all 0.6s ease;
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+
+.btn__h-effects:hover img {}
+
+.btn__h-effects {
+    line-height: 0;
+}
+
+.btn__h-effects .icon img {
+    position: absolute;
+    bottom: 11px;
+    right: 12px;
+    z-index: 99;
+}
+
+.btn__h-effects p {
+    opacity: 0;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-right: 23px;
+    /* padding: 15px 0; */
+}
+
+.filter__layouts {
+    width: 100%;
+    display: flex;
+}
+
+/* //////////////       modal form */
+
+.layouts-modal__wrapper .modal .modal-dialog .modal-content {
+    border-radius: 25px !important;
+    background-color: #2e67c4 !important;
+    outline: none !important;
+}
+
+/* and modal form */
+
+
+/* ///// modal img */
+
+.rodal-dialog {
+    width: 54% !important;
+    height: 60% !important;
+    border-radius: 16px !important;
+    animation-duration: 300ms;
+}
+
+.layouts-modal__img {
+    max-width: 100%;
+}
+
+.TransformComponent-module_container__3NwNd {
+    border-radius: 16px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.tools {
+    position: absolute;
+    padding: 10px;
+    z-index: 9;
+}
+
+.tools button {
+    border-radius: 50%;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    background: #2f8cca;
+}
+
+
+.rodal-dialog {
+    padding: 0 !important;
+}
+
+.rodal-close:before,
+.rodal-close:after {
+    border-radius: 0 !important;
+    background: #000 !important;
+}
+
+/* .tools button svg {
+    fill: #FFFFFF !important;
+} */
+
+@media screen and (min-width: 1200px) and (max-width: 1280px) {
+    .btns__filter {
+        font-size: 17px;
+    }
+
+    .btn__filter {
+        font-size: 18px;
+    }
+
+    .lyts .col-lg-3 {
+        flex: 0 0 32% !important;
+        max-width: 38%;
+    }
+
+    .btn__h-effects:hover {
+        width: 83%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .btns__filter {
+        font-size: 17px;
+        width: 28%;
+    }
+
+    .btn__filter {
+        font-size: 18px;
+    }
+
+    .lyts .col-lg-3 {
+        flex: 0 0 32% !important;
+        max-width: 38%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .btns__filter {
+        font-size: 17px;
+        width: 31%;
+    }
+
+    .btn__filter {
+        font-size: 18px;
+    }
+
+    .lyts .col-lg-3 {
+        flex: 0 0 50% !important;
+        max-width: 50%;
+    }
+
+    .filter__layouts {
+        width: 100%;
+        display: block;
+    }
+
+    .btn__h-effects:hover {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 460px) {
+    .btns__filter {
+        font-size: 17px;
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .btn__filter {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .lyts .col-lg-3 {
+        flex: 0 0 100% !important;
+        max-width: 100%;
+    }
+
+    .filter__layouts {
+        width: 100%;
+        display: block;
+    }
+
+    .sales-wrapper-inner .sales-icon {
+        width: 30px;
+    }
+
+    .sales-wrapper-inner .icon3 {
+        width: 25px;
+    }
+
+    .floor {
+        font-size: 18px;
+    }
+
+    .room {
+        font-size: 18px;
+    }
+
+    .text__w {
+        font-size: 18px;
+    }
+
+    .btn__h-effects:hover {
+        width: 87%;
+    }
+
+    .rodal-dialog {
+        width: 90% !important;
+        height: 60% !important;
+        animation-duration: 300ms;
+    }
+
+    .layouts-modal__img {
+        margin-top: 50px;
+        max-width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+
+    .img__trasformw {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }

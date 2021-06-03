@@ -7,9 +7,9 @@ export default function SubMenu({ projectsLink }) {
             <div className="submenu__trasparent-bg">
                 <div className="submenu__wrapper">
                     {
-                        projectsLink.map((el, index) => {
+                        projectsLink?.map((el, index) => {
                             return (
-                                <ul className="dropdown-menu__list">
+                                <ul className="dropdown-menu__list" key={index}>
                                     <li>
                                         <a href={el.url}>
                                             • {el.text}

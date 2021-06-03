@@ -83,7 +83,7 @@
     justify-content: center;
 }
 
-.modal-content {
+.modal .modal-dialog .modal-content {
     border-radius: 25px !important;
     background-color: #383D45 !important;
     outline: none !important;

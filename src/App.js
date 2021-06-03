@@ -38,6 +38,7 @@ function App() {
           <Route path="/team" exact component={Team} />
           <Route path="/layouts" exact component={Layouts} />
           <Route path='/404' component={NotFound} />
+          {/* <Router path="*" component={NotFound} /> */}
         </ScrollToTop>
       </Router>
     </>
