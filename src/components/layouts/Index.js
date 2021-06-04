@@ -16,6 +16,9 @@ import vvv from '../../assets/img/vvv.jpg'
 import icon1 from '../../assets/icons/1.svg'
 import icon2 from '../../assets/icons/2.svg'
 import icon3 from '../../assets/icons/3.svg'
+import mf1 from '../../assets/icons/mf1.svg'
+import mf2 from '../../assets/icons/mf2.svg'
+import mf3 from '../../assets/icons/mf3.svg'
 import lybtn from '../../assets/icons/ly-btn-e.svg'
 import lyiconh from '../../assets/icons/ly-icon-h.svg'
 
@@ -23,16 +26,28 @@ export default function Index() {
     const [modalShow, setModalShow] = useState(false);
     const [modalfShow, setModalfShow] = useState(false);
 
-    const [open, setOpen] = useState(
+    const [openImgModal, setOpenImgModal] = useState(
+        { visible: false }
+    )
+
+    const [openFormModal, setOpenFormModal] = useState(
         { visible: false }
     )
 
     const show = () => {
-        setOpen({ visible: true });
+        setOpenImgModal({ visible: true });
     }
 
     const hide = () => {
-        setOpen({ visible: false });
+        setOpenImgModal({ visible: false });
+    }
+
+    const showMForm = () => {
+        setOpenFormModal({ visible: true })
+    }
+
+    const hideMForm = () => {
+        setOpenFormModal({ visible: false })
     }
 
     const [post, setPost] = useState([
@@ -44,10 +59,7 @@ export default function Index() {
                 <div className="layouts-modal__wrapper">
                     <div>
 
-                        <Rodal visible={open.visible} onClose={hide.bind()}>
-                            {/* <div className="scale">
-                                <img src={vvv} alt="big" className="layouts-modal__img big" />
-                            </div> */}
+                        <Rodal visible={openImgModal.visible} onClose={hide.bind()}>
                             <TransformWrapper
                                 defaultScale={1}
                                 defaultPositionX={200}
@@ -56,19 +68,61 @@ export default function Index() {
                                 {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                                     <React.Fragment>
                                         <div className="tools">
-                                            <button onClick={zoomIn}><FontAwesomeIcon icon={faPlus} color="white" /></button>
-                                            <button onClick={zoomOut}><FontAwesomeIcon icon={faMinus} color="white" /></button>
-                                            <button onClick={resetTransform}> <FontAwesomeIcon icon={faUndo} color="white" /></button>
+                                            <button onClick={zoomIn} className="tol__button" ><FontAwesomeIcon icon={faPlus} color="white" /></button>
+                                            <button onClick={zoomOut} className="tol__button"  ><FontAwesomeIcon icon={faMinus} color="white" /></button>
+                                            <button onClick={resetTransform} className="tol__button" > <FontAwesomeIcon icon={faUndo} color="white" /></button>
+                                            <button onClick={showMForm.bind()} className="jk__form">Оставить заявку</button>
                                         </div>
                                         <TransformComponent>
                                             <img src={vvv} className="img__trasformw" alt="big" />
-                                            {/* <div>Example text</div> */}
                                         </TransformComponent>
                                     </React.Fragment>
                                 )}
                             </TransformWrapper>
                         </Rodal>
                     </div>
+                </div>
+                <div className="layouts-form__modal__wrapper">
+                    <Rodal visible={openFormModal.visible} onClose={hideMForm.bind()}>
+                        <div className="wrapper-modal-window d-flex flex-column flex-lg-row  justify-content-lg-between align-items-center">
+                            <div className="wraper-modal-1">
+                                <h3>ЖК Ispechak</h3>
+                                <img src={Imglayouts} alt="" />
+                            </div>
+                            <div className="wraper-modal-2">
+                                <div className="form__group">
+                                    <ul className="list__t">
+                                        <li>
+                                            <div className="sales-wrapper-inner d-flex align-items-center ">
+                                                <img className="sales-icon sales-icon2" src={mf2} alt="sdc" />
+                                                <p className="floor">от 3-го до 13-го</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="sales-wrapper-inner d-flex align-items-center ">
+                                                <img className="sales-icon  sales-icon2" src={mf3} alt="sdc" />
+                                                <p className="area">250 кв\м</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="sales-wrapper-inner d-flex align-items-center">
+                                                <img className="sales-icon sales-icon2" src={mf1} alt="sdc" />
+                                                <p className="room">2 комнаты</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div className="input__group">
+                                        <form action="">
+                                            <input type="text" placeholder="Имя..." />
+                                            <input type="text" className="midle-input" placeholder="Телефон..." />
+                                            <button className="btn__form-group">Отправить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </Rodal>
                 </div>
                 <Modal
                     show={modalShow}
@@ -140,7 +194,7 @@ export default function Index() {
                                                     <p className="text__w">
                                                         ЖК Ispechak Residence
                                                             </p>
-                                                    <button className="btn__h-effects" onClick={show.bind()}>
+                                                    <button className="btn__h-effects" onClick={showMForm.bind()}>
 
                                                         <p className="">Оставить заявку</p>
                                                         <div className="icon">
