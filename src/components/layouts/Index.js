@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Modal, Form } from 'react-bootstrap';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -21,10 +21,18 @@ import mf2 from '../../assets/icons/mf2.svg'
 import mf3 from '../../assets/icons/mf3.svg'
 import lybtn from '../../assets/icons/ly-btn-e.svg'
 import lyiconh from '../../assets/icons/ly-icon-h.svg'
+import http from '../../http'
 
-export default function Index() {
+export default function Index({ post }) {
+    const [layout, setLayot] = useState(null)
     const [modalShow, setModalShow] = useState(false);
     const [modalfShow, setModalfShow] = useState(false);
+
+    const [Img, setImg] = useState([])
+
+    const getImg = el => {
+        setImg(el.img)
+    }
 
     const [openImgModal, setOpenImgModal] = useState(
         { visible: false }
@@ -50,9 +58,53 @@ export default function Index() {
         setOpenFormModal({ visible: false })
     }
 
-    const [post, setPost] = useState([
-        "d", "a", "s", "d", "sd", "f", "s", "d"
-    ])
+    const showFromjk = el => {
+        showMForm();
+        getImg(el)
+    }
+
+    // const [validetAlert, setValidetAlert] = useState(null)
+    // const [show, setShow] = useState(false)
+    // const [res, setRes] = useState(null)
+    // const [form, setForm] = useState({
+    //     name: null,
+    //     phone: null
+    // })
+
+    // const handleModalInput = (e) => {
+    //     const name = e.target.name
+    //     const value = e.target.value
+    //     const data = form
+    //     data[name] = value
+    //     setForm(data)
+    // }
+
+    // const submitForm = (e) => {
+    //     e.preventDefault()
+    //     const data = new FormData()
+    //     data.append('id', form.floor);
+    //     data.append('name', form.name);
+    //     data.append('phone', form.phone);
+    //     http.post(`dd`, data)
+    //         .then(res => {
+    //             setRes(res.data)
+    //         })
+    //         .catch((errors) => {
+    //             console.log('Ошибка', `${errors.message}`);
+    //         })
+    // }
+    // jovid1242jivO
+
+    // const valideModal = () => {
+    //     const err = validation.modalValidation(form)
+    //     if (err.error) {
+    //         setValidetAlert(err.message)
+    //         setShow(true)
+    //         return false
+    //     }
+    //     return true
+    // }
+
     return (
         <>
             <div className="ofices-section">
@@ -71,10 +123,10 @@ export default function Index() {
                                             <button onClick={zoomIn} className="tol__button" ><FontAwesomeIcon icon={faPlus} color="white" /></button>
                                             <button onClick={zoomOut} className="tol__button"  ><FontAwesomeIcon icon={faMinus} color="white" /></button>
                                             <button onClick={resetTransform} className="tol__button" > <FontAwesomeIcon icon={faUndo} color="white" /></button>
-                                            <button onClick={showMForm.bind()} className="jk__form">Оставить заявку</button>
+                                            <button onClick={showMForm.bind()} className="jk__form" >Оставить заявку</button>
                                         </div>
                                         <TransformComponent>
-                                            <img src={vvv} className="img__trasformw" alt="big" />
+                                            <img src={Img} className="img__trasformw" alt="big" />
                                         </TransformComponent>
                                     </React.Fragment>
                                 )}
@@ -87,7 +139,7 @@ export default function Index() {
                         <div className="wrapper-modal-window d-flex flex-column flex-lg-row  justify-content-lg-between align-items-center">
                             <div className="wraper-modal-1">
                                 <h3>ЖК Ispechak</h3>
-                                <img src={Imglayouts} alt="" />
+                                <img src={Img} alt="Img" />
                             </div>
                             <div className="wraper-modal-2">
                                 <div className="form__group">
@@ -159,21 +211,27 @@ export default function Index() {
                     <div className="rowr">
                         <div className="mb-3">
                             <div className="filter__layouts">
-                                <button className="btn__filter">Жилые комплексы:</button>
-                                <button className="btns__filter">Freedom Residence </button>
-                                <button className="btns__filter">Ispechak Residence </button>
+                                <button className="btn__filter" onClick={() => { setLayot(null) }}>Жилые комплексы:</button>
+                                <button className="btns__filter" onClick={() => { setLayot("Freedom residences") }}>Freedom Residence </button>
+                                <button className="btns__filter" onClick={() => { setLayot("Ispechak Residence") }}>Ispechak Residence </button>
                             </div>
                         </div>
                     </div>
                     <div className="row lyts">
                         {
-                            post?.map((el, index) => {
+                            post?.filter((e) => {
+                                if (!layout || layout === null) {
+                                    return e
+                                } else if (e.residences.toLowerCase().includes(layout.toLowerCase())) {
+                                    return e
+                                }
+                            }).map((el, index) => {
                                 return (
                                     <div className="col-lg-3 col-md-12 mt-4" key={index}>
                                         <div className="layouts__wrapper">
                                             <div className="layouts__card">
-                                                <div className="img__hover">
-                                                    <img className="sales-image" src={Imglayouts} alt="sdc" onClick={show.bind()} />
+                                                <div className="img__hover" onClick={() => { getImg(el) }}>
+                                                    <img className="sales-image" src={el.img} alt="sdc" onClick={show.bind()} />
                                                     <img src={lyiconh} className="icon-h" alt="lyiconh" onClick={show.bind()} />
                                                 </div>
                                                 <div className="d-flex">
@@ -192,10 +250,9 @@ export default function Index() {
                                                 </div>
                                                 <div className="d-flex justify-content-between align-items mt-3 mb-2">
                                                     <p className="text__w">
-                                                        ЖК Ispechak Residence
-                                                            </p>
-                                                    <button className="btn__h-effects" onClick={showMForm.bind()}>
-
+                                                        {el.residences}
+                                                    </p>
+                                                    <button className="btn__h-effects" onClick={() => { showFromjk(el) }}>
                                                         <p className="">Оставить заявку</p>
                                                         <div className="icon">
                                                             <img src={lybtn} alt="" />
