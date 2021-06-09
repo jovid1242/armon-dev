@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top'
 import Home from './pages/Home';
 import About from './pages/About';
@@ -25,20 +25,22 @@ function App() {
         basename="#"
       >
         <ScrollToTop>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/sales-offices" exact component={SalesOffices} />
-          <Route path="/contacts" exact component={Contacts} />
-          <Route path="/news" exact component={News} />
-          <Route path="/news/:id" component={NewsID} />
-          <Route path="/career" exact component={Career} />
-          <Route path="/tradein" exact component={TradeIn} />
-          <Route path="/payment" exact component={Payment} />
-          <Route path="/projects" exact component={Projects} />
-          <Route path="/team" exact component={Team} />
-          <Route path="/layouts" exact component={Layouts} />
-          <Route path='/404' component={NotFound} />
-          {/* <Router path="*" component={NotFound} /> */}
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/sales-offices" exact component={SalesOffices} />
+            <Route path="/contacts" exact component={Contacts} />
+            <Route path="/news" exact component={News} />
+            <Route path="/news/:id" component={NewsID} />
+            <Route path="/career" exact component={Career} />
+            <Route path="/tradein" exact component={TradeIn} />
+            <Route path="/payment" exact component={Payment} />
+            <Route path="/projects" exact component={Projects} />
+            <Route path="/team" exact component={Team} />
+            <Route path="/layouts" exact component={Layouts} />
+            <Route path='/404' component={NotFound} />
+            <Route path="*" component={NotFound} status={404} />
+          </Switch>
         </ScrollToTop>
       </Router>
     </>

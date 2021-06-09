@@ -77,6 +77,10 @@ export default function MobileMenu() {
                             </Link>
                             {/* <SubMenu link={about} /> */}
                         </li>
+                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/about">О компании</Link></li>
+                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/news">Новости</Link></li>
+                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/career">Карьера</Link></li>
+                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/layouts">Планировки</Link></li>
                         <li className="nav-item delay-2 ">
                             <Link className="nav-link" to="/projects">Проекты
                             {/* <div className="dropdown-toggle"></div> */}

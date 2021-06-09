@@ -219,6 +219,11 @@
         width: 200px;
     }
 
+    .icons svg {
+        width: 32px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
 
     .main {
         padding: 20px 0 0;

@@ -30,16 +30,22 @@ export default function Menu() {
     ]
     const aboutLink = [
         {
-            url: "https://armon.tj/#/about",
+            url: "/about",
             text: "О компании"
         },
         {
-            url: "https://armon.tj/#/news",
+            url: "/news",
             text: "Новости"
         },
         {
-            url: "https://armon.tj/#/career",
+            url: "/career",
             text: "Карьера"
+        }
+    ]
+    const prodaje = [
+        {
+            url: "/layouts",
+            text: "Планировки"
         }
     ]
     return (
@@ -52,7 +58,12 @@ export default function Menu() {
                     <li><Link to="/projects" className="links-headers">Проекты</Link>
                         <SubMenu projectsLink={projectsLink} />
                     </li>
-                    <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link></li>
+                    <li><Link to="/layouts" className="links-headers">Планировки</Link>
+                        {/* <SubMenu projectsLink={prodaje} /> */}
+                    </li>
+                    <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link>
+                        {/* <SubMenu projectsLink={prodaje} /> */}
+                    </li>
                     <li><Link to="/contacts" className="links-headers">Контакты</Link></li>
                 </ul>
                 <div className="header-icon ml-3">
