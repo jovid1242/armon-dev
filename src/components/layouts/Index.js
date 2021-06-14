@@ -27,12 +27,29 @@ export default function Index({ post }) {
     const [layout, setLayot] = useState(null)
     const [modalShow, setModalShow] = useState(false);
     const [modalfShow, setModalfShow] = useState(false);
+    const [residences, setResidences] = useState([])
+    const [applications, setApplications] = useState({
+        id: null,
+        username: null,
+        phone: null
+    })
+    const [jkdesc, setJkdesc] = useState([])
 
     const [Img, setImg] = useState([])
 
     const getImg = el => {
         setImg(el.img)
     }
+
+    useEffect(() => {
+        http.get('get_residences')
+            .then(res => {
+                setResidences(res.data)
+            })
+            .catch((errors) => {
+                console.log('Ошибка', `${errors.message}`);
+            })
+    }, [])
 
     const [openImgModal, setOpenImgModal] = useState(
         { visible: false }
@@ -59,40 +76,35 @@ export default function Index({ post }) {
     }
 
     const showFromjk = el => {
+        const arr = [el];
+        setJkdesc(arr);
+        setApplications({ ...applications, id: el.id });
         showMForm();
-        getImg(el)
+        getImg(el);
     }
 
     // const [validetAlert, setValidetAlert] = useState(null)
-    // const [show, setShow] = useState(false)
-    // const [res, setRes] = useState(null)
-    // const [form, setForm] = useState({
-    //     name: null,
-    //     phone: null
-    // })
+    const handleModalInput = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        const data = applications
+        data[name] = value
+        setApplications(data)
+    }
 
-    // const handleModalInput = (e) => {
-    //     const name = e.target.name
-    //     const value = e.target.value
-    //     const data = form
-    //     data[name] = value
-    //     setForm(data)
-    // }
-
-    // const submitForm = (e) => {
-    //     e.preventDefault()
-    //     const data = new FormData()
-    //     data.append('id', form.floor);
-    //     data.append('name', form.name);
-    //     data.append('phone', form.phone);
-    //     http.post(`dd`, data)
-    //         .then(res => {
-    //             setRes(res.data)
-    //         })
-    //         .catch((errors) => {
-    //             console.log('Ошибка', `${errors.message}`);
-    //         })
-    // }
+    const submitForm = (e) => {
+        e.preventDefault()
+        const data = new FormData()
+        data.append('name', applications.name);
+        data.append('phone', applications.phone);
+        http.post(`create_order/${applications.id}`, data)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch((errors) => {
+                console.log('Ошибка', `${errors.message}`);
+            })
+    }
     // jovid1242jivO
 
     // const valideModal = () => {
@@ -143,30 +155,47 @@ export default function Index({ post }) {
                             </div>
                             <div className="wraper-modal-2">
                                 <div className="form__group">
-                                    <ul className="list__t">
-                                        <li>
-                                            <div className="sales-wrapper-inner d-flex align-items-center ">
-                                                <img className="sales-icon sales-icon2" src={mf2} alt="sdc" />
-                                                <p className="floor">от 3-го до 13-го</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="sales-wrapper-inner d-flex align-items-center ">
-                                                <img className="sales-icon  sales-icon2" src={mf3} alt="sdc" />
-                                                <p className="area">250 кв\м</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="sales-wrapper-inner d-flex align-items-center">
-                                                <img className="sales-icon sales-icon2" src={mf1} alt="sdc" />
-                                                <p className="room">2 комнаты</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    {
+                                        jkdesc?.map((el, index) => {
+                                            return (
+                                                <ul className="list__t" key={index}>
+                                                    <li>
+                                                        <div className="sales-wrapper-inner d-flex align-items-center ">
+                                                            <img className="sales-icon sales-icon2" src={mf2} alt="sdc" />
+                                                            <p className="floor">{el.floor}</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="sales-wrapper-inner d-flex align-items-center ">
+                                                            <img className="sales-icon  sales-icon2" src={mf3} alt="sdc" />
+                                                            <p className="area">{el.square}</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="sales-wrapper-inner d-flex align-items-center">
+                                                            <img className="sales-icon sales-icon2" src={mf1} alt="sdc" />
+                                                            <p className="room">{el.rooms}</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            )
+                                        })
+                                    }
                                     <div className="input__group">
-                                        <form action="">
-                                            <input type="text" placeholder="Имя..." />
-                                            <input type="text" className="midle-input" placeholder="Телефон..." />
+                                        <form action="" onSubmit={submitForm}>
+                                            <input
+                                                type="text"
+                                                name="username"
+                                                onChange={handleModalInput}
+                                                placeholder="Имя..."
+                                            />
+                                            <input
+                                                type="text"
+                                                name="phone"
+                                                onChange={handleModalInput}
+                                                className="midle-input"
+                                                placeholder="Телефон..."
+                                            />
                                             <button className="btn__form-group">Отправить</button>
                                         </form>
                                     </div>
@@ -209,11 +238,16 @@ export default function Index({ post }) {
                         </h2>
                     </div>
                     <div className="rowr">
-                        <div className="mb-3">
+                        <div className="mb-5">
                             <div className="filter__layouts">
                                 <button className="btn__filter" onClick={() => { setLayot(null) }}>Жилые комплексы:</button>
-                                <button className="btns__filter" onClick={() => { setLayot("Freedom residences") }}>Freedom Residence </button>
-                                <button className="btns__filter" onClick={() => { setLayot("Ispechak Residence") }}>Ispechak Residence </button>
+                                {
+                                    residences?.map((el, i) => {
+                                        return (
+                                            <button className="btns__filter" onClick={() => { setLayot(`${el.name}`) }} key={i}>{el.name}</button>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
@@ -227,7 +261,7 @@ export default function Index({ post }) {
                                 }
                             }).map((el, index) => {
                                 return (
-                                    <div className="col-lg-3 col-md-12 mt-4" key={index}>
+                                    <div className="col-lg-3 col-md-12 mb-4" key={index}>
                                         <div className="layouts__wrapper">
                                             <div className="layouts__card">
                                                 <div className="img__hover" onClick={() => { getImg(el) }}>
@@ -237,16 +271,16 @@ export default function Index({ post }) {
                                                 <div className="d-flex">
                                                     <div className="sales-wrapper-inner d-flex align-items-center ">
                                                         <img className="sales-icon" src={icon2} alt="sdc" />
-                                                        <p className="floor">3-13 этажи</p>
+                                                        <p className="floor">{el.floor}</p>
                                                     </div>
                                                     <div className="sales-wrapper-inner d-flex align-items-center ml-1">
                                                         <img className="sales-icon ml-1" src={icon3} alt="sdc" />
-                                                        <p className="area">250 м\кв</p>
+                                                        <p className="area">{el.square}</p>
                                                     </div>
                                                 </div>
                                                 <div className="sales-wrapper-inner d-flex align-items-center ml-1">
                                                     <img className="sales-icon icon3" src={icon1} alt="sdc" />
-                                                    <p className="room">3-х комнаты</p>
+                                                    <p className="room">{el.rooms}</p>
                                                 </div>
                                                 <div className="d-flex justify-content-between align-items mt-3 mb-2">
                                                     <p className="text__w">

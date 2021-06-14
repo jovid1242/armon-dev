@@ -22,7 +22,6 @@ export default function News() {
 
     const onUpdateCurrentPage = async (page) => {
         await setPagePost(page)
-        console.log('async update', page);
     }
     return (
         <div>

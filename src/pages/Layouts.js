@@ -7,9 +7,11 @@ import Pagination from '../components/pagination/Index'
 import http from '../http'
 
 export default function Team() {
+
     const [pagePost, setPagePost] = useState(1)
     const [pagTotal, setPagTotal] = useState()
     const [post, setPost] = useState(null)
+
     useEffect(() => {
         http.get(`get_layout?page/${pagePost}`)
             .then((response) => {
@@ -21,7 +23,6 @@ export default function Team() {
 
     const onUpdateCurrentPage = async (page) => {
         await setPagePost(page)
-        console.log('async update', page);
     }
     return (
         <>

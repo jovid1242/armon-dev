@@ -30,15 +30,15 @@ export default function Menu() {
     ]
     const aboutLink = [
         {
-            url: "/about",
+            url: "#/about",
             text: "О компании"
         },
         {
-            url: "/news",
+            url: "#/news",
             text: "Новости"
         },
         {
-            url: "/career",
+            url: "#/career",
             text: "Карьера"
         }
     ]

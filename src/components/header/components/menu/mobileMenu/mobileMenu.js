@@ -77,17 +77,16 @@ export default function MobileMenu() {
                             </Link>
                             {/* <SubMenu link={about} /> */}
                         </li>
-                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/about">О компании</Link></li>
-                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/news">Новости</Link></li>
-                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/career">Карьера</Link></li>
-                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/layouts">Планировки</Link></li>
-                        <li className="nav-item delay-2 ">
-                            <Link className="nav-link" to="/projects">Проекты
+                        <li className="nav-item delay-2"><Link className="nav-link" onClick={() => toggle()} to="/news">Новости</Link></li>
+                        <li className="nav-item delay-2"><Link className="nav-link" onClick={() => toggle()} to="/career">Карьера</Link></li>
+                        <li className="nav-item delay-2"><Link className="nav-link" onClick={() => toggle()} to="/layouts">Планировки</Link></li>
+                        <li className="nav-item delay-3 ">
+                            <Link className="nav-link" to="/projects" onClick={() => toggle()}>Проекты
                             {/* <div className="dropdown-toggle"></div> */}
                             </Link>
                             {/* <SubMenu link={projects} /> */}
                         </li>
-                        <li className="nav-item delay-3"><Link className="nav-link" onClick={() => toggle()} to="/sales-offices">Офисы продаж</Link></li>
+                        <li className="nav-item delay-4"><Link className="nav-link" onClick={() => toggle()} to="/sales-offices">Офисы продаж</Link></li>
                         <li className="nav-item delay-4"><Link className="nav-link" onClick={() => toggle()} to="/contacts">Контакты</Link></li>
                         {/* <li className="nav-item delay-5"><a className="nav-link" href="#">Связаться с нами</a></li> */}
                     </ul>
