@@ -26,7 +26,7 @@ export default function Index({ team }) {
                     </div>
                     <div className="row">
                         {
-                            team.map((el, index) => {
+                            team?.map((el, index) => {
                                 return (
                                     <div className="col-lg-4 col-md-4" key={index}>
                                         <div className="team-card">

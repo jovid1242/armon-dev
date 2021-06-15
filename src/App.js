@@ -37,7 +37,7 @@ function App() {
             <Route path="/payment" exact component={Payment} />
             <Route path="/projects" exact component={Projects} />
             <Route path="/team" exact component={Team} />
-            <Route path="/layouts" exact component={Layouts} />
+            <Route path="/onsales" exact component={Layouts} />
             <Route path='/404' component={NotFound} />
             <Route path="*" component={NotFound} status={404} />
           </Switch>

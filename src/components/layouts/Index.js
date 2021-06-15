@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Modal, Form } from 'react-bootstrap';
+import { Modal, Form, Toast } from 'react-bootstrap';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUndo, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
@@ -22,11 +22,14 @@ import mf3 from '../../assets/icons/mf3.svg'
 import lybtn from '../../assets/icons/ly-btn-e.svg'
 import lyiconh from '../../assets/icons/ly-icon-h.svg'
 import http from '../../http'
+import validation from './validateModal'
 
 export default function Index({ post }) {
     const [layout, setLayot] = useState(null)
     const [modalShow, setModalShow] = useState(false);
+    const [showNotif, setShowNotif] = useState(false)
     const [modalfShow, setModalfShow] = useState(false);
+    const [validetAlert, setvalidetAlert] = useState("")
     const [residences, setResidences] = useState([])
     const [applications, setApplications] = useState({
         id: null,
@@ -97,25 +100,30 @@ export default function Index({ post }) {
         const data = new FormData()
         data.append('name', applications.name);
         data.append('phone', applications.phone);
-        http.post(`create_order/${applications.id}`, data)
-            .then(res => {
-                console.log(res.data)
-            })
-            .catch((errors) => {
-                console.log('Ошибка', `${errors.message}`);
-            })
+        if (valideModal()) {
+            http.post(`create_order/${applications.id}`, data)
+                .then((res) => {
+                    setvalidetAlert('Ваша заявка успешно отправлена!')
+                })
+                .catch((errors) => {
+                    console.log('Ошибка', `${errors.message}`);
+                })
+        } else {
+            return
+        }
+
     }
     // jovid1242jivO
 
-    // const valideModal = () => {
-    //     const err = validation.modalValidation(form)
-    //     if (err.error) {
-    //         setValidetAlert(err.message)
-    //         setShow(true)
-    //         return false
-    //     }
-    //     return true
-    // }
+    const valideModal = () => {
+        const err = validation.modalValidation(applications)
+        if (err.error) {
+            setvalidetAlert(err.message)
+            setShowNotif(true)
+            return false
+        }
+        return true
+    }
 
     return (
         <>
@@ -150,11 +158,15 @@ export default function Index({ post }) {
                     <Rodal visible={openFormModal.visible} onClose={hideMForm.bind()}>
                         <div className="wrapper-modal-window d-flex flex-column flex-lg-row  justify-content-lg-between align-items-center">
                             <div className="wraper-modal-1">
-                                <h3>ЖК Ispechak</h3>
+                                <h3>ЖК Ispechak
+                                    <Toast onClose={() => setShowNotif(false)} show={showNotif} delay={3000} autohide>
+                                        <Toast.Body>{validetAlert}</Toast.Body>
+                                    </Toast></h3>
                                 <img src={Img} alt="Img" />
                             </div>
                             <div className="wraper-modal-2">
                                 <div className="form__group">
+
                                     {
                                         jkdesc?.map((el, index) => {
                                             return (

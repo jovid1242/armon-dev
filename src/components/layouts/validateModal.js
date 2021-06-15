@@ -1,6 +1,6 @@
 const validate = {
     modalValidation: (state) => {
-        if (!state.name) {
+        if (!state.username) {
             return { error: true, message: 'Запольните поле имя' };
         }
         if (!state.phone) {

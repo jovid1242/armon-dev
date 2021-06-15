@@ -30,7 +30,7 @@ export default function NewsById({ news }) {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="news__img">
-                                <img src={newsidimg} alt="" />
+                                <img src={news?.map(el => el.img)} alt="" />
                             </div>
                         </div>
                         <div className="col-md-6">

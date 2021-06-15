@@ -50,7 +50,7 @@ export default function Projects({ projects }) {
                             dotListClass="custom-dot-list-style"
                             itemClass="carousel-item-padding-10-px" >
                             {
-                                projects.map((item, index) => {
+                                projects?.map((item, index) => {
                                     return (
                                         <a href={item.url} key={index}>
                                             <div className="wrapper-card">

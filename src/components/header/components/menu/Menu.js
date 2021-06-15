@@ -58,7 +58,7 @@ export default function Menu() {
                     <li><Link to="/projects" className="links-headers">Проекты</Link>
                         <SubMenu projectsLink={projectsLink} />
                     </li>
-                    <li><Link to="/layouts" className="links-headers">Планировки</Link>
+                    <li><Link to="/onsales" className="links-headers">В продаже</Link>
                         {/* <SubMenu projectsLink={prodaje} /> */}
                     </li>
                     <li><Link to="/sales-offices" className="links-headers">Офисы продаж</Link>

@@ -44,6 +44,11 @@
     margin-right: 5px;
 }
 
+.header-icon img:hover {
+    cursor: pointer;
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(172deg);
+}
+
 .menu li {
     display: flex;
 }

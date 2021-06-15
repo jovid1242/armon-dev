@@ -38,7 +38,7 @@ export default function Index({ news }) {
                                                     <p>{el.title}</p>
                                                 </div>
                                                 <div className="news__card-text">
-                                                    <p>{ReactHtmlParser(el.text.substr(0, 65) + '...')}</p>
+                                                    <p>{ReactHtmlParser(el.text.substr(0, 65))}</p>
                                                 </div>
                                                 <div className="news__card-date">
                                                     <p className="news-dates"><Moment format="LL">{el.date}</Moment></p>
