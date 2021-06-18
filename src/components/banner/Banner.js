@@ -54,11 +54,11 @@ export default function Banner() {
                             <div className="wrapper-inner" style={{ padding: "130px 0px 106px 50px" }}>
                                 <h4 className="wrapper-inner__title" style={{ fontSize: "36px", fontWeight: "bold", lineHeight: "19px" }}>
                                     Trade-in
-                                    </h4>
+                                </h4>
                                 <p className="wrapper-inner__text" style={{ fontSize: "25px", letterSpacing: "-1px" }}>
                                     на выгодных
                                     условиях
-                                    </p>
+                                </p>
                             </div>
                             <img src={frames} alt="" className="wrapper__img wrapper__img_height" style={{ marginRight: "-24px", marginLeft: "auto" }} />
                         </div>

@@ -8,6 +8,7 @@ import Video from '../components/video/Video'
 import Instagram from '../components/instagram/Instagram'
 import Feedback from '../components/feedback/Index'
 import Footer from '../components/footer/Footer'
+import Promotions from '../components/promotions/Promotions'
 
 import http from '../http'
 
@@ -176,6 +177,7 @@ export default function Home() {
         <>
             <Header header={true} />
             <SliderWeb slide={slide} />
+            <Promotions />
             <Banner />
             <Projects projects={projects} />
             <News news={news} />

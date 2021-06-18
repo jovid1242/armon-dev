@@ -1,0 +1,271 @@
+.promotions-section {
+    width: 100%;
+    position: relative;
+    padding: 85px 0 0;
+}
+
+.promotions__wrapper {
+    padding: 30px 70px;
+    width: 100%;
+    height: auto;
+    background: #0273BA;
+    border-radius: 27px;
+}
+
+.pro__wrapper-title {
+    margin: 0 !important;
+}
+
+.pro__wrapper-title p {
+    margin: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 46px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+}
+
+.pro__wrapper-title span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+}
+
+.pro__wr-text p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 46px;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+
+}
+
+.icon__promotions {
+    position: absolute;
+    left: -15px;
+    bottom: -5px;
+}
+
+.promo__days p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    /* padding-top: 10px; */
+    /* White Color Armon */
+    margin: 0 !important;
+    color: #FFFFFF;
+}
+
+.promo__days span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 49px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -1px;
+
+    /* White Color Armon */
+
+    color: #FFFFFF;
+
+}
+
+.icon__promotions img {
+    width: 398px;
+}
+
+.btn__promo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__promo button {
+    background: #0273BA;
+    border-radius: 27px;
+    outline: none;
+    border: 2px solid #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    padding: 5px 20px 5px 20px;
+}
+
+.btn__promo button:hover {
+    background: #FF0000;
+}
+
+.promo__modal .rodal-fade-enter .rodal-dialog {
+    background: #0273BA;
+    border-radius: 27px;
+}
+
+.promo__modal .rodal-fade-enter .rodal-dialog .rodal-close {
+    border-radius: 50% !important;
+    top: 20px !important;
+    right: 20px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border: 2px solid #fff !important;
+}
+
+.promo__modal .rodal-fade-enter .rodal-dialog .rodal-close:before {
+    border-radius: 0 !important;
+    background: #fff !important;
+    width: 60% !important;
+    left: 5px !important;
+}
+
+.promo__modal .rodal-fade-enter .rodal-dialog {
+    border-radius: 16px !important;
+    animation-duration: 300ms;
+}
+
+.promo__modal .rodal-fade-enter .rodal-dialog .rodal-close:after {
+    border-radius: 0 !important;
+    background: #fff !important;
+    width: 60% !important;
+    left: 5px !important;
+}
+
+@media screen and (min-width: 428px) and (max-width: 768px) {
+    .promotions__wrapper {
+        padding: 25px 30px;
+    }
+
+    .promo__days p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pro__wrapper-title p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pro__wrapper-title span {
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .pro__wr-text p {
+        font-size: 22px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .promo__days p {
+        font-size: 42px;
+        line-height: 10px;
+    }
+
+    .promo__days span {
+        font-size: 22px;
+    }
+
+    .icon__promotions {
+        position: absolute;
+        left: 60px;
+        bottom: 215px;
+    }
+
+    .icon__promotions img {
+        width: 280px;
+    }
+
+    .pro__wrapper-title {
+        padding-top: 170px;
+    }
+
+    .promo__time {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 427px) {
+    .promotions__wrapper {
+        padding: 25px 30px;
+    }
+
+    .promo__days p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pro__wrapper-title p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pro__wrapper-title span {
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .pro__wr-text p {
+        font-size: 22px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .promo__days p {
+        font-size: 38px;
+        line-height: 10px;
+    }
+
+    .promo__days span {
+        font-size: 16px;
+    }
+
+    .icon__promotions {
+        position: absolute;
+        left: 60px;
+        bottom: 210px;
+    }
+
+    .icon__promotions img {
+        width: 280px;
+    }
+
+    .pro__wrapper-title {
+        padding-top: 180px;
+    }
+
+    .promo__time {
+        margin-left: 20px;
+    }
+
+    .btn__promo {
+        margin-top: 10px;
+    }
+}
