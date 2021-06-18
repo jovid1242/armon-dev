@@ -119,9 +119,14 @@
     background: #FF0000;
 }
 
+/* start modal */
+
 .promo__modal .rodal-fade-enter .rodal-dialog {
     background: #0273BA;
     border-radius: 27px;
+    width: 520px !important;
+    height: 715px !important;
+    padding: 35px !important;
 }
 
 .promo__modal .rodal-fade-enter .rodal-dialog .rodal-close {
@@ -151,6 +156,90 @@
     width: 60% !important;
     left: 5px !important;
 }
+
+.modal-icon__promotions {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-icon__promotions img {
+    position: absolute;
+    width: 320px;
+    bottom: 490px;
+}
+
+.stock__wrapper {
+    margin-top: 185px;
+}
+
+.stock__wrapper-title p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    /* White Color Armon */
+
+    color: #FFFFFF;
+
+}
+
+.pdtext {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ddtt {
+    width: 80px;
+    height: 3px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.stock__wrapper-text p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: -1px;
+
+    /* White Color Armon */
+
+    color: #FFFFFF;
+}
+
+.modal__input__group ul {
+    padding: 0 !important;
+}
+
+.modal__input__group ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__stock {
+    display: flex;
+    justify-content: center;
+}
+
+.modal__input__group .mdl__input {
+    background: #FFFFFF;
+    border-radius: 29px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 60%;
+    padding-left: 15px;
+}
+
+/* and modal */
 
 @media screen and (min-width: 428px) and (max-width: 768px) {
     .promotions__wrapper {
