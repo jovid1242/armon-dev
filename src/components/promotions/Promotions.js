@@ -1,10 +1,22 @@
 import React, { useRef, useState, useEffect } from 'react'
+import iconPromt from '../../assets/icons/offer_2.svg'
 import Rodal from 'rodal';
 import './promotions.css'
-
-import iconPromt from '../../assets/icons/offer_2.svg'
+import axios from 'axios'
+import FormData from 'form-data'
+import validation from './validateModal'
+import { Toast } from 'react-bootstrap';
+import ReactHtmlParser from 'react-html-parser'
 
 export default function Promotions() {
+    const [validetAlert, setValidetAlert] = useState(null)
+    const [showt, setShowt] = useState(false)
+    const [form, setForm] = useState({
+        username: null,
+        phone: null
+    })
+
+
     const [timerDays, setTimerDays] = useState('00')
     const [timerHours, setTimerHours] = useState('00')
     const [timerMinutes, setTimerMinutes] = useState('00')
@@ -56,9 +68,49 @@ export default function Promotions() {
     const hide = () => {
         setOpenImgModal({ visible: false });
     }
+
+    const handleModalInput = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        const data = form
+        data[name] = value
+        setForm(data)
+    }
+
+    const submitForm = (e) => {
+        e.preventDefault()
+        const data = new FormData()
+        data.append('site', 'armon.tj');
+        data.append('theme', '"Акция 30/30/30"');
+        data.append('name', form.username);
+        data.append('phone', form.phone);
+        if (valideModal()) {
+            axios.post(`https://armon.tj/freedom/telegramForm/php/send-message-to-telegram.php`, data)
+                .then(res => {
+                    setValidetAlert(res.data)
+                    setShowt(true)
+                })
+                .catch((errors) => {
+                    console.log('Ошибка', `${errors.message}`);
+                })
+        } else {
+            return
+        }
+    }
+    // jovid1242jivO
+
+    const valideModal = () => {
+        const err = validation.modalValidation(form)
+        if (err.error) {
+            setValidetAlert(err.message)
+            setShowt(true)
+            return false
+        }
+        return true
+    }
     return (
         <>
-            <div className="promotions-section">
+            <div className="promotions-section" id="stackk">
                 <div className="promo__modal">
                     <Rodal visible={openImgModal.visible} onClose={hide.bind()} width="600">
                         <div className="modal-icon__promotions">
@@ -81,11 +133,20 @@ export default function Promotions() {
                                     "</p>
                             </div>
                             <div className="modal__input__group">
-                                <form action="" >
+                                <Toast onClose={() => setShowt(false)} show={showt} delay={3000} autohide>
+                                    <Toast.Body>
+                                        <span className="toasp__text-modal">
+                                            {ReactHtmlParser(validetAlert)}
+                                        </span>
+                                    </Toast.Body>
+                                </Toast>
+                                <form action="" onSubmit={submitForm}>
                                     <ul>
                                         <li>
                                             <input
                                                 type="text"
+                                                name="username"
+                                                onChange={handleModalInput}
                                                 className="mdl__input"
                                                 placeholder="Имя..."
                                             />
@@ -93,6 +154,8 @@ export default function Promotions() {
                                         <li>
                                             <input
                                                 type="text"
+                                                name="phone"
+                                                onChange={handleModalInput}
                                                 className="mdl__input mt-2"
                                                 placeholder="Тел... +992__"
                                             />
@@ -100,7 +163,7 @@ export default function Promotions() {
                                     </ul>
                                     <div className="btn__promo">
                                         <button >
-                                            Узнать подробнее
+                                            Отправить
                                         </button>
                                     </div>
                                 </form>
