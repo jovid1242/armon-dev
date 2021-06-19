@@ -54,7 +54,7 @@ export default function Instagram({ post }) {
                             {
                                 post.map((item, index) => {
                                     return (
-                                        <a href={item.url} key={index}>
+                                        <a href={item.url} target="_blank" key={index}>
                                             <div className="instagram-card">
                                                 <img src={item.img} alt="" />
                                                 <div className="like-inst">
