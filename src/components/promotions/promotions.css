@@ -269,6 +269,91 @@
 }
 
 /* and modal */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .promotions__wrapper {
+        padding: 25px 30px;
+    }
+
+    .promo__days p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pro__wrapper-title p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pro__wrapper-title span {
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .pro__wr-text p {
+        font-size: 22px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .promo__days p {
+        font-size: 42px;
+        line-height: 10px;
+    }
+
+    .promo__days span {
+        font-size: 22px;
+    }
+
+    .icon__promotions {
+        position: absolute;
+        left: 60px;
+        bottom: 215px;
+    }
+
+    .icon__promotions img {
+        width: 280px;
+    }
+
+    .pro__wrapper-title {
+        padding-top: 170px;
+    }
+
+    .promo__time {
+        margin-left: 15px;
+    }
+
+    .promo__modal .rodal-fade-enter .rodal-dialog {
+        background: #0273BA;
+        border-radius: 27px;
+        width: 95% !important;
+        height: 715px !important;
+        padding: 15px !important;
+    }
+
+    .stock__wrapper-title p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 49px;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #FFFFFF;
+    }
+
+    .stock__wrapper-text p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: -1px;
+        color: #FFFFFF;
+    }
+}
 
 @media screen and (min-width: 428px) and (max-width: 768px) {
     .promotions__wrapper {

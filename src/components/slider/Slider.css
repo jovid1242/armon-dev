@@ -187,10 +187,12 @@
 
     .carousel-item img {
         width: 100% !important;
+        height: 100vh;
+        object-fit: cover;
     }
 
     .carousel-caption {
-        bottom: 38% !important;
+        bottom: 31% !important;
         left: 7% !important;
         width: 70%;
     }
@@ -228,10 +230,12 @@
 
     .carousel-item img {
         width: 100% !important;
+        height: 100vh;
+        object-fit: cover;
     }
 
     .carousel-caption {
-        bottom: 35% !important;
+        bottom: 31% !important;
         left: 7% !important;
         width: 70%;
     }
@@ -264,10 +268,12 @@
 
     .carousel-item img {
         width: 100% !important;
+        height: 100vh;
+        object-fit: cover;
     }
 
     .carousel-caption {
-        bottom: 32% !important;
+        bottom: 30% !important;
         left: 10% !important;
         width: 70%;
     }
@@ -298,10 +304,12 @@
 
     .carousel-item img {
         width: 100% !important;
+        height: 100vh;
+        object-fit: cover;
     }
 
     .carousel-caption {
-        bottom: 29% !important;
+        bottom: 23% !important;
         left: 10% !important;
         width: 70%;
     }
@@ -339,7 +347,7 @@
     }
 
     .carousel-caption {
-        bottom: 28% !important;
+        bottom: 23% !important;
         left: 10% !important;
         width: 70%;
     }
@@ -370,10 +378,11 @@
     .carousel-item img {
         width: 100% !important;
         height: 100vh;
+        object-fit: cover;
     }
 
     .carousel-caption {
-        bottom: 25% !important;
+        bottom: 20% !important;
         left: 10% !important;
         width: 70%;
     }
@@ -409,7 +418,6 @@
 
     .carousel-item img {
         width: 100% !important;
-        object-fit: cover;
         height: 100vh;
     }
 
@@ -474,16 +482,15 @@
 
     .carousel-item img {
         height: 68vh;
-        object-fit: cover;
     }
 
     .carousel-caption {
         bottom: 35% !important;
-        left: 13% !important;
-        width: 75%;
-        background: rgba(255, 255, 255, 0.5);
+        left: 5% !important;
+        width: 90%;
+        background: hsla(0, 0%, 100%, .5);
         border-radius: 14px;
-        height: 200px !important;
+        height: 234px !important;
         padding: 10px;
     }
 

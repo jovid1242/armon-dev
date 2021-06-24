@@ -64,7 +64,7 @@ export default function Index(props) {
                 <Modal.Header closeButton>
                 </Modal.Header>
                 <Modal.Body>
-                    <p className="text-center text__modal">ЗАДАТЬ ВОПРОС</p>
+                    <p className="text-center text__modal">Оставить заявку</p>
                     {res === null ? "" : ReactHtmlParser(res)}
                     <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
                         <Toast.Body>{validetAlert}</Toast.Body>
@@ -72,8 +72,7 @@ export default function Index(props) {
                     <div className="under__modal-text d-flex justify-content-center">
                         <div className="under__text"></div>
                     </div>
-                    <p className="text-center text__modal-fdb">Оставьте свой вопрос нам и
-мы ответим вам на него</p>
+                    <p className="text-center text__modal-fdb">Оставьте свои контакты и наш менеджер свяжется с Вами</p>
                     <Form action="#" onSubmit={submitForm}>
                         <Form.Group controlId="formBasicName">
                             <Form.Control

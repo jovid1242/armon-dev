@@ -142,7 +142,7 @@ export default function SliderWeb() {
                 </Rodal>
             </div>
             <Carousel pause={false} fade style={{ animationDelay: "2.5s" }}>
-                <Carousel.Item interval={5000} pause={false}>
+                <Carousel.Item interval={500000} pause={false}>
                     <img
                         className="d-block w-100"
                         src={slide3}
