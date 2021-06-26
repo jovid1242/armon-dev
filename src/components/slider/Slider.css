@@ -185,11 +185,11 @@
         width: 10% !important;
     }
 
-    .carousel-item img {
+    /* .carousel-item img {
         width: 100% !important;
         height: 100vh;
         object-fit: cover;
-    }
+    } */
 
     .carousel-caption {
         bottom: 31% !important;

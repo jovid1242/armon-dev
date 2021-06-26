@@ -1,0 +1,375 @@
+.carousel-item {
+    background-size: 90% !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+.carousel-caption {
+    width: 100% !important;
+    right: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    /* overflow: auto !important; */
+    overflow-x: hidden !important;
+}
+
+.my__auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+    position: absolute;
+    text-align: start;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 5%;
+    margin: auto;
+}
+
+.carousel__img {
+    float: right;
+    max-width: 90%;
+    object-fit: cover;
+}
+
+.my__auto h3 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: start;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #343237;
+
+}
+
+.my__auto p {
+    max-width: 40%;
+    margin-top: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+    color: #343237;
+
+}
+
+.slide__btn button a {
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+}
+
+.slide__btn button {
+    border: none;
+    height: 40px;
+    padding: 0px 15px 0 15px;
+    background: #0273BA;
+    color: #FFFFFF;
+    margin-right: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    outline: none !important;
+}
+
+.mob__btn-slider button {
+    display: none;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #0273BA !important;
+}
+
+.carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50% !important;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff !important;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 1 !important;
+    transition: opacity .6s ease;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../../assets/icon-slider/w2.svg') !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../../assets/icon-slider/w1.svg') !important;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1 !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5% !important;
+}
+
+@media (max-width: 1920px) {
+    .carousel-item {
+        background-size: 100% !important;
+        background-position: right !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        width: 100% !important;
+        height: 900px !important;
+    }
+
+    .my__auto {
+        height: 330px;
+    }
+
+    .my__auto h3 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: start;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: #343237;
+
+    }
+
+    .my__auto p {
+        max-width: 40%;
+        margin-top: 50px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        color: #343237;
+
+    }
+
+}
+
+
+@media (max-width: 1440px) {
+    .carousel-item {
+        background-size: 100% !important;
+        background-position: right !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        width: 100% !important;
+        height: 700px !important;
+    }
+
+    .my__auto {
+        height: 330px;
+    }
+
+    .my__auto h3 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: start;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: #343237;
+
+    }
+
+    .my__auto p {
+        max-width: 40%;
+        margin-top: 50px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        color: #343237;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        background-size: 100% !important;
+        background-position: right !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        width: 100% !important;
+        height: 80vh !important;
+    }
+
+    .my__auto {
+        width: 90%;
+        height: 280px;
+        padding: 45px 10px 0px 10px;
+        background: hsla(0, 0%, 100%, .5);
+        border-radius: 14px;
+    }
+
+    .my__auto h3 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        text-align: center;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: #343237;
+
+    }
+
+    .my__auto p {
+        margin-top: 10px;
+        max-width: 100%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: #343237;
+    }
+
+    .slide__btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -80px;
+        z-index: 5;
+    }
+
+    .slide__btn button {
+        border: none;
+        height: 40px;
+        padding: 0px 5px 0 5px;
+        margin-right: 0;
+    }
+
+    .slide__btn button:nth-child(1) {
+        display: none;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        background-size: 100% !important;
+        background-position: right !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        width: 100% !important;
+        height: 80vh !important;
+    }
+
+    .my__auto {
+        width: 85%;
+        height: 280px;
+        padding: 45px 10px 0px 10px;
+        background: hsla(0, 0%, 100%, .5);
+        border-radius: 14px;
+    }
+
+    .my__auto h3 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: #343237;
+
+    }
+
+    .my__auto p {
+        margin-top: 10px;
+        max-width: 100%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: #343237;
+    }
+
+    .slide__btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -80px;
+        z-index: 5;
+    }
+
+    .slide__btn button {
+        border: none;
+        height: 40px;
+        padding: 0px 5px 0 5px;
+        margin-right: 0;
+    }
+
+    .slide__btn button:nth-child(1) {
+        display: none;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        display: none !important;
+    }
+}

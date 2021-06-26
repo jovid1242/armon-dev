@@ -269,7 +269,38 @@
 }
 
 /* and modal */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
+    .icon__promotions {
+        position: absolute;
+        left: 14px;
+        bottom: 85px;
+    }
+
+    .icon__promotions img {
+        width: 280px;
+    }
+
+    .promo__days p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 65px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -1px;
+        padding-top: 10px;
+        margin: 0 !important;
+        color: #FFFFFF;
+    }
+
+    /* .icon__promotions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .promotions__wrapper {
         padding: 25px 30px;
     }
@@ -281,14 +312,15 @@
 
     .pro__wrapper-title p {
         display: flex;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-end;
+        text-align: end;
     }
 
     .pro__wrapper-title span {
         display: flex;
+        justify-content: flex-end;
         font-size: 15px;
-        text-align: center;
+        text-align: end;
     }
 
     .pro__wr-text p {
@@ -305,16 +337,6 @@
 
     .promo__days span {
         font-size: 22px;
-    }
-
-    .icon__promotions {
-        position: absolute;
-        left: 60px;
-        bottom: 215px;
-    }
-
-    .icon__promotions img {
-        width: 280px;
     }
 
     .pro__wrapper-title {
@@ -352,10 +374,37 @@
         line-height: 34px;
         letter-spacing: -1px;
         color: #FFFFFF;
+    } */
+}
+
+@media screen and (min-width: 490px) and (max-width: 768px) {
+
+    .icon__promotions {
+        position: absolute;
+        left: 14px;
+        bottom: 85px;
+    }
+
+    .icon__promotions img {
+        width: 280px;
+    }
+
+    .promo__days p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -1px;
+        padding-top: 10px;
+        margin: 0 !important;
+        color: #FFFFFF;
     }
 }
 
-@media screen and (min-width: 428px) and (max-width: 768px) {
+@media screen and (min-width: 428px) and (max-width: 480px) {
     .promotions__wrapper {
         padding: 25px 30px;
     }
@@ -396,7 +445,7 @@
     .icon__promotions {
         position: absolute;
         left: 60px;
-        bottom: 215px;
+        bottom: 210px;
     }
 
     .icon__promotions img {
