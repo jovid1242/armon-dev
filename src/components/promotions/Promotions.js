@@ -93,6 +93,19 @@ export default function Promotions() {
                 .catch((errors) => {
                     console.log('Ошибка', `${errors.message}`);
                 })
+            const stock = {
+                theme: "Акция 30/30/30",
+                name: form.username,
+                phone: form.phone
+            }
+            axios.post(`https://api.armon.tj/stock/create`, stock)
+                .then(res => {
+                    setValidetAlert('Спасибо за отправку вашего сообщения')
+                    setShowt(true)
+                })
+                .catch((errors) => {
+                    console.log('Ошибка', `${errors.message}`);
+                })
         } else {
             return
         }

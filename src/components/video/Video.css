@@ -20,6 +20,19 @@ iframe {
     border-radius: 15px !important;
 }
 
+.text-loading {
+    position: absolute;
+    margin: auto !important;
+    bottom: 0;
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    left: 0;
+    right: 0;
+}
+
 .modal-xl .modal-header .close {
     opacity: 1 !important;
     padding: 0 !important;

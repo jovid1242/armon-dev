@@ -37,6 +37,7 @@ export default function Video({ videoGallery }) {
                             <Modal.Header closeButton>
                             </Modal.Header>
                             <Modal.Body>
+                                {/* <h1 className="text-center text-loading my-auto">Загрузка...</h1> */}
                                 <ReactPlayer
                                     playing={false}
                                     controls={true}
@@ -56,7 +57,7 @@ export default function Video({ videoGallery }) {
                                         <img data-toggle="modal" className="image" data-target="#exampleModalLong" src={item.img} />
                                         <div className="middle">
                                             <div className="play-btn">
-                                                <img src={playBtn} alt="play-btn" onClick={() => { handleVideo(item.videoUrl) }} />
+                                                <img src={playBtn} alt="play-btn" onClick={() => { handleVideo(item.url) }} />
                                             </div>
                                         </div>
                                     </div>
