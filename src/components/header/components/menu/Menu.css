@@ -22,18 +22,31 @@
 
 .header-icon-black {
     display: flex;
+    cursor: pointer;
 }
 
 .header-icon-black img {
     margin-left: 10px;
     /* margin-right: 10px; */
     display: none;
+    cursor: pointer;
+}
+
+.header-icon-black img:hover {
+    cursor: pointer;
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(172deg);
 }
 
 .header-icon img {
     display: block;
+    cursor: pointer;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.header-icon img:hover {
+    cursor: pointer;
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(172deg);
 }
 
 .menu li {
@@ -41,17 +54,24 @@
 }
 
 .menu li a {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     display: block;
-    color: #F2F2F2;
+    color: #080B11;
     text-decoration: none;
-    padding: 22px 12px;
+    padding: 6px 12px;
     transition: all 0.3s ease-in-out 0s;
 }
 
-.menu li a:hover {
-    color: #0273BA;
+.menu li:hover .links-headers {
+    opacity: 1;
+    border-radius: 6px;
+    color: #fff !important;
+    background: #0273BA;
+}
+
+.menu li:hover .submenu__trasparent-bg {
+    display: block;
 }
 
 .black-collor ul li {

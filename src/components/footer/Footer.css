@@ -3,7 +3,6 @@
     width: 100%;
     height: auto;
     background: #333333;
-    margin-top: 15px;
     z-index: 9;
 }
 
@@ -74,14 +73,19 @@
     margin-right: 8px;
 }
 
-
-
 .main svg {
-    padding: 0 10px 10px;
+    /* padding: 0 10px 10px; */
 }
 
 .substr {
     /* padding: 1rem; */
+}
+
+.footer-address .footer-address__text_bott {
+    text-decoration: none !important;
+    color: #BFBFBF !important;
+    outline: none;
+    font-size: 14px;
 }
 
 .substr p {
@@ -115,6 +119,11 @@
     list-style: none;
 }
 
+.info-txt li p a {
+    text-decoration: none !important;
+    color: #BFBFBF !important;
+}
+
 .info-txt li .phone-color {
     line-height: 5px;
     font-style: normal;
@@ -142,8 +151,7 @@
 .main {
     display: block;
     color: #BFBFBF;
-    padding: 20px 0 40px;
-    border-bottom: 60px solid #2C2A2F;
+    padding: 20px 0 0;
 }
 
 .footer-address__text {
@@ -157,6 +165,7 @@
 
 .footer-address__text_marg {
     margin-bottom: 0 !important;
+    font-size: 14px;
 }
 
 .footer-address__text_bott {
@@ -165,7 +174,8 @@
 
 .footer__logo img {
     object-fit: cover;
-    width: 216px;
+    width: 185px;
+    margin-bottom: 6px;
 }
 
 .mobile-footer {
@@ -181,6 +191,17 @@
     margin-bottom: 15px;
 }
 
+.footer-bttm-wrap {
+    margin-top: 40px;
+    padding: 8px 0;
+    background: #000;
+}
+
+.footer-bttm-wrap p {
+    margin: 0;
+    font-size: 14px;
+}
+
 /* @media screen and (min-width: 1366) and (max-width: 1920px) {
     .icons-text {
         margin-left: 96px !important;
@@ -188,6 +209,9 @@
     }
 } */
 
+.under-footer__logo img {
+    max-width: 210px;
+}
 
 @media (max-width: 1024px) {
     .footer__logo img {
@@ -195,9 +219,14 @@
         width: 200px;
     }
 
+    .icons svg {
+        width: 32px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
     .main {
-        padding: 20px 0 40px;
-        border-bottom: 30px solid #2C2A2F;
+        padding: 20px 0 0;
     }
 
     .footer-address__text_color,
@@ -224,6 +253,23 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .mobile-under-footer__text {
+        padding-left: 10%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #BFBFBF;
+        text-align: left;
+        max-width: 60%;
+    }
+
+    .mobile__under-footer-img {
+        padding-right: 31% !important;
+    }
+
     .icons {
         display: flex;
         justify-content: center;
@@ -254,6 +300,10 @@
     }
 
     .links {
+        display: none;
+    }
+
+    .full_links {
         display: none;
     }
 
@@ -302,7 +352,7 @@
     }
 
     .f-logo svg {
-        padding: 0 10px 10px;
+        padding: 10px 10px 10px;
     }
 
     .armon-info {
@@ -327,7 +377,6 @@
         font-size: 16px;
         line-height: 18px;
         text-align: center;
-
         color: #BFBFBF;
     }
 
@@ -349,6 +398,10 @@
 
     .input-group {
         margin: 0 auto;
+    }
+
+    .footer-bttm-wrap {
+        margin-top: 0;
     }
 
     /* .info li p {

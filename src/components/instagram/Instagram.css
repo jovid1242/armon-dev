@@ -1,12 +1,13 @@
 .instagram {
     width: 100% !important;
     height: auto;
-    padding: 50px 0 80px;
+    padding: 30px 0 74px;
 }
 
 .instagram-projects-header {
     width: 100%;
     height: auto;
+    margin-bottom: 35px;
     margin-top: 40px;
     /* margin-left: 43px; */
 }
@@ -95,7 +96,7 @@
 
 @media (max-width: 900px) {
     .instagram-card {
-        margin-left: 5px !important;
+        margin-left: 10px !important;
         margin-right: 0;
     }
 
@@ -152,7 +153,7 @@
         border: none !important;
         box-shadow: 0px 0px 10px 2px #e9e9e9;
         border-radius: 14px;
-        width: 250px !important;
+        width: 95% !important;
     }
 
     .react-multi-carousel-dot-list {

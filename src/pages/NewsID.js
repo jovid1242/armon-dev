@@ -1,51 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import Main from '../components/news-main/newsById'
 
+import http from '../http'
+
 export default function NewsID() {
-    const news = [
-        {
-            id: "1",
-            title: "Открытие офиса продаж",
-            text: "Индивидуальный офис продаж создан для максимального удобства покупателей...",
-            date: "12 марта 2021"
-        },
-        {
-            id: "2",
-            title: "Открытие офиса продаж",
-            text: "Индивидуальный офис продаж создан для максимального удобства покупателей...",
-            date: "12 марта 2021"
-        },
-        {
-            id: "3",
-            title: "Открытие офиса продаж",
-            text: "Индивидуальный офис продаж создан для максимального удобства покупателей...",
-            date: "12 марта 2021"
-        },
-        {
-            id: "4",
-            title: "Открытие офиса продаж",
-            text: "Индивидуальный офис продаж создан для максимального удобства покупателей...",
-            date: "12 марта 2021"
-        },
-        {
-            id: "5",
-            title: "Открытие офиса продаж",
-            text: "Индивидуальный офис продаж создан для максимального удобства покупателей...",
-            date: "12 марта 2021"
-        },
-        {
-            id: "6",
-            title: "Открытие офиса продаж",
-            text: "Индивидуальный офис продаж создан для максимального удобства покупателей...",
-            date: "12 марта 2021"
-        }
-    ]
+    const [newsContent, setNewsContent] = useState([])
+    const { id } = useParams();
+    useEffect(() => {
+        http.get(`get_news/${id}`)
+            .then((response) => {
+                setNewsContent(response.data)
+            })
+    }, [])
+
     return (
         <>
             <Header header={false} />
-            <Main news={news} />
+            <Main news={newsContent} />
             <Footer />
         </>
     )

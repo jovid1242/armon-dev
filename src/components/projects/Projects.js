@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ReactHtmlParser from 'react-html-parser'
 import './Projects.css'
 
 export default function Projects({ projects }) {
@@ -50,14 +51,14 @@ export default function Projects({ projects }) {
                             dotListClass="custom-dot-list-style"
                             itemClass="carousel-item-padding-10-px" >
                             {
-                                projects.map((item, index) => {
+                                projects?.map((item, index) => {
                                     return (
-                                        <a href={item.url} key={index}>
+                                        <a href={item.url} target="_blank" key={index}>
                                             <div className="wrapper-card">
                                                 <div className="project-card">
                                                     <img src={item.img} alt="" />
                                                     <h2>{item.title}</h2>
-                                                    <span>{item.text}</span>
+                                                    <span>{ReactHtmlParser(item.text.substr(0, 57))}</span>
                                                     <p>{item.address}</p>
                                                 </div>
                                             </div>

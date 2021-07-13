@@ -1,58 +1,221 @@
-import React, { useState, useRef } from "react"
-import Swiper from 'react-id-swiper';
-import PaginateBtn from './components/paginate/Index'
-import Slide from './components/slide/Slide'
-import SlideOne from './components/slide/Slide2'
-import SlideTwo from './components/slide/Slide3'
-import 'swiper/css/swiper.css'
-import "./Slider.css";
+import React, { useState } from "react"
+import { Carousel } from 'react-bootstrap';
+import Modal from '../modal/Index'
+import Rodal from 'rodal';
+import axios from 'axios'
+import FormData from 'form-data'
+import validation from './validateModal'
+import { Toast } from 'react-bootstrap';
+import ReactHtmlParser from 'react-html-parser'
 
+import slidew from '../../assets/img/slide_w.jpg'
+import slideww from '../../assets/img/slide_ww.jpg'
+import slide3 from '../../assets/icon-slider/armon_sale1.jpg'
+import iconPromt from '../../assets/icons/offer_2.svg'
 
+import { Animated } from "react-animated-css";
 
-export default function SliderWeb({ slide }) {
-    const [swiper, setSwiper] = useState(null);
-    const ref = useRef(null);
+import "./Index.css";
 
-    const goNext = () => {
-        console.log('hiii');
-        if (ref.current !== null && ref.current.swiper !== null) {
-            ref.current.swiper.slideNext()
-        }
-    };
+export default function SliderWeb() {
+    const [modalShow, setModalShow] = useState(false);
+    const [validetAlert, setValidetAlert] = useState(null)
+    const [showt, setShowt] = useState(false)
+    const [form, setForm] = useState({
+        username: null,
+        phone: null
+    })
 
-    const goPrev = () => {
-        console.log('helllo');
-        if (ref.current !== null && ref.current.swiper !== null) {
-            ref.current.swiper.slidePrev();
+    const [openImgModal, setOpenImgModal] = useState(
+        { visible: false }
+    )
+
+    const show = () => {
+        setOpenImgModal({ visible: true });
+    }
+
+    const hide = () => {
+        setOpenImgModal({ visible: false });
+    }
+
+    const handleModalInput = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        const data = form
+        data[name] = value
+        setForm(data)
+    }
+
+    const submitForm = (e) => {
+        e.preventDefault()
+        const data = new FormData()
+        data.append('site', 'armon.tj');
+        data.append('theme', '"Акция 30/30/30"');
+        data.append('name', form.username);
+        data.append('phone', form.phone);
+        if (valideModal()) {
+            axios.post(`https://armon.tj/freedom/telegramForm/php/send-message-to-telegram.php`, data)
+                .then(res => {
+                    setValidetAlert(res.data)
+                    setShowt(true)
+                })
+                .catch((errors) => {
+                    console.log('Ошибка', `${errors.message}`);
+                })
+        } else {
+            return
         }
     }
-    // const urlSlider = ["/", "https://armon.tj/freedom/", "/"]
-    const text = ["Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором...", "Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором...", "Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором..."]
-    const title = ["Ispechak Residence", "Freedom residence", "Скоро в продаже"]
-    const number = ["1", "2", "3"]
-    const params = {
-        spaceBetween: 0,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            // renderBullet: (index, className) => {
-            //     return '<span class="' + className + '">' + (index + 1) + '</span>';
-            // }
-            renderBullet: function (index, className) {
-                return '<div class="' + className + ' paginate-item"><span>' + (number[index]) + '</span><div class="text-under"></div><h1>' + (title[index]) + '</h1><p>' + (text[index]) + '</p></div>';
-            }
+
+    const valideModal = () => {
+        const err = validation.modalValidation(form)
+        if (err.error) {
+            setValidetAlert(err.message)
+            setShowt(true)
+            return false
         }
+        return true
     }
+
     return (
-        <Swiper {...params} ref={ref}>
-            <div><Slide /></div>
-            <div><SlideOne /></div>
-            <div><SlideTwo /></div>
-        </Swiper>
+        <>
+            <div className="promo__modal">
+                <Rodal visible={openImgModal.visible} onClose={hide.bind()} width="600">
+                    <div className="modal-icon__promotions">
+                        <img src={iconPromt} alt="" />
+                    </div>
+                    <div className="stock__wrapper">
+                        <div className="stock__wrapper-title">
+                            <p>Акция "УДОБНАЯ РАССРОЧКА "30/30/30"</p>
+                        </div>
+                        <div className="pdtext">
+                            <div className="ddtt"></div>
+                        </div>
+                        <div className="stock__wrapper-text">
+                            <p>
+                                В рамках данной акции Вы можете приобрести
+                                желаемую недвижимость
+                                в ЖК "Freedom Residence" в рассрочку и без лишних переплат!
+                                Вы вносите первоначальный взнос от 30%, и затем, в течение
+                                30 месяцев выплачиваете фиксированную сумму.
+                                "</p>
+                        </div>
+                        <div className="modal__input__group">
+                            <Toast onClose={() => setShowt(false)} show={showt} delay={3000} autohide>
+                                <Toast.Body>
+                                    <span className="toasp__text-modal">
+                                        {ReactHtmlParser(validetAlert)}
+                                    </span>
+                                </Toast.Body>
+                            </Toast>
+                            <form action="" onSubmit={submitForm}>
+                                <ul>
+                                    <li>
+                                        <input
+                                            type="text"
+                                            name="username"
+                                            onChange={handleModalInput}
+                                            className="mdl__input"
+                                            placeholder="Имя..."
+                                        />
+                                    </li>
+                                    <li>
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            onChange={handleModalInput}
+                                            className="mdl__input mt-2"
+                                            placeholder="Тел... +992__"
+                                        />
+                                    </li>
+                                </ul>
+                                <div className="btn__promo">
+                                    <button >
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </Rodal>
+            </div>
+            <Carousel pause={false} fade style={{ animationDelay: "2.5s" }}>
+                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slide3})` }}>
+                    {/* <img
+                        className="carousel__img d-block"
+                        src={slide3}
+                        alt="Second slide"
+                    /> */}
+                    <Carousel.Caption>
+                        <div className="my__auto ">
+                            <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
+                                <h3 style={{ animationDelay: "3s" }}>Акция "УДОБНАЯ<br />РАССРОЧКА "30/30/30""</h3>
+                                <p style={{ animationDelay: "3s" }}>
+                                    В рамках данной акции Вы можете приобрести желаемую недвижимость в ЖК "Freedom Residence" в рассрочку и без лишних переплат! Вы вносите первоначальный взнос от 30%,
+                                    и затем, в течение 30 месяцев выплачиваете фиксированную сумму.
+                                </p>
+                            </Animated>
+                            <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+                                <button> <a href="#stackk">Узнать подробнее</a></button>
+                                <button onClick={show.bind()}>Оставить заявку</button>
+                            </div>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slideww})` }}>
+                    {/* <img
+                        className="d-block carousel__img"
+                        src={slideww}
+                        alt="First slide"
+                    /> */}
+                    <Carousel.Caption>
+                        <div className="my__auto">
+                            <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
+                                <h3 style={{ animationDelay: "3s" }} >Ispechak Residence</h3>
+                                <p style={{ animationDelay: "3s" }}>Рады представить Вам первый в Душанбе
+                                    продуманный архитектурный проект в
+                                    котором сочетаются красота и качество,
+                                    роскошь и уют, простота и обдуманность в деталях.</p>
+                            </Animated>
+                            <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+                                <button>
+                                    <a href="https://arc.tj/project/ispechak-residence/">
+                                        Узнать подробнее
+                                    </a>
+                                </button>
+                                <button onClick={() => setModalShow(true)}>Оставить заявку</button>
+                            </div>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slidew})` }}>
+                    {/* <img
+                        className="d-block carousel__img"
+                        src={slidew}
+                        alt="Second slide"
+                    /> */}
+                    <Carousel.Caption>
+                        <div className="my__auto">
+                            <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
+                                <h3 style={{ animationDelay: "3s" }}>Freedom Residence</h3>
+                                <p style={{ animationDelay: "3s" }}>
+                                    Freedom Residence - место, где красота и удобство, качество и уют,
+                                    безопасность и беззаботность никогда не будут спорить между собой.
+                                </p>
+                            </Animated>
+                            <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+                                <button> <a href="https://armon.tj/freedom">Узнать подробнее</a></button>
+                                <button onClick={() => setModalShow(true)}>Оставить заявку</button>
+                            </div>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+            </Carousel>
+            <Modal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+        </>
     )
 }

@@ -1,9 +1,27 @@
+.modal-sm {
+    max-width: 700px !important;
+    z-index: 999999 !important;
+}
+
+.modal-sm .modal-header .close {
+    opacity: 1 !important;
+    padding: 0 !important;
+    width: 30px !important;
+    margin: 0 0 0 auto !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    border: 2px solid #fff !important;
+    color: #FFFFFF !important;
+    font-weight: 100 !important;
+}
+
 .career-section {
-    background: url(../../assets/img/чап.svg) 1% 3.1% repeat-y,
-        url(../../assets/img/рост.svg) 99% 3.1% repeat-y;
-    padding: 100px 0 200px;
+    /* background: url(../../assets/img/чап.svg) 1% 3.1% repeat-y,
+        url(../../assets/img/рост.svg) 99% 3.1% repeat-y; */
+    padding: 100px 0;
     font-size: 18px;
     background-size: 100px;
+    height: 75vh;
 }
 
 .career-card {
@@ -12,6 +30,11 @@
     background: #FFFFFF;
     box-shadow: 0 0 10px 3px rgb(0 0 0 / 25%);
     border-radius: 20px;
+}
+
+.modal-wrapper__text {
+    width: 100%;
+    margin-top: -4rem;
 }
 
 .career-card-card__img {
@@ -65,13 +88,85 @@
 }
 
 .career-card__button:hover {
-    box-shadow: 0 0 10px 3px rgb(0 0 0 / 25%);
+    background: #0273BA;
+    border: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    color: #FFFFFF;
+
+    box-sizing: border-box;
+    border-radius: 10px;
 }
+
+.text__modal-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 59px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.text__modal-text {
+    padding: 0 10px 0 10px;
+    margin-top: 1.5rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+}
+
+.bnt__modal-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__modal {
+    padding: 5px 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -1px;
+
+    color: #FFFFFF;
+    border: 2px solid #E9E9E9;
+    box-sizing: border-box;
+    border-radius: 28px;
+    background: none;
+}
+
+.btn__modal:hover {
+    background: #fff;
+    color: #000;
+}
+
 
 @media screen and (min-width: 1600px) and (max-width: 1920px) {
     .career-section {
-        background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
-            url(../../assets/img/рост.svg) 99% 17% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
+            url(../../assets/img/рост.svg) 99% 17% repeat-y; */
         background-size: 250px;
     }
 
@@ -83,8 +178,8 @@
 
 @media screen and (min-width: 1440px) and (max-width: 1600px) {
     .career-section {
-        background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
-            url(../../assets/img/рост.svg) 99% 17% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
+            url(../../assets/img/рост.svg) 99% 17% repeat-y; */
         background-size: 170px;
     }
 
@@ -96,8 +191,8 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1366px) {
     .career-section {
-        background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
-            url(../../assets/img/рост.svg) 99% 16% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
+            url(../../assets/img/рост.svg) 99% 16% repeat-y; */
         background-size: 130px;
     }
 
@@ -105,8 +200,8 @@
 
 @media screen and (min-width: 1180px) and (max-width: 1280px) {
     .career-section {
-        background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
-            url(../../assets/img/рост.svg) 99% 16% repeat-y;
+        /* background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
+            url(../../assets/img/рост.svg) 99% 16% repeat-y; */
         background-size: 90px;
     }
 
@@ -121,6 +216,16 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+    .text__career-t {
+        margin-top: 25px;
+        font-size: 28px;
+    }
+
+    .modal-wrapper__text {
+        width: 100%;
+        margin-top: -2rem;
+    }
+
     .career-card {
         margin-bottom: 20px;
     }

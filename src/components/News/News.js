@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ReactHtmlParser from 'react-html-parser'
+import Moment from 'react-moment'
+import 'moment-timezone';
+import 'moment/locale/ru';
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
 
@@ -58,14 +62,14 @@ export default function News({ news }) {
                             dotListClass="custom-dot-list-style"
                             itemClass="carousel-item-padding-10-px" >
                             {
-                                news.map((item, index) => {
+                                news?.map((item, index) => {
                                     return (
                                         <div className="wrapper-news-card overflow-hidden" key={index}>
-                                            <Link to={`/news`}>
+                                            <Link to={`/news/${item.id}`}>
                                                 <div className="news-card" >
                                                     <h2>{item.title}</h2>
-                                                    <span>{item.text.substr(0, 70) + '...'}</span>
-                                                    <p className="news-dates">{item.data}</p>
+                                                    <span className="text__news-t">{ReactHtmlParser(item.text.substr(0, 70))}</span>
+                                                    <p className="news-dates"><Moment format="LL">{item.date}</Moment></p>
                                                 </div>
                                             </Link>
                                         </div>

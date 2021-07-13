@@ -1,0 +1,143 @@
+.feedback__wrapper {
+    width: 100%;
+    background: #F2F2F2;
+    padding: 50px;
+    margin-bottom: -1.5rem;
+}
+
+.feedback-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text__feedback p {
+    margin: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.text__feedback span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.feedback__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.feedback__btn button {
+    padding: 8px 10px;
+    background: #FFFFFF;
+    border: 2px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 13px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #000000;
+}
+
+.feedback__btn button:hover {
+    background: #0273BA;
+    border: 2px solid #0273BA;
+    color: #FFFFFF;
+}
+
+.feedback__btn button img {
+    padding-right: 10px;
+}
+
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {}
+
+@media screen and (min-width: 1280px) and (max-width: 1366px) {}
+
+@media screen and (min-width: 1180px) and (max-width: 1280px) {}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .text__feedback p {
+        margin: 0;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 29px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    .text__feedback span {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .text__feedback p {
+        /* margin: 0; */
+        margin-bottom: 23px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 29px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    .text__feedback span {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    .feedback__btn button {
+        width: 100% !important;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #000000;
+        padding: 10px;
+    }
+
+    .feedback__btn button img {
+        padding-right: 25px;
+    }
+
+    .feedback__btn {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: start;
+    }
+
+    .feedback__wrapper {
+        padding: 15px;
+    }
+}

@@ -1,7 +1,7 @@
 .about-section1 {
-    background: url(../../assets/img/чап.svg) 1% 7.4% repeat-y,
-        url(../../assets/img/рост.svg) 99% 7.4% repeat-y;
-    padding: 100px 0 200px;
+    /* background: url(../../assets/img/чап.svg) 1% 7.4% repeat-y,
+        url(../../assets/img/рост.svg) 99% 7.4% repeat-y; */
+    padding: 100px 0 130px;
     font-size: 18px;
     background-size: 83px;
 }
@@ -37,9 +37,11 @@
 }
 
 .about__logo-svg {
+    margin-top: -4rem;
+    width: 277px;
     max-width: 100%;
     float: right;
-    padding: 20px;
+    padding: 0 72px 38px 46px;
 }
 
 .about-wrapper-text {
@@ -115,6 +117,10 @@
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1366px) {
+    .about__img {
+        margin-left: 20px;
+    }
+
     .about-section1 {
         background-size: 110px;
     }
@@ -197,9 +203,6 @@
         margin: 20px 0;
     }
 
-    /* .about-wrapper {
-        display: none;
-    } */
     .pc__about-wrapper {
         display: none;
     }

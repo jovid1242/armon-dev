@@ -205,7 +205,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #FFFFFF;
+    background: #000;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -290,7 +290,13 @@
     }
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
+    #nav-icon3 {
+        margin-top: 10px;
+    }
+} */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
     #nav-icon3 {
         margin-top: 10px;
     }

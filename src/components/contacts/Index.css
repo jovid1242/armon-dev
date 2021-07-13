@@ -1,73 +1,30 @@
 .about-section {
-    margin-top: 5rem;
-    width: 100%;
-    display: flex;
+    /* background: url(../../assets/img/чап.svg) 1% 3.1% repeat-y,
+        url(../../assets/img/рост.svg) 99% 3.1% repeat-y; */
+    padding: 100px 0 140px;
+    font-size: 18px;
+    background-size: 100px;
 }
 
-.about-main {
-    z-index: 2;
-    width: 100%;
+.info_wrapper {
+    border: 3px solid #E9E9E9;
+    box-sizing: border-box;
+    border-radius: 14px;
+    padding: 28px;
 }
 
-.about-section-head {
-    margin-top: 2.5rem;
-    margin-bottom: 50px;
-    width: 100%;
-}
-
-.about-section-head h2 {
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 37px;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-
-    color: #000000;
-
-}
-
-.about-section-head span {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: right;
-    letter-spacing: 0.5px;
-    display: flex;
-    justify-content: flex-end;
-    color: #2B2B2B;
-}
-
-.about-section-head a {
-    color: #000;
-}
-
-.about-main {
-    width: 100%;
-}
-
-.about-main ul {
-    padding: 0;
-}
-
-.about-main ul li {
-    list-style: none;
-    margin: 10px;
-}
-
-.about-main ul li p {
+.info__text p {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 32px;
+
     color: #000000;
+
 }
 
-.about-main li span {
+.info__phone-text {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -76,24 +33,140 @@
     color: #000000;
 }
 
-@media screen and (min-width: 1920px) {}
+.info__phone-text a {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
 
-@media screen and (min-width: 1440px) and (max-width: 1600px) {}
+.info__address-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    color: #000000;
+    display: flex;
+}
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+.info__address-text a {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
 
-    .about-section-head {
-        padding-left: 0;
+.info__contact {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.info__contact li {
+    display: flex;
+    list-style: none;
+}
+
+.info__img {
+    padding: 0px 10px 13px 0px;
+}
+
+.img__adress {
+    margin-left: -7px;
+}
+
+.contact__map {
+    width: 100% !important;
+    border-radius: 15px !important;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+    .about-section {
+        /* background: url(../../assets/img/чап.svg) 1% 17% repeat-y,
+            url(../../assets/img/рост.svg) 99% 17% repeat-y; */
+        background-size: 170px;
     }
 
-    .about-main {
-        margin: 0;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1366px) {
+    .about-section {
+        /* background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
+            url(../../assets/img/рост.svg) 99% 16% repeat-y; */
+        background-size: 130px;
     }
 
-    .about-main ul {
-        padding: 0;
+}
+
+@media screen and (min-width: 1180px) and (max-width: 1280px) {
+    .about-section {
+        /* background: url(../../assets/img/чап.svg) 1% 16% repeat-y,
+            url(../../assets/img/рост.svg) 99% 16% repeat-y; */
+        background-size: 90px;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .info__phone-text {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #000000;
+    }
+
+    .info__address-text {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #000000;
+        display: flex;
+    }
+
+    .about-section {
+        background: none;
+        padding-bottom: 0 !important;
     }
 }
 
-/* @media screen and (min-width: 1440px) and (max-width: 1600px) {}
-@media screen and (min-width: 1440px) and (max-width: 1600px) {} */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .info_wrapper {
+        height: 456px;
+        padding: 20px;
+        margin-top: 29px;
+    }
+
+    /* .map__about {
+        height: 600px !important;
+    } */
+
+    .info__phone-text {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #000000;
+    }
+
+    .info__address-text {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #000000;
+        display: flex;
+    }
+
+
+    .map__about {
+        margin-top: 2rem;
+    }
+
+    .about-section {
+        background: none;
+        padding-bottom: 0 !important;
+    }
+}
