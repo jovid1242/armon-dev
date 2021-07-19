@@ -5,6 +5,7 @@
 }
 
 .news__img img {
+    object-fit: cover;
     max-width: 464px;
     border-radius: 25px;
     min-height: 385px;

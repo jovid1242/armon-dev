@@ -13,7 +13,7 @@ export default function Team() {
     const [post, setPost] = useState(null)
 
     useEffect(() => {
-        http.get(`get_layout?page/${pagePost}`)
+        http.get(`get_layout?page=${pagePost}`)
             .then((response) => {
                 setPost(response.data.Layout)
                 setPagTotal(response.data.count)

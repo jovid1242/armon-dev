@@ -30,6 +30,24 @@ export default function SliderWeb() {
         { visible: false }
     )
 
+    // <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slide3})` }}>
+    //                 <Carousel.Caption>
+    //                     <div className="my__auto ">
+    //                         <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
+    //                             <h3 style={{ animationDelay: "3s" }}>Акция "УДОБНАЯ<br />РАССРОЧКА "30/30/30""</h3>
+    //                             <p style={{ animationDelay: "3s" }}>
+    //                                 В рамках данной акции Вы можете приобрести желаемую недвижимость в ЖК "Freedom Residence" в рассрочку и без лишних переплат! Вы вносите первоначальный взнос от 30%,
+    //                                 и затем, в течение 30 месяцев выплачиваете фиксированную сумму.
+    //                             </p>
+    //                         </Animated>
+    //                         <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
+    //                             <button> <a href="#stackk">Узнать подробнее</a></button>
+    //                             <button onClick={show.bind()}>Оставить заявку</button>
+    //                         </div>
+    //                     </div>
+    //                 </Carousel.Caption>
+    //             </Carousel.Item>
+
     const show = () => {
         setOpenImgModal({ visible: true });
     }
@@ -140,28 +158,6 @@ export default function SliderWeb() {
                 </Rodal>
             </div>
             <Carousel pause={false} fade style={{ animationDelay: "2.5s" }}>
-                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slide3})` }}>
-                    {/* <img
-                        className="carousel__img d-block"
-                        src={slide3}
-                        alt="Second slide"
-                    /> */}
-                    <Carousel.Caption>
-                        <div className="my__auto ">
-                            <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
-                                <h3 style={{ animationDelay: "3s" }}>Акция "УДОБНАЯ<br />РАССРОЧКА "30/30/30""</h3>
-                                <p style={{ animationDelay: "3s" }}>
-                                    В рамках данной акции Вы можете приобрести желаемую недвижимость в ЖК "Freedom Residence" в рассрочку и без лишних переплат! Вы вносите первоначальный взнос от 30%,
-                                    и затем, в течение 30 месяцев выплачиваете фиксированную сумму.
-                                </p>
-                            </Animated>
-                            <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
-                                <button> <a href="#stackk">Узнать подробнее</a></button>
-                                <button onClick={show.bind()}>Оставить заявку</button>
-                            </div>
-                        </div>
-                    </Carousel.Caption>
-                </Carousel.Item>
                 <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slideww})` }}>
                     {/* <img
                         className="d-block carousel__img"

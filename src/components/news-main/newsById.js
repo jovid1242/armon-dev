@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import ReactHtmlParser from 'react-html-parser'
 import http from '../../http'
 
-import newsidimg from '../../assets/img/newsid1.png'
+// import newsidimg from '../../assets/img/newsid1.png'
 import './newsById.css'
 
 export default function NewsById({ news }) {

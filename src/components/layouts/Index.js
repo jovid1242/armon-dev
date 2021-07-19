@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Modal, Form, Toast } from 'react-bootstrap';
+import { Modal, Toast } from 'react-bootstrap';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUndo, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
-import Modalf from './ModalLayouts'
+// import Modalf from './ModalLayouts'
 
 import './Index.css'
 import Imglayouts from '../../assets/img/layouts-1.jpg'
@@ -12,7 +12,6 @@ import Rodal from 'rodal';
 
 // include styles
 import 'rodal/lib/rodal.css';
-import vvv from '../../assets/img/vvv.jpg'
 import icon1 from '../../assets/icons/1.svg'
 import icon2 from '../../assets/icons/2.svg'
 import icon3 from '../../assets/icons/3.svg'
@@ -26,6 +25,8 @@ import validation from './validateModal'
 
 export default function Index({ post }) {
     const [layout, setLayot] = useState(null)
+    const [activeBtn , setActiveBtn] = useState(false)
+    const [activeBtn1, setActiveBtn1] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [showNotif, setShowNotif] = useState(false)
     const [modalfShow, setModalfShow] = useState(false);
@@ -37,6 +38,16 @@ export default function Index({ post }) {
         phone: null
     })
     const [jkdesc, setJkdesc] = useState([])
+
+    const activate = (a , b) => {
+        if(a !== false) {
+            setActiveBtn(true)
+            setActiveBtn1(false)
+        } else if (b !== false) {
+            setActiveBtn(false)
+            setActiveBtn1(true)
+        }
+    }
 
     const [Img, setImg] = useState([])
 
@@ -261,23 +272,18 @@ export default function Index({ post }) {
                     <div className="rowr">
                         <div className="mb-5">
                             <div className="filter__layouts">
-                                <button className="btn__filter" onClick={() => { setLayot(null) }}>Жилые комплексы:</button>
-                                {
-                                    residences?.map((el, i) => {
-                                        return (
-                                            <button className="btns__filter" onClick={() => { setLayot(`${el.name}`) }} key={i}>{el.name}</button>
-                                        )
-                                    })
-                                }
+                                <button className="btn__filter" onClick={() => { setLayot(null); setActiveBtn(false); setActiveBtn1(false) }}>Жилые комплексы:</button>
+                                <button className={!activeBtn ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot('Ispechak Residence'); activate(true, false) }}>Ispechak Residence</button>
+                                <button className={!activeBtn1 ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot('Freedom Residence'); activate(false, true) }}>Freedom Residence</button>     
                             </div>
                         </div>
                     </div>
                     <div className="row lyts">
                         {
-                         onsales.length === 0 ? <div className="nosales">
+                         onsales?.length === 0 ? <div className="nosales">
                              <h2>Все квартиры проданы</h2>
                              <div className="mb__200"></div>
-                         </div> :  onsales.map((el, index) => {
+                         </div> :  onsales?.map((el, index) => {
                                 return (
                                     <div className="col-lg-3 col-md-12 mb-4" key={index}>
                                         <div className="layouts__wrapper">

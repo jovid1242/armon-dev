@@ -68,7 +68,7 @@ export default function News({ news }) {
                                             <Link to={`/news/${item.id}`}>
                                                 <div className="news-card" >
                                                     <h2>{item.title}</h2>
-                                                    <span className="text__news-t">{ReactHtmlParser(item.text.substr(0, 70))}</span>
+                                                    <span className="text__news-t">{ReactHtmlParser(item.text.substr(0, 55) + '...')}</span>
                                                     <p className="news-dates"><Moment format="LL">{item.date}</Moment></p>
                                                 </div>
                                             </Link>

@@ -58,8 +58,8 @@ export default function Projects({ projects }) {
                                                 <div className="project-card">
                                                     <img src={item.img} alt="" />
                                                     <h2>{item.title}</h2>
-                                                    <span>{ReactHtmlParser(item.text.substr(0, 57))}</span>
-                                                    <p>{item.address}</p>
+                                                    <span className="text__projects-tr">{ReactHtmlParser(item.text.substr(0, 55) + '...')}</span>
+                                                    <p className="p-address">{item.address}</p>
                                                 </div>
                                             </div>
                                         </a>

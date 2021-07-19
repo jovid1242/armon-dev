@@ -25,7 +25,7 @@ export default function Promotions() {
     let interval = useRef()
 
     const startTimer = () => {
-        const countdownDate = new Date('july 15, 2021 00:00:00').getTime()
+        const countdownDate = new Date('july 15, 2021 18:00:00').getTime()
         interval = setInterval(() => {
             const now = new Date().getTime();
             const distance = countdownDate - now;

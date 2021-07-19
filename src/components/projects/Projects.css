@@ -117,13 +117,16 @@
     color: #1c1b1b;
 }
 
-.project-card p {
+.project-card .p-address {
     padding-top: 20px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.5px;
     color: #2B2B2B;
+}
+.text__projects-tr p {
+    margin: 8px;
 }
 
 .react-multiple-carousel__arrow--left {

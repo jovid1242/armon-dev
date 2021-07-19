@@ -14,14 +14,7 @@ import http from '../http'
 
 import projectsImg1 from '../assets/img/projects-1.jfif'
 import projectsImg2 from '../assets/img/projects-2.jfif'
-import projectsImg3 from '../assets/img/29.1.jpg'
 
-import videoImg1 from '../assets/img/1.jpg'
-import videoImg2 from '../assets/img/2.jpg'
-
-import inst1 from '../assets/img/inst1.jpg'
-import inst2 from '../assets/img/inst2.jpg'
-import inst3 from '../assets/img/inst3.jpg'
 
 export default function Home() {
     const [projects, setProjects] = useState([])
