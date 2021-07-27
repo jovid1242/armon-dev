@@ -43,7 +43,7 @@ export default function Index({ news }) {
                                                 </div>
                                                 <div className="news__card-date">
                                                     <p className="news-dates">
-                                                    <Moment locale="ru">
+                                                    <Moment locale="ru" format="DD MMMM YYYY">
                                                         {el.data}
                                                     </Moment>
                                                     </p>

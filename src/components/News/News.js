@@ -69,7 +69,7 @@ export default function News({ news }) {
                                                 <div className="news-card" >
                                                     <h2>{item.title}</h2>
                                                     <span className="text__news-t">{ReactHtmlParser(item.text.substr(0, 55) + '...')}</span>
-                                                    <p className="news-dates"><Moment format="LL">{item.date}</Moment></p>
+                                                    <p className="news-dates"><Moment locale="ru" format="DD MMMM YYYY">{item.data}</Moment></p>
                                                 </div>
                                             </Link>
                                         </div>

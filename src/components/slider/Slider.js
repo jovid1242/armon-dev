@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Carousel } from 'react-bootstrap';
 import Modal from '../modal/Index'
 import Rodal from 'rodal';
@@ -7,10 +7,7 @@ import FormData from 'form-data'
 import validation from './validateModal'
 import { Toast } from 'react-bootstrap';
 import ReactHtmlParser from 'react-html-parser'
-
-import slidew from '../../assets/img/slide_w.jpg'
-import slideww from '../../assets/img/slide_ww.jpg'
-import slide3 from '../../assets/icon-slider/armon_sale1.jpg'
+import http from '../../http'
 import iconPromt from '../../assets/icons/offer_2.svg'
 
 import { Animated } from "react-animated-css";
@@ -18,6 +15,7 @@ import { Animated } from "react-animated-css";
 import "./Index.css";
 
 export default function SliderWeb() {
+    const [slider, setSlider] = useState([])
     const [modalShow, setModalShow] = useState(false);
     const [validetAlert, setValidetAlert] = useState(null)
     const [showt, setShowt] = useState(false)
@@ -25,6 +23,16 @@ export default function SliderWeb() {
         username: null,
         phone: null
     })
+
+    useEffect(() => {
+        http.get('/get_slider?page=1')
+        .then((res) => {
+            setSlider(res.data)
+        })
+        .catch((err) => {
+            console.log('Ошибка в слайдере :' , err.message);
+        })
+    }, [])
 
     const [openImgModal, setOpenImgModal] = useState(
         { visible: false }
@@ -158,24 +166,19 @@ export default function SliderWeb() {
                 </Rodal>
             </div>
             <Carousel pause={false} fade style={{ animationDelay: "2.5s" }}>
-                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slideww})` }}>
-                    {/* <img
-                        className="d-block carousel__img"
-                        src={slideww}
-                        alt="First slide"
-                    /> */}
+            {
+                slider?.map((el , index) => {
+                    return (
+                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${el.img})` }} key={index}>
                     <Carousel.Caption>
                         <div className="my__auto">
                             <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
-                                <h3 style={{ animationDelay: "3s" }} >Ispechak Residence</h3>
-                                <p style={{ animationDelay: "3s" }}>Рады представить Вам первый в Душанбе
-                                    продуманный архитектурный проект в
-                                    котором сочетаются красота и качество,
-                                    роскошь и уют, простота и обдуманность в деталях.</p>
+                                <h3 style={{ animationDelay: "3s" }} >{el.title}</h3>
+                                <p style={{ animationDelay: "3s" }}>{el.text}</p>
                             </Animated>
                             <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
                                 <button>
-                                    <a href="https://arc.tj/project/ispechak-residence/">
+                                    <a href={el.url}>
                                         Узнать подробнее
                                     </a>
                                 </button>
@@ -184,29 +187,9 @@ export default function SliderWeb() {
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={5000} pause={false} style={{ background: `url(${slidew})` }}>
-                    {/* <img
-                        className="d-block carousel__img"
-                        src={slidew}
-                        alt="Second slide"
-                    /> */}
-                    <Carousel.Caption>
-                        <div className="my__auto">
-                            <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
-                                <h3 style={{ animationDelay: "3s" }}>Freedom Residence</h3>
-                                <p style={{ animationDelay: "3s" }}>
-                                    Freedom Residence - место, где красота и удобство, качество и уют,
-                                    безопасность и беззаботность никогда не будут спорить между собой.
-                                </p>
-                            </Animated>
-                            <div className="slide__btn d-flex" style={{ animationDelay: "3s" }}>
-                                <button> <a href="https://armon.tj/freedom">Узнать подробнее</a></button>
-                                <button onClick={() => setModalShow(true)}>Оставить заявку</button>
-                            </div>
-                        </div>
-                    </Carousel.Caption>
-                </Carousel.Item>
-
+                    )
+                })
+            }
             </Carousel>
             <Modal
                 show={modalShow}
