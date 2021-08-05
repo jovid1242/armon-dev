@@ -23,10 +23,11 @@ import lyiconh from '../../assets/icons/ly-icon-h.svg'
 import http from '../../http'
 import validation from './validateModal'
 
-export default function Index({ post }) {
+export default function Index({ post, stylePaginate }) {
     const [layout, setLayot] = useState(null)
     const [activeBtn , setActiveBtn] = useState(false)
     const [activeBtn1, setActiveBtn1] = useState(false)
+    const [activeBtn2, setActiveBtn2] = useState(true)
     const [modalShow, setModalShow] = useState(false);
     const [showNotif, setShowNotif] = useState(false)
     const [modalfShow, setModalfShow] = useState(false);
@@ -39,20 +40,27 @@ export default function Index({ post }) {
     })
     const [jkdesc, setJkdesc] = useState([])
 
-    const activate = (a , b) => {
+    const activate = (a , b , c) => {
         if(a !== false) {
             setActiveBtn(true)
             setActiveBtn1(false)
+            setActiveBtn2(false)
         } else if (b !== false) {
             setActiveBtn(false)
             setActiveBtn1(true)
+            setActiveBtn2(false)
+        } else if ( c !== false) {
+            setActiveBtn(false)
+            setActiveBtn1(false)
+            setActiveBtn2(true)
         }
     }
 
-    const [Img, setImg] = useState([])
+    const [modalSImg, setModalSImg] = useState([])
 
     const getImg = el => {
-        setImg(el.img)
+        setModalSImg(el)
+        setJkdesc([el])
     }
 
     const onsales = post?.filter((e) => {
@@ -62,7 +70,6 @@ export default function Index({ post }) {
             return e
         }
     })
-    console.log('fffffffffff', onsales);
 
     useEffect(() => {
         http.get('get_residences')
@@ -162,11 +169,11 @@ export default function Index({ post }) {
                                         <div className="tools">
                                             <button onClick={zoomIn} className="tol__button" ><FontAwesomeIcon icon={faPlus} color="white" /></button>
                                             <button onClick={zoomOut} className="tol__button"  ><FontAwesomeIcon icon={faMinus} color="white" /></button>
-                                            <button onClick={resetTransform} className="tol__button" > <FontAwesomeIcon icon={faUndo} color="white" /></button>
+                                            <button onClick={resetTransform} className="tol__button" ><FontAwesomeIcon icon={faUndo} color="white" /></button>
                                             <button onClick={showMForm.bind()} className="jk__form" >Оставить заявку</button>
                                         </div>
                                         <TransformComponent>
-                                            <img src={Img} className="img__trasformw" alt="big" />
+                                            <img src={modalSImg.img} className="img__trasformw" alt="big" />
                                         </TransformComponent>
                                     </React.Fragment>
                                 )}
@@ -182,7 +189,7 @@ export default function Index({ post }) {
                                     <Toast onClose={() => setShowNotif(false)} show={showNotif} delay={3000} autohide>
                                         <Toast.Body>{validetAlert}</Toast.Body>
                                     </Toast></h3>
-                                <img src={Img} alt="Img" />
+                                <img src={modalSImg.img} alt="Img" />
                             </div>
                             <div className="wraper-modal-2">
                                 <div className="form__group">
@@ -272,9 +279,9 @@ export default function Index({ post }) {
                     <div className="rowr">
                         <div className="mb-5">
                             <div className="filter__layouts">
-                                <button className="btn__filter" onClick={() => { setLayot(null); setActiveBtn(false); setActiveBtn1(false) }}>Жилые комплексы:</button>
-                                <button className={!activeBtn ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot('Ispechak Residence'); activate(true, false) }}>Ispechak Residence</button>
-                                <button className={!activeBtn1 ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot('Freedom Residence'); activate(false, true) }}>Freedom Residence</button>     
+                                <button className={!activeBtn2 ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot(null); setActiveBtn(false); setActiveBtn1(false) ; activate(false,false , true) ; stylePaginate(true)}}>Жилые комплексы:</button>
+                                <button className={!activeBtn ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot('Ispechak Residence'); activate(true, false , false) ; stylePaginate(false)}}>Ispechak Residence</button>
+                                <button className={!activeBtn1 ? "btns__filter" : "btns__filter activeBtn"} onClick={() => { setLayot('Freedom Residence'); activate(false, true , false) ; stylePaginate(true)}}>Freedom Residence</button>     
                             </div>
                         </div>
                     </div>

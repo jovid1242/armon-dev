@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Index.css'
 
+import ReactHtmlParser from 'react-html-parser'
+
 import projectsImg1 from '../../assets/img/projects-1.jfif'
 import projectsImg2 from '../../assets/img/projects-2.jfif'
 import projectsImg3 from '../../assets/img/29.1.jpg'
@@ -53,7 +55,7 @@ export default function Index({ projects }) {
                                                 <img src={el.img} alt="" />
                                             </a>
                                         </div>
-                                        <p className="card__text mt-4">{el.text}</p>
+                                        <p className="card__text mt-4">{ReactHtmlParser(el.text)}</p>
                                         
                                     </div>
                                         }

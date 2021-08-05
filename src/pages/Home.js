@@ -21,6 +21,23 @@ export default function Home() {
     const [news, setNews] = useState([])
     const [video, setVideo] = useState([])
     const [instagram, setInstagram] = useState([])
+  
+    const [dateEnd , setDateEnd] = useState({
+        date: null
+    })
+    const [sale , setSale] = useState([])
+
+    useEffect(() => {
+        http.get('/sale/get?page=1')
+        .then((res) => {
+            setDateEnd({date: res.data.Sale[0]?.data_end.split(', ')[1]})
+            setSale(res.data.Sale[0])
+        })
+        .catch((err) => {
+            console.log('Ошибка в акции исправтье бистрее ' + err.message);
+        })
+    }, [])
+
 
     useEffect(() => {
         http.get(`get_project?page=1`)
@@ -63,23 +80,6 @@ export default function Home() {
     }, [])
 
 
-    // const sliderPaginate = [
-    //     {
-    //         number: "1",
-    //         title: "Ispechak Residence",
-    //         text: "Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором..."
-    //     },
-    //     {
-    //         number: "2",
-    //         title: "Ispechak Residence",
-    //         text: "Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором..."
-    //     },
-    //     {
-    //         number: "3",
-    //         title: "Ispechak Residence",
-    //         text: "Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором..."
-    //     }
-    // ]
     const slide = [
         {
             text: "Рады представить Вам первый в Душанбе продуманный архитектурный проект в котором...",
@@ -98,79 +98,12 @@ export default function Home() {
         }
 
     ]
-    // const projectss = [
-    //     {
-    //         url: "https://arc.tj/project/ispechak-residence/",
-    //         img: projectsImg1,
-    //         title: "Ispechak Residence",
-    //         text: "Один из первых проектов, который мы реализовали в Душанбе...",
-    //         address: "Испечак 2, М14"
-    //     },
-    //     {
-    //         url: "https://armon.tj/freedom",
-    //         img: projectsImg2,
-    //         title: "Freedom Residence",
-    //         text: "Станет идеальным местом для комфортной жизни Вашей семьи...",
-    //         address: "Ул. Н. Махсум 156"
-    //     },
-    //     {
-    //         url: "#",
-    //         img: projectsImg3,
-    //         title: "Скоро начнем!",
-    //         text: "Уже совсем скоро! Следите за нашими обновлениями, чтобы быть в курсе самых последних новостей",
-    //         address: "Скоро начнем!"
-    //     }
-    // ];
-    // const newss = [
-    //     {
-    //         id: "6",
-    //         title: "ОТКРЫТИЕ ОФИСА ПРОДАЖ ЖК 'FREEDOM RESIDENCE'",
-    //         text: "Индивидуальный офис продаж ЖК 'Freedom Residence' создан для максимального удобства покупателей и экономии их времени: всего за один визит можно...",
-    //         data: "12 марта 2021"
-    //     },
-    //     {
-    //         id: "7",
-    //         title: "СОТРУДНИЧЕСТВО С КОМПАНИЕЙ 'AR CONSTRUCTION'",
-    //         text: "Строительные компании «Armon Development» и «AR Construction» являются партнерами в сфере недвижимости и строительстве объектов...",
-    //         data: "11 марта 2021"
-    //     },
-    //     {
-    //         id: "8",
-    //         title: "Покупка недвижимости: что самое важное?",
-    //         text: "Во избежание дальнейших проблем, если Вы думаете приобрести недвижимость, необходимо провести тщательный анализ, исходя из которого нужно...",
-    //         data: "10 марта 2021"
-    //     }
-    // ];
-    // const videoGallery4 = [
-    //     // https://alexbruni.ru/youtube2images/index.php?id=-QYoYRsIXQ0
-    //     {
-    //         img: videoImg1,
-    //         videoUrl: "https://www.youtube.com/watch?v=xM-OsROu0Kw"
-    //     }
-    // ];
-    // const instagrame = [
-    //     {
-    //         img: inst1,
-    //         like: "",
-    //         url: "https://www.instagram.com/p/COJ_WyxLpvS/?utm_source=ig_web_copy_link"
-    //     },
-    //     {
-    //         img: inst2,
-    //         like: "",
-    //         url: "https://www.instagram.com/p/COJ_Q0wLOae/?utm_source=ig_web_copy_link"
-    //     },
-    //     {
-    //         img: inst3,
-    //         like: "",
-    //         url: "https://www.instagram.com/p/COJ_EKBLk-o/?utm_source=ig_web_copy_link"
-    //     }
-    // ]
 
     return (
         <>
             <Header header={true} />
             <SliderWeb slide={slide} />
-            <Promotions />
+            <Promotions sale={sale} dateEnd={dateEnd.date} />
             <Banner />
             <Projects projects={projects} />
             <News news={news} />

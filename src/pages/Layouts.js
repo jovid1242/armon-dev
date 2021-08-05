@@ -11,6 +11,7 @@ export default function Team() {
     const [pagePost, setPagePost] = useState(1)
     const [pagTotal, setPagTotal] = useState()
     const [post, setPost] = useState(null)
+    const [stylePgn , setStylePgn] = useState(true)
 
     useEffect(() => {
         http.get(`get_layout?page=${pagePost}`)
@@ -20,6 +21,10 @@ export default function Team() {
             })
     }, [pagePost])
 
+    const stylePaginate = e => {
+        setStylePgn(e)
+        console.log(e);
+    }
 
     const onUpdateCurrentPage = async (page) => {
         await setPagePost(page)
@@ -27,8 +32,8 @@ export default function Team() {
     return (
         <>
             <Header header={false} />
-            <Main post={post} />
-            <Pagination total={pagTotal} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} />
+            <Main post={post} stylePaginate={stylePaginate} />
+            <Pagination total={pagTotal} currentPage={pagePost} onChangeCurrentPage={onUpdateCurrentPage} dNone={stylePgn} />
             <Footer />
         </>
     )

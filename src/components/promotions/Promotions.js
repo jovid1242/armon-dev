@@ -7,15 +7,15 @@ import FormData from 'form-data'
 import validation from './validateModal'
 import { Toast } from 'react-bootstrap';
 import ReactHtmlParser from 'react-html-parser'
+import http from '../../http'
 
-export default function Promotions() {
+export default function Promotions({sale, dateEnd}) {
     const [validetAlert, setValidetAlert] = useState(null)
     const [showt, setShowt] = useState(false)
     const [form, setForm] = useState({
         username: null,
         phone: null
     })
-
 
     const [timerDays, setTimerDays] = useState('00')
     const [timerHours, setTimerHours] = useState('00')
@@ -24,31 +24,31 @@ export default function Promotions() {
 
     let interval = useRef()
 
-    const startTimer = () => {
-        const countdownDate = new Date('july 15, 2021 18:00:00').getTime()
-        interval = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hourse = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            // console.log(days);
-            if (distance < 0) {
-                // stop time
-                clearInterval(interval.current)
-            } else {
-                //update time
+        var startTimer = () => {
+            const countdownDate = new Date(dateEnd).getTime()
+            interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+    
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hourse = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 // console.log(days);
-                setTimerDays(days);
-                setTimerHours(hourse);
-                setTimerMinutes(minutes);
-                setTimerSeconds(seconds);
-            }
+                if (distance < 0) {
+                    // stop time
+                    clearInterval(interval.current)
+                } else {
+                    //update time
+                    setTimerDays(days);
+                    setTimerHours(hourse);
+                    setTimerMinutes(minutes);
+                    setTimerSeconds(seconds);
+                }
+    
+            }, 1000)
+        }
 
-        }, 1000)
-    }
     useEffect(() => {
         startTimer();
         return () => {
@@ -98,7 +98,7 @@ export default function Promotions() {
                 name: form.username,
                 phone: form.phone
             }
-            axios.post(`https://api.armon.tj/stock/create`, stock)
+            http.post(`/stock/create`, stock)
                 .then(res => {
                     setValidetAlert('Спасибо за отправку вашего сообщения')
                     setShowt(true)
@@ -121,9 +121,10 @@ export default function Promotions() {
         }
         return true
     }
+    console.log('ddd', sale);
     return (
         <>
-            <div className="promotions-section" id="stackk">
+            <div className={sale !== undefined ?  "promotions-section" : "sale_none"} id="stackk">
                 <div className="promo__modal">
                     <Rodal visible={openImgModal.visible} onClose={hide.bind()} width="600">
                         <div className="modal-icon__promotions">
@@ -131,19 +132,13 @@ export default function Promotions() {
                         </div>
                         <div className="stock__wrapper">
                             <div className="stock__wrapper-title">
-                                <p>Акция "УДОБНАЯ РАССРОЧКА "30/30/30"</p>
+                                <p>{sale?.title_second}</p>
                             </div>
                             <div className="pdtext">
                                 <div className="ddtt"></div>
                             </div>
                             <div className="stock__wrapper-text">
-                                <p>
-                                    В рамках данной акции Вы можете приобрести
-                                    желаемую недвижимость
-                                    в ЖК "Freedom Residence" в рассрочку и без лишних переплат!
-                                    Вы вносите первоначальный взнос от 30%, и затем, в течение
-                                    30 месяцев выплачиваете фиксированную сумму.
-                                    "</p>
+                                <p>{sale?.text}</p>
                             </div>
                             <div className="modal__input__group">
                                 <Toast onClose={() => setShowt(false)} show={showt} delay={3000} autohide>
@@ -189,9 +184,8 @@ export default function Promotions() {
                         <div className="row">
                             <div className="col-md-9">
                                 <div className="pro__wrapper-title">
-                                    <p>Успейте приобрести</p>
-                                    <span>квартиру мечты на самых выгодных условиях! <br />
-                                        Количество квартир ограничено</span>
+                                    <p>{sale?.title}</p>
+                                    <span>{sale?.desc}</span>
                                 </div>
                                 <div className="pro__wr-text">
                                     <p>до конца акции осталось:</p>

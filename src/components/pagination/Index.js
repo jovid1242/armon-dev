@@ -3,7 +3,7 @@ import leftSvg from '../../assets/img/leftp.svg'
 import rightSvg from '../../assets/img/rigp.svg'
 import './Index.css'
 
-export default function Index({ total, currentPage, onChangeCurrentPage }) {
+export default function Index({ total, currentPage, onChangeCurrentPage , dNone}) {
     let [currentX, setCurrentX] = useState(currentPage)
     const paginators = () => {
         const data = [<button disabled={currentX === 1} className={currentX === 1 ? "paginate__btn-act" : "paginate__btn"} onClick={() => { prev() }}><img src={rightSvg} alt="rightSvg" /></button>]
@@ -45,7 +45,7 @@ export default function Index({ total, currentPage, onChangeCurrentPage }) {
 
     return (
         <>
-            <div className="container">
+            <div className= {dNone === true ? "container" : "container d-none"}>
                 <ul className="d-flex paginate">
                     {paginators().map(el => el)}
                 </ul>
